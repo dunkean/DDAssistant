@@ -1,0 +1,24 @@
+Fire
+Infernal Fire
+Cold
+Electricity
+Acid
+Positive Energy
+Negative Energy
+Piercing
+Bludgeoning
+Slashing
+Force
+Sonic
+Divine
+Untyped
+Vile
+Non-Lethal
+Piercing
+Bludgeoning
+Slashing
+Force
+Sonic
+Divine
+Falling
+Typeless
