@@ -1,0 +1,3137 @@
+abjurer = abjurateur
+adept = adepte
+arcane archer = archer-mage
+arcane trickster = mystificateur
+profane
+archmage = archimage
+aristocrat = noble
+assassin = assassin
+barbarian = barbare
+bard = barde
+blackguard = chevalier noir
+cleric = prêtre, prêtresse
+commoner = gens du peuple
+conjurer = invocateur
+diviner = devin
+dragon disciple = disciple draconien
+druid = druide, druidesse
+duelist = duelliste
+dwarven defender = protecteur nain
+eldritch knight = champion occultiste
+enchanter = enchanteur
+evoker = évocateur
+expert = expert
+fighter = guerrier, guerrière
+hierophant = hiérophante
+horizon walker = arpenteur d'horizon
+illusionist = illusionniste
+loremaster = gardien du savoir
+monk = moine
+mystic theurge = théurge mystique
+necromancer = nécromancien
+paladin = paladin, paladine
+ranger = rôdeur, rôdeuse
+rogue = roublard, roublarde
+shadowdancer = maître des ombres
+sorcerer = ensorceleur, ensorceleuse
+thaumaturgist = thaumaturge
+transmuter = transmutateur
+warrior = homme d'armes
+wizard = magicien, magicienne
+Appraise = Estimation
+Balance = Équilibre
+Bluff = Bluff
+Climb = Escalade
+Concentration = Concentration
+Control Shape = Contrôle de forme
+Craft = Artisanat
+Craft (alchemy) = Artisanat
+(alchimie)
+Craft (armorsmithing) = Artisanat
+(fabrication d'armures)
+Craft (basketweaving) = Artisanat
+(vannerie)
+Craft (bookbinding) = Artisanat
+(reliure)
+Craft (bowmaking) = Artisanat
+(fabrication d'arcs)
+Craft (calligraphy) = Artisanat
+(calligraphie)
+Craft (carpentry) = Artisanat
+(travaux de charpente)
+Craft (cobbling) = Artisanat
+(cordonnerie)
+Craft (gemcutting) = Artisanat (taille
+des pierres fines ou précieuses)
+Craft (leatherworking) = Artisanat
+(maroquinerie)
+Craft (locks) = Artisanat (serrurerie)
+Craft (locksmithing) = Artisanat
+(serrurerie)
+Craft (painting) = Artisanat
+(peinture)
+Craft (pottery) = Artisanat (poterie)
+Craft (sculpting) = Artisanat
+(sculpture)
+Craft (shipmaking) = Artisanat
+(fabrication de navires)
+Craft (stonemasonery) = Artisanat
+(maçonnerie)
+Craft (trapmaking) = Artisanat
+(fabrication de pièges)
+Craft (weaponsmithing) = Artisanat
+(fabrication d'armes)
+Craft (weaving) = Artisanat (tissage)
+Decipher Script = Décryptage
+Diplomacy = Diplomatie
+Disable Device =
+Désamorçage/sabotage
+Disguise = Déguisement
+Escape Artist = Évasion
+Forgery = Contrefaçon
+Gather Information =
+Renseignements
+Handle Animal = Dressage
+Heal = Premiers secours
+Hide = Discrétion
+Jump = Saut
+Knowledge = Connaissances
+Knowledge (arcana) =
+Connaissances (mystères)
+Knowledge (architecture and
+engineering) = Connaissances
+(architecture et ingénierie)
+Knowledge (dungeoneering) =
+Connaissances (exploration
+souterraine)
+Knowledge (geography) =
+Connaissances (géographie)
+Knowledge (history) =
+Connaissances (histoire)
+Knowledge (local) = Connaissances
+(folklore local)
+Knowledge (nature) = Connaissances
+(nature)
+Knowledge (nobility and royalty) =
+Connaissances (noblesse et royauté)
+Knowledge (planes) = Connaissances
+(plans)
+Knowledge (religion) =
+Connaissances (religion)
+Knowledge (the planes) =
+Connaissances (plans)
+Listen = Perception auditive
+Move Silently = Déplacement
+silencieux
+Open Lock = Crochetage
+Perform = Représentation
+Perform (act) = Représentation
+(scène)
+Perform (comedy) = Représentation
+(farce)
+Perform (dance) = Représentation
+(danse)
+Perform (keyboard instruments) =
+Représentation (instruments à
+claviers)
+Perform (oratory) = Représentation
+(déclamation)
+Perform (percussion instruments) =
+Représentation (percussions)
+Perform (sing) = Représentation
+(chant)
+Perform (string instruments) =
+Représentation (instruments à
+cordes)
+Perform (wind instruments) =
+Représentation (instruments à vent)
+Profession = Profession
+Profession (apothecary) = Profession
+(apothicaire)
+Profession (boater) = Profession
+(canotier)
+Profession (bookkeeper) =
+Profession (libraire)
+Profession (brewer) = Profession
+(brasseur)
+Profession (cook) = Profession
+(cuisinier)
+Profession (driver) = Profession
+(conducteur d'attelage)
+Profession (farmer) = Profession
+(fermier)
+Profession (fisher) = Profession
+(pêcheur)
+Profession (guide) = Profession
+(guide)
+Profession (herbalist) = Profession
+(herboriste)
+Profession (herdsman) = Profession
+(berger)
+Profession (innkeeper) = Profession
+(tavernier)
+Profession (lumberjack) =
+Profession (bûcheron)
+Profession (miller) = Profession
+(meunier)
+Profession (miner) = Profession
+(mineur)
+Profession (porter) = Profession
+(porteur)
+Profession (rancher) = Profession
+(éleveur)
+Profession (sailor) = Profession
+(marin)
+Profession (scribe) = Profession
+(scribe)
+Profession (siege engineer) =
+Profession (ingénieur de siège)
+Profession (stablehand) = Profession
+(garçon d'écurie)
+Profession (tanner) = Profession
+(tanneur)
+Profession (teamster) = Profession
+(conducteur d'attelage)
+Profession (woodcutter) = Profession
+(bûcheron)
+Ride = Équitation
+Scry = Scrutation
+Search = Fouille
+Sense Motive = Psychologie
+Sleight of Hand = Escamotage
+Speak Language = Langue
+Spellcraft = Art de la magie
+Spot = Détection
+Survival = Survie
+Swim = Natation
+Tumble = Acrobaties
+Use Magic Device = Utilisation
+d'objets magiques
+Use Rope = Maîtrise des cordes
+Agile = Funambule
+Ability Focus = Attaque spéciale
+renforcée
+Alertness = Vigilance
+Animal affinity = Fraternité animale
+Armor Proficiency (heavy) = Port
+des armures lourdes
+Armor Proficiency (light) = Ports
+des armures légères
+Armor Proficiency (medium) = Port
+des armures intermédiaires
+Awesome Blow = Coup fabuleux
+Blind-Fight = Combat en aveugle
+Brew Potion = Préparation de potions
+Cleave = Enchaînement
+Combat Casting = Magie de guerre
+Combat Expertise = Expertise du
+combat
+Combat Reflexes = Attaques réflexes
+Craft Construct = Création de
+créature artificielle
+Craft Magic Arms and Armor =
+Création d'armes et armures
+magiques
+Craft Rod = Création de sceptres
+magiques
+Craft Staff = Création de bâtons
+magiques
+Craft Wand = Création de baguettes
+magiques
+Craft Wondrous Item = Création
+d'objets merveilleux
+Deceitful = Fourberie
+Deflect Arrows = Parade de
+projectiles
+Deft Hands = Doigts de fée
+Diehard = Dur à cuire
+Diligent = Méticuleux
+Dodge = Esquive
+Empower Spell = Extension d'effet
+Endurance = Endurance
+Enlarge Spell = Extension de portée
+Exotic Weapon Proficiency =
+Maniement d'une arme exotique
+Extend Spell = Extension de durée
+Extra Turning = Emprise sur les
+morts-vivants
+Familiar Spell = Sort de familier
+Far Shot = Tir de loin
+Flyby Attack = Attaque en vol
+Forge Ring = Création d'anneaux
+magiques
+Great Cleave = Succession
+d'enchaînements
+Great Fortitude = Vigueur
+surhumaine
+Great Smiting = Châtiment suprême
+Greater Weapon Focus = Arme de
+prédilection supérieure
+Greater Weapon Specialisation =
+Spécialisation martiale supérieure
+Heighten Spell = Augmentation
+d'intensité
+Hover = Vol stationnaire
+Improved Bull Rush = Science de la
+bousculade
+Improved Control Shape = Contrôle
+total de forme
+Improved Critical = Science du
+critique
+Improved Disarm = Science du
+désarmement
+Improved Elemental Wild Shape =
+Science de la forme animale
+élémentaire
+Improved Favored Enemy = Science
+de l'ennemi juré
+Improved Feint = Science de la feinte
+Improved Initiative = Science de
+l'initiative
+Improved Metamagic = Science de
+la métamagie
+Improved Precise Shot = Science du
+tir de précision
+Improved Sneak Attack = Science
+de l'attaque sournoise
+Improved Spell Capacity = Science
+de l'emplacement de sort
+Improved Stunning Fist = Science
+du coup étourdissant
+Improved Sunder = Science de la
+destruction
+Improved Trip = Science du croc-enjambe
+Improved Turning = Science du
+renvoi
+Improved Two-Weapon Fighting =
+Science du combat à deux armes
+Improved Unarmed Strike = Science
+du combat à mains nues
+Lasting Inspiration = Inspiration
+durable
+Leadership = Prestige
+Lightning Reflexes = Réflexes
+surhumains
+Magical Aptitude = Affinité magique
+Martial Weapon Proficiency =
+Maniement d'une arme de guerre
+Maximize Spell = Quintessence des
+sorts
+Mobility = Souplesse du serpent
+Mounted Archery = Tir monté
+Mounted Combat = Combat monté
+Multiattack = Attaques multiples
+Multiweapon Fighting = Combat à
+plusieurs armes
+Negociator = Négociation
+Nimble Fingers = Savoir-faire
+mécanique
+Overwhelming Critical = Critique
+anéantissant
+Planar Turning = Renvoi planaire
+Point Blank Shot = Tir à bout portant
+Power Attack = Attaque en puissance
+Precise Shot = Tir de précision
+Quick Draw = Arme en main
+Quicken Spell = Incantation rapide
+Quicken Spell-Like Ability =
+Pouvoir magique rapide
+Rapid Shot = Tir rapide
+Ride-By Attack = Attaque au galop
+Run = Course
+Scent = Odorat
+Scribe Scroll = Écriture de
+parchemins
+Self-Sufficient = Autonome
+Shield Proficiency = Maniement des
+boucliers
+Shot on the Run = Tir en mouvement
+Silent Spell = Incantation silencieuse
+Simple Weapon Proficiency =
+Maniement des armes courantes
+Skill Focus = Talent
+Snatch = Capture
+Spell Focus = École renforcée
+Spell Knowledge = Connaissance
+magique
+Spell Mastery = Maîtrise des sorts
+Spell Penetration = Efficacité des
+sorts accrue
+Spirited Charge = Charge
+dévastatrice
+Spring Attack = Attaque éclair
+Still Spell = Incantation statique
+Stunning Fist = Coup étourdissant
+Terrifying Rage = Rage terrifiante
+Toughness = Robustesse
+Tower Shield Proficiency =
+Maniement du pavois
+Track = Pistage
+Trample = Piétinement
+Two-Weapon Defense = Défense à
+deux armes
+Two-Weapon Fighting = Combat à
+deux armes
+Weapon Finesse = Attaque en finesse
+Weapon Focus = Arme de
+prédilection
+Weapon Specialization =
+Spécialisation martiale
+Whirlwind Attack = Attaque en
+rotation
+Wingover = Virage sur l'aile
+acid fog = brume acide
+acid splash = aspersion acide
+aid = aide
+air walk = marche dans les airs
+alarm = alarme
+align weapon = arme alignée
+alter self = modification d'apparence
+analyse dweomer = analyse
+d'enchantement
+animal friendship = amitié avec les
+animaux
+animal growth = croissance animale
+animal messenger = messager animal
+animal shapes = métamorphose
+animale
+animal trance = hypnose des animaux
+animate dead = animation des morts
+animate objects = animation d'objets
+animate plants = animation des
+plantes
+animate rope = corde animée
+antilife shell = coquille antivie
+antimagic field = zone d'antimagie
+antipathy = aversion
+antiplant shell = coquille antiplantes
+arcane eye = œil du mage
+arcane lock = verrou du mage
+arcane mark = signature magique
+arcane sight = vision magique
+astral projection = projection astrale
+atonement = pénitence
+augury = augure
+awaken = éveil
+baleful polymorph = métamorphose
+funeste
+bane = imprécation
+banishment = bannissement
+barkskin = peau d'écorce
+bear's endurance = endurance de
+l'ours
+bestow curse = malédiction
+Bigby's clenched fist = poing de Bigby
+Bigby's crushing hand = main
+broyeuse de Bigby
+Bigby's forceful hand = main
+impérieuse de Bigby
+Bigby's grasping hand = poigne de
+Bigby
+Bigby's interposing hand = main
+interposée de Bigby
+binding = entrave
+blade barrier = barrière de lames
+blasphemy = blasphème
+bless = bénédiction
+bless water = bénédiction de l'eau
+bless weapon = bénédiction d'arme
+blight = flétrissement végétal
+blindness = cécité
+blindness/deafness = cécité/surdité
+blink = clignotement
+blur = flou
+brain spider = araignée mentale
+break enchantment = annulation
+d'enchantement
+bull's strength = force de taureau
+burning hands = mains brûlantes
+call lightning = appel de la foudre
+call lightning storm = appel de la
+tempête
+calm animals = apaisement des
+animaux
+calm emotions = apaisement des
+émotions
+cat's grace = grâce féline
+cause fear = frayeur
+chain lightning = éclair multiple
+changestaff = bâton sylvanien
+chaos hammer = marteau du Chaos
+charm animal = charme-animal
+charm monster = charme-monstre
+charm person = charme-personne
+charm person or animal = charmepersonne
+ou animal
+chill metal = métal gelé
+chill touch = contact glacial
+circle of death = cercle de mort
+circle of doom = cercle de douleur
+clairaudience = clairaudience
+clairaudience/clairvoyance =
+clairaudience/clairvoyance
+clairvoyance = clairvoyance
+cloak of chaos = manteau du Chaos
+clone = clone
+close = fermeture
+cloudkill = brume mortelle
+color spray = couleurs dansantes
+command = injonction
+command plants = empire végétal
+command undead = contrôle mineur
+des morts-vivants
+commune = communion
+commune with nature = communion
+avec la nature
+comprehend languages =
+compréhension des langages
+cone of cold = cône de froid
+confusion = confusion
+consecrate = consécration
+contact other plane = contact avec les
+plans
+contagion = contagion
+contingency = prévoyance
+continual flame = flamme éternelle
+control plants = contrôle des plantes
+control undead = contrôle des mortsvivants
+control water = contrôle de l'eau
+control weather = contrôle du climat
+control winds = contrôle des vents
+create food and water = création de
+nourriture et d'eau
+create greater undead = création de
+mort-vivant dominant
+create undead = création de mortvivant
+create water = création d'eau
+creeping doom = mort rampante
+crushing despair = désespoir
+foudroyant
+cure critical wounds = soins intensifs
+cure light wounds = soins légers
+cure minor wounds = soins
+superficiels
+cure moderate wounds = soins
+modérés
+cure serious wounds = soins
+importants
+curse water = malédiction de l'eau
+dancing lights = lumières dansantes
+darkness = ténèbres
+darkvision = vision dans le noir
+daylight = lumière du jour
+daze = hébétement
+daze monster = hébétement de
+monstre
+deafness = surdité
+death knell = mise à mort
+death ward = protection contre la
+mort
+deathwatch = perception de la mort
+deep slumber = sommeil profond
+deeper darkness = ténèbres profondes
+delay poison = ralentissement du
+poison
+delayed blast fireball = boule de feu à
+retardement
+demand = exigence
+desecrate = profanation
+destruction = destruction
+detect animals or plants = détection
+de la faune ou de la flore
+detect chaos = détection du Chaos
+detect evil = détection du Mal
+detect good = détection du Bien
+detect law = détection de la Loi
+detect magic = détection de la magie
+detect poison = détection du poison
+detect scrying = détection de la
+scrutation
+detect secret doors = détection des
+passages secrets
+detect snares and pits = détection des
+collets et des fosses
+detect thoughts = détection de pensées
+detect undead = détection des mortsvivants
+dictum = décret
+dimension door = porte
+dimensionnelle
+dimensional anchor = ancre
+dimensionnelle
+dimensional lock = verrou
+dimensionel
+diminish plants = rabougrissement
+des plantes
+discern lies = détection du mensonge
+discern location = localisation
+suprême
+disguise self = déguisement
+disintegrate = désintégration
+dismissal = renvoi
+dispel chaos = rejet du Chaos
+dispel evil = rejet du Mal
+dispel good = rejet du Bien
+dispel law = rejet de la Loi
+dispel magic = dissipation de la magie
+dispel vil = rejet du Mal
+displacement = déplacement
+disrupt undead = destruction de mortvivant
+disrupting weapon = arme
+destructrice
+divination = divination
+divine favor = faveur divine
+divine power = puissance divine
+dominate animal = domination
+d'animal
+dominate monster = domination
+universelle
+dominate person = domination
+doom = anathème
+Drawmij's instant summons =
+invocation instantanée de Drawmij
+dream = songe
+dweomer of transference = sortilège
+de transfert
+eagle's splendor = splendeur de l'aigle
+earthquake = tremblement de terre
+elemental swarm = nuée
+d'élémentaires
+emotion = émotion
+endure elements = endurance aux
+énergies destructives
+energy drain = absorption d'énergie
+enervation = énergie négative
+enlarge person = agrandissement
+entangle = enchevêtrement
+enthrall = discours captivant
+entropic shield = bouclier entropique
+erase = effacement
+ethereal jaunt = forme éthérée
+etherealness = passage dans l'éther
+Evard's black tentacles = tentacules
+noirs d'Evard
+expeditious retreat = repli expéditif
+explosive runes = runes explosives
+eyebite = mauvais œil
+fabricate = fabrication
+faerie fire = lueur féerique
+false life = simulacre de vie
+false vision = leurre
+fear = terreur
+feather fall = feuille morte
+feeblemind = débilité
+find the path = orientation
+find traps = détection des pièges
+finger of death = doigt de mort
+fire seeds = germes de feu
+fire shield = bouclier de feu
+fire storm = tempête de feu
+fire trap = piège à feu
+fireball = boule de feu
+flame arrow = flèches enflammées
+flame blade = lame de feu
+flame strike = colonne de feu
+flaming sphere = sphère de feu
+flare = illumination
+flesh to stone = pétrification
+fly = vol
+fog cloud = nappe de brouillard
+forbiddance = interdiction
+forcecage = cage de force
+foresight = prémonition
+fox's cunning = ruse du renard
+freedom = délivrance
+freedom of movement = liberté de
+mouvement
+gaseous form = état gazeux
+gate = portail
+geas = quête
+geas/quest = quête
+gentle repose = préservation des
+morts
+ghost sound = son imaginaire
+ghoul touch = baiser de la goule
+giant vermin = vermine géante
+glibness = bagou
+glitterdust = poussière scintillante
+globe of invulnerability = globe
+d'invulnérabilité renforcée
+glossolalia = glossolalie
+glyph of warding = glyphe de garde
+good hope = espoir
+goodberry = baie nourricière
+grease = graisse
+greater arcane sight = vision magique
+suprême
+greater command = injonction
+suprême
+greater dispel magic = dissipation
+suprême
+greater glyph of warding = glyphe de
+garde suprême
+greater heroism = héroïsme suprême
+greater invisibility = invisibilité
+suprême
+greater magic fang = morsure
+magique suprême
+greater magic weapon = arme
+magique suprême
+greater planar ally = allié suprême
+d'outreplan
+greater planar binding = contrat
+suprême
+greater prying eyes = œil indiscret
+suprême
+greater psychic turmoil = tourmente
+psychique suprême
+greater restoration = restauration
+suprême
+greater scrying = scrutation suprême
+greater shadow conjuration =
+convocation d'ombres suprême
+greater shadow evocation = magie des
+ombres suprême
+greater shout = cri suprême
+greater spell immunity = immunité
+contre les sorts suprême
+greater teleport = téléportation
+suprême
+guards and wards = défense magique
+guidance = assistance divine
+gust of wind = bourrasque
+hallow = sanctification
+hallucinatory terrain = terrain
+hallucinatoire
+halt undead = immobilisation de
+morts-vivants
+harm = mise à mal
+haste = rapidité
+heal = guérison suprême
+heal mount = guérison de destrier
+healing circle = cercle de guérison
+heat metal = métal brûlant
+helping hand = main du berger
+heroes' feast = festin des héros
+heroism = héroïsme
+hide from animals = invisibilité pour
+les animaux
+hide from undead = invisibilité pour
+les morts-vivants
+hold animal = immobilisation
+d'animal
+hold monster = immobilisation de
+monstre
+hold person = immobilisation de
+personne
+hold portal = verrouillage
+holy aura = aura sacrée
+holy smite = châtiment sacré
+holy sword = épée sainte
+holy word = parole sacrée
+horrid wilting = flétrissure
+hypnotic pattern = lueurs hypnotiques
+hypnotism = hypnose
+ice storm = tempête de grêle
+identify = identification
+illusory script = texte illusoire
+illusory wall = mur illusoire
+imbue with spell ability = transfert de
+sorts
+implosion = implosion
+imprisonment = emprisonnement
+incendiary cloud = nuage incendiaire
+jump = saut
+keen edge = affûtage
+knock = déblocage
+know direction = repérage
+legend lore = mythes et légendes
+Leomund's secret chest = coffre secret
+de Léomund
+Leomund's secure shelter = refuge de
+Léomund
+Leomund's tiny hut = abri de
+Léomund
+Leomund's trap = piège de Léomund
+lesser confusion = confusion mineure
+lesser geas = mission
+lesser globe of invulnerability = globe
+d'invulnérabilité partielle
+lesser planar ally = allié d'outreplan
+lesser planar binding = contrat
+lesser restoration = restauration
+partielle
+lesser telepathic bond = lien
+télépathique mineur
+levitate = lévitation
+light = lumière
+lightning bolt = éclair
+limited wish = souhait limité
+liveoak = chêne animé
+locate creature = localisation de
+créature
+locate object = localisation d'objet
+longstrider = grand pas
+lullaby = berceuse
+mage armor = armure de mage
+mage hand = manipulation à distance
+magic circle against chaos = cercle
+magique contre le Chaos
+magic circle against evil = cercle
+magique contre le Mal
+magic circle against good = cercle
+magique contre le Bien
+magic circle against law = cercle
+magique contre la Loi
+magic fang = morsure magique
+magic jar = possession
+magic missile = projectile magique
+magic mouth = bouche magique
+magic stone = pierre magique
+magic vestment = panoplie magique
+magic weapon = arme magique
+major creation = création majeure
+major image = image accomplie
+make whole = réparation intégrale
+mark of justice = marque de la justice
+mass bear's endurance = endurance
+de l'ours de groupe
+mass bull's strength = force de
+taureau de groupe
+mass cat's grace = grâce féline de
+groupe
+mass charm monster = charmemonstre
+de groupe
+mass cure critical wounds = soins
+intensifs de groupe
+mass cure light wounds = soins légers
+de groupe
+mass cure moderate wounds = soins
+modérés de groupe
+mass cure serious wounds = soins
+importants de groupe
+mass eagle's splendor = splendeur de
+l'aigle de groupe
+mass enlarge person =
+agrandissement de groupe
+mass fox's cunning = ruse du renard
+de groupe
+mass haste = rapidité de groupe
+mass heal = guérison suprême de
+groupe
+mass hold monster = immobilisation
+de monstre de groupe
+mass hold person = immobilisation de
+personne de groupe
+mass inflict critical wounds = blessure
+critique de groupe
+mass inflict light wounds = blessure
+légère de groupe
+mass inflict moderate wounds =
+blessure modérée de groupe
+mass inflict serious wounds = blessure
+grave de groupe
+mass invisibility = invisibilité de
+groupe
+mass owl's wisdom = sagesse du
+hibou de groupe
+mass reduce person = rapetissement
+de groupe
+mass suggestion = suggestion de
+groupe
+maze = dédale
+meld into stone = fusion dans la
+pierre
+Melf's acid arrow = flèche acide de
+Melf
+mending = réparation
+mental pinnacle = apogée mental
+message = message
+meteor swarm = nuée de météores
+mind blank = esprit impénétrable
+mind fog = brume mentale
+minor creation = création mineure
+minor image = image imparfaite
+miracle = miracle
+mirage arcana = mirage
+mirror image = image miroir
+misdirection = détection faussée
+mislead = double illusoire
+modify memory = modification de
+mémoire
+moment of prescience = moment de
+prescience
+Mordenkainen's disjunction =
+disjonction de Mordenkainen
+Mordenkainen's faithful hound =
+chien de garde de Mordenkainen
+Mordenkainen's lucubration =
+remémoration de Mordenkainen
+Mordenkainen's magnificent
+mansion = manoir somptueux de
+Mordenkainen
+Mordenkainen's private sanctum =
+sanctuaire de Mordenkainen
+Mordenkainen's sword = épée de
+Mordenkainen
+mount = monture
+move earth = glissement de terrain
+negative energy protection =
+protection contre l'énergie négative
+neutralize poison = neutralisation du
+poison
+nightmare = cauchemar
+nondetection = antidétection
+Nystul's magic aura = aura magique
+de Nystul
+Nystul's undetectable aura = aura
+indétectable de Nystul
+obscure object = dissimulation d'objet
+obscuring mist = brume de
+dissimulation
+open = ouverture
+open/close = ouverture/fermeture
+order's wrath = courroux de l'ordre
+Otiluke's freezing sphere = sphère
+glaciale d'Otiluke
+Otiluke's resilient sphere = sphère
+d'isolement d'Otiluke
+Otiluke's telekinetic sphere = sphère
+téléguidée d'Otiluke
+Otto's irresistible dance = danse
+irrésistible d'Otto
+overland flight = vol supérieur
+owl's wisdom = sagesse du hibou
+pass without trace = passage sans
+trace
+passwall = passe-muraille
+permanency = permanence
+permanent image = image permanente
+persistent image = image
+prédéterminée
+phantasmal killer = assassin
+imaginaire
+phantom steed = coursier fantôme
+phase door = porte de phase
+planar ally = allié majeur d'outreplan
+planar binding = contrat
+intermédiaire
+plane shift = changement de plan
+plant growth = croissance végétale
+poison = empoisonnement
+polar ray = rayon polaire
+polymorph = métamorphose
+polymorph any object =
+métamorphose universelle
+power word, blind = mot de pouvoir
+aveuglant
+power word, kill = mot de pouvoir
+mortel
+power word, stun = mot de pouvoir
+étourdissant
+prayer = prière
+prestidigitation = prestidigitation
+prismatic sphere = sphère prismatique
+prismatic spray = rayons prismatiques
+prismatic wall = mur prismatique
+probe thoughts = exploration des
+pensées
+produce flame = flammes
+programmed image = image
+programmée
+project image = projection d'image
+protection from arrows = protection
+contre les projectiles
+protection from chaos = protection
+contre le Chaos
+protection from energy = protection
+contre les énergies destructives
+protection from evil = protection
+contre le Mal
+protection from good = protection
+contre le Bien
+protection from law = protection
+contre la Loi
+protection from spells = protection
+contre les sorts
+prying eyes = œil indiscret
+psychic turmoil = tourmente
+psychique
+purify food and drink = purification
+de nourriture et d'eau
+pyrotechnics = pyrotechnie
+quench = extinction des feux
+quest = quête
+rage = rage
+rainbow pattern = lueur d'arc-en-ciel
+raise dead = rappel à la vie
+random action = action aléatoire
+Rary's mnemonic enhancer =
+mémorisation de Rary
+Rary's telepathic bond = lien
+télépathique de Rary
+ray of enfeeblement = rayon
+affaiblissant
+ray of exhaust = rayon d'épuisement
+ray of frost = rayon de givre
+read magic = lecture de la magie
+reduce animal = rapetissement
+d'animal
+reduce person = rapetissement
+refuge = refuge
+regenerate = régénération
+reincarnate = réincarnation
+remove blindness = guérison de la
+cécité
+remove blindness/deafness = guérison
+de la cécité/surdité
+remove curse = délivrance des
+malédictions
+remove deafness = guérison de la
+surdité
+remove disease = guérison des
+maladies
+remove fear = regain d'assurance
+remove paralysis = délivrance de la
+paralysie
+repel metal or stone = éloignement du
+métal et de la pierre
+repel vermin = répulsif
+repel wood = éloignement du bois
+repulsion = champ de force
+resist elements = résistance aux
+énergies destructives
+resist energy = résistance aux
+énergies destructives
+resistance = résistance
+restoration = restauration
+resurrection = résurrection
+reverse gravity = inversion de la
+gravité
+righteous might = force du colosse
+rope trick = corde enchantée
+rusting grasp = rouille
+sanctuary = sanctuaire
+scare = effroi
+scintillating pattern = motif scintillant
+scorching ray = rayon ardent
+screen = écran
+scrying = scrutation
+sculpt sound = manipulation des sons
+searing light = lumière brûlante
+secret page = page secrète
+see invisibility = détection de
+l'invisibilité
+seeming = faux-semblant
+sending = communication à distance
+sepia snake sigil = sceau du serpent
+sequester = dissimulation suprême
+shades = reflets d'ombre
+shadow conjuration = convocation
+d'ombres
+shadow evocation = magie des ombres
+shadow walk = traversée des ombres
+shambler = grand tertre
+shapechange = changement de forme
+shatter = fracassement
+shield = bouclier
+shield of faith = bouclier de la foi
+shield of law = bouclier de la Loi
+shield other = protection d'autrui
+shillelagh = gourdin magique
+shocking grasp = décharge électrique
+shout = cri
+shrink item = réduction d'objet
+silence = silence
+silent image = image silencieuse
+simulacrum = simulacre
+slay living = exécution
+sleep = sommeil
+sleet storm = tempête de neige
+slow = lenteur
+snare = collet
+soften earth and stone =
+ramollissement de la terre et de la
+pierre
+solid fog = brouillard dense
+song of discord = chant de discorde
+soul bind = capture d'âme
+sound burst = cacophonie
+speak with animals = communication
+avec les animaux
+speak with dead = communication
+avec les morts
+speak with plants = communication
+avec les plantes
+spectral hand = main spectrale
+spell immunity = immunité contre les
+sorts
+spell resistance = résistance à la
+magie
+spell turning = renvoi des sorts
+spellstaff = bâton à sort
+spider climb = pattes d'araignée
+spike growth = croissance d'épines
+spike stones = pierres acérées
+spiritual weapon = arme spirituelle
+statue = statue
+status = rapport
+stinking cloud = nuage nauséabond
+stone shape = façonnage de la pierre
+stone tell = pierres commères
+stone to flesh = transmutation de la
+pierre en chair
+stoneskin = peau de pierre
+storm of vengeance = tempête
+vengeresse
+suggestion = suggestion
+summon instrument = convocation
+d'instrument
+summon monster I = convocation de
+monstres I
+summon monster II = convocation de
+monstres II
+summon monster III = convocation de
+monstres III
+summon monster IV = convocation de
+monstres IV
+summon monster IX = convocation de
+monstres IX
+summon monster V = convocation de
+monstres V
+summon monster VI = convocation de
+monstres VI
+summon monster VII = convocation de
+monstres VII
+summon monster VIII = convocation
+de monstres VIII
+summon nature's ally I = convocation
+d'alliés naturels I
+summon nature's ally II = convocation
+d'alliés naturels II
+summon nature's ally III =
+convocation d'alliés naturels III
+summon nature's ally IV =
+convocation d'alliés naturels IV
+summon nature's ally IX =
+convocation d'alliés naturels IX
+summon nature's ally V = convocation
+d'alliés naturels V
+summon nature's ally VI =
+convocation d'alliés naturels VI
+summon nature's ally VII =
+convocation d'alliés naturels VII
+summon nature's ally VIII =
+convocation d'alliés naturels VIII
+summon swarm = nuée grouillante
+sunbeam = rayon de soleil
+sunburst = explosion de lumière
+symbol = symbole
+symbol of death = symbole de mort
+symbol of discord = symbole de
+discorde
+symbol of fear = symbole de terreur
+symbol of hopelessness = symbole de
+désespoir
+symbol of insanity = symbole
+d'aliénation mentale
+symbol of pain = symbole de douleur
+symbol of persuasion = symbole de
+persuasion
+symbol of sleep = symbole de sommeil
+symbol of stunning = symbole
+d'étourdissement
+symbol of weakness = symbole de
+faiblesse
+sympathetic vibration = résonance
+sympathy = attirance
+Tasha's hideous laughter = fou rire de
+Tasha
+telekinesis = télékinésie
+teleport = téléportation
+teleport object = téléportation d'objet
+teleportation circle = cercle de
+téléportation
+temporal stasis = animation
+suspendue
+Tenser's floating disk = disque flottant
+de Tenser
+Tenser's transformation =
+transformation de Tenser
+time stop = arrêt du temps
+tongues = don des langues
+touch of fatigue = fatigue
+touch of idiocy = idiotie
+transmute metal to wood =
+transmutation du métal en bois
+transmute mud to rock =
+transmutation de la boue en pierre
+transmute rock to mud =
+transmutation de la pierre en boue
+transport via plants = voie végétale
+trap the soul = séquestration
+tree shape = forme d'arbre
+tree stride = voyage par les arbres
+true resurrection = résurrection
+suprême
+true seeing = vision lucide
+true strike = coup au but
+undeath to death = annihilation de
+mort-vivant
+undetectable alignment = alignement
+indétectable
+unhallow = sanctification maléfique
+unholy aura = aura maudite
+unholy blight = ténèbres maudites
+unseen servant = serviteur invisible
+vampiric touch = baiser du vampire
+veil = voile
+ventriloquism = ventriloquie
+virtue = stimulant
+vision = vision mystique
+wail of the banshee = plainte d'outretombe
+wall of fire = mur de feu
+wall of force = mur de force
+wall of ice = mur de glace
+wall of iron = mur de fer
+wall of stone = mur de pierre
+wall of thorns = mur d'épines
+warp wood = distorsion du bois
+water breathing = respiration
+aquatique
+water walk = marche sur l'onde
+waves of exhaustion = vagues
+d'épuisement
+waves of fatigue = vagues de fatigue
+web = toile d'araignée
+weird = ennemi subconscient
+whirlwind = cyclone
+whispering wind = vent de murmures
+wind walk = vent divin
+wind wall = mur de vent
+wish = souhait
+wood shape = façonnage du bois
+word of chaos = parole du Chaos
+word of recall = mot de rappel
+zone of silence = zone de silence
+zone of truth = zone de vérité
+(normal) metamagic rod = sceptre de
+métamagie modérée
+<spell> scroll ; scroll of <spell> =
+parchemin de <sort>
+absorbing shield = bouclier phagocyte
+(ou écu phagocyte)
+acid = acide
+acid resistance = résistance à l'acide
+Acrola, Watchful Tooth of
+Ashardalon = Acrola, Croc alerte
+d'Ashardalon
+adamantine battleaxe = hache
+d'armes en adamantium
+adamantine breastplate = cuirasse en
+adamantium
+adamantine dagger = dague en
+adamantium
+adamantine shield = bouclier en
+adamantium (ou écu en
+adamantium)
+agate = agate
+air elemental gem = gemme à
+élémentaire d'Air
+alchemist's fire = feu grégeois
+alchemist's lab = laboratoire
+d'alchimie
+ale = bière
+alexandrite = alexandrite
+amazing lock = excellent cadenas
+amber = ambre
+amethyst = améthyste
+amulet of health = amulette de
+Constitution
+amulet of inescapable detection =
+amulette de localisation
+amulet of mighty fists = amulette des
+poings invincibles
+amulet of natural armor = amulette
+d'armure naturelle
+amulet of proof against detection and
+location = amulette d'antidétection
+amulet of the planes = amulette des
+plans
+anarchic ; +X anarchic <weapon> =
+anarchique ; <arme> +X
+anarchique
+animated = animé(e)
+antimatter rifle = fusil à antimatière
+antimatter rifle energy pack =
+recharge énergétique pour fusil à
+antimatière
+antitoxin = antidote
+apparatus of Kwalish = submersible
+de Kwalish
+aquamarine = aigue-marine
+armor of arrow attraction = armure
+d'attraction des projectiles
+armor of rage = armure de fureur
+arrow deflection = antiprojectiles
+artisan's outfit = tenue d'artisan
+artisan's tools = outils d'artisan
+assassin's dagger = dague de
+l'assassin
+automatic pistol = pistolet
+automatique
+automatic rifle = fusil automatique
+average lock = cadenas moyen
+axiomatic ; +X axiomatic
+<weapon> = axiomatique ; <arme>
++X axiomatique
+azurite = azurite
+backpack = sac à dos
+bag of devouring = sac dévoreur
+bag of holding = sac sans fond
+bag of holding (bag 1) = sac sans
+fond (1er modèle)
+bag of holding (bag 2) = sac sans
+fond (2e modèle)
+bag of holding (bag 3) = sac sans
+fond (3e modèle)
+bag of holding (bag 4) = sac sans
+fond (4e modèle)
+bag of tricks = sac à malice
+bag of tricks (gray) = sac à malice
+(gris)
+bag of tricks (rust) = sac à malice
+(rouille)
+bag of tricks (tan) = sac à malice
+(ocre)
+ballista = baliste
+banded agate = agate xyloïde
+banded mail of luck = crevice de la
+seconde chance
+bane ; +X YYY bane <weapon> =
+tueur ; <arme> +X tueur (ou tueuse)
+de YYY
+banquet = banquet
+barding = barde
+barrel = tonneau
+bashing = d'attaque
+basket = panier
+bead of force = bille de force
+bedroll = paillasse
+bell = cloche
+belt of dwarvenkind = ceinture des
+nains
+belt of giant strength = ceinturon de
+force de géant
+belt pouch = sacoche de ceinture
+berserking sword = épée de berserker
+beryl = béryl
+bit and bridle = mors et bride
+black dragon orb of dragonkind =
+orbe du dragon noir
+black opal = opale noire
+black pearl = perle noire
+black star sapphire = saphir noir
+block and tackle = palan
+bloodstone = héliotrope
+blowgun = sarbacane
+blowgun needle = aiguille pour
+sarbacane
+blue diamond = diamant bleu
+blue dragon orb of dragonkind =
+orbe du dragon bleu
+blue quartz = quartz bleu
+blue sapphire = saphir bleu
+blue star sapphire = saphir bleu
+blue-white diamond = diamant
+limpide
+Boccob's blessed book = livre
+magique de Boccob
+bomb = bombe
+book of exalted deeds = livre
+d'exaltation suprême
+book of infinite spells = recueil de
+sorts inépuisable
+book of vile darkness = livre de noire
+vilenie
+boots of dancing = bottes de danse
+effrénée
+boots of elvenkind = bottes d'elfe
+boots of levitation = bottes de
+lévitation
+boots of speed = bottes de rapidité
+boots of striding and springing =
+bottes de sept lieues
+boots of teleportation = bottes de
+téléportation
+boots of the winterlands = bottes des
+terres gelées
+Bosk, the Poetic Blade = Bosk, la
+lame poétesse
+bottle of air = flacon d'air pur
+bowl of commanding water
+elementals = jatte de contrôle des
+élémentaires de l'Eau
+bracelet of friends = bracelet
+d'assistance
+bracers of armor = bracelets d'armure
+bracers of defenselessness = bracelets
+de vulnérabilité
+brass dragon orb of dragonkind =
+orbe du dragon d'airain
+brazier of commanding fire
+elementals = brasero de contrôle
+des élémentaires du Feu
+bread = pain
+breastplate of command = cuirasse de
+commandement
+brilliant energy ; +X brilliant energy
+<weapon> = lumière ; <arme> +X
+de lumière
+bronze dragon orb of dragonkind =
+orbe du dragon de bronze
+brooch of shielding = broche de
+défense
+broom of animated attack = balai
+frappeur
+broom of flying = balai volant
+brown diamond = diamant brun
+brown-green garnet = grenat brunvert
+bucket = seau
+bullseye lantern = lanterne sourde
+caltrop = chausse-trappe (plur.
+chausse-trappes)
+canary diamond = diamant jaune
+candle = bougie
+candle of invocation = cierge
+d'invocation
+candle of truth = cierge de vérité
+canvas = toile
+cape of the mountebank = cape de
+prestidigitateur
+carnelian = cornaline
+carpet of flying = tapis volant
+cart = charrette
+caster's shield = bouclier des arcanes
+(ou rondache des arcanes)
+castle = château
+celestial armor = armure céleste
+censer of controlling air elementals =
+encensoir de contrôle des
+élémentaires de l'Air
+chain = chaîne
+chalcedony = calcédoine
+chalk = craie
+chaos diamond = diamant du Chaos
+cheese = fromage
+chest = coffre
+chime of interruption = carillon
+d'interruption
+chime of opening = carillon
+d'ouverture
+chrysoberyl = chrysobéryl
+chrysoprase = chrysoprase
+circlet of persuasion = serre-tête de
+persuasion
+citrine = citrine
+clay golem manual = traité de
+création des golems d'argile
+clay jug = jarre en terre cuite
+clay mug = chope en terre cuite
+clay pitcher = cruche en terre cuite
+clay tankard = chope en terre cuite
+clearest bright green emerald =
+émeraude pure
+cleric's vestments = tenue sacerdotale
+climber's kit = matériel d'escalade
+cloak of arachnida = cape de
+l'araignée
+cloak of Charisma = cape de
+Charisme
+cloak of elvenkind = cape d'elfe
+cloak of etherealness = cape éthérée
+cloak of poisonousness = cape
+empoisonnée
+cloak of resistance = cape de
+résistance
+cloak of the bat = cape de la chauvesouris
+cloak of the manta ray = cape de la
+raie manta
+coach cab = diligence
+cold resistance = résistance au froid
+cold weather outfit = tenue polaire
+common inn stay = séjour à l'auberge
+de qualité convenable
+common meal = repas de qualité
+convenable
+common musical instrument =
+instrument de musique courant
+common wine = vin de table
+copper dragon orb of dragonkind =
+orbe du dragon de cuivre
+coral = corail
+corundum = corindon
+courtier's outfit = habit de cour
+crowbar = pied-de-biche
+crystal ball = boule de cristal
+crystal ball with detect thoughts =
+boule de cristal dotée de détection
+de pensées
+crystal ball with see invisibility =
+boule de cristal dotée de détection
+de l'invisibilité
+crystal ball with telepathy = boule de
+cristal dotée de télépathie
+crystal ball with true seeing = boule
+de cristal dotée de vision lucide
+crystal hypnosis ball = boule de
+cristal asservissante
+cube of force = cube de force
+cube of frost resistance = cube de
+résistance au froid
+cubic gate = cube des plans
+cursed –2 sword = épée maudite –2
+cursed backbiter spear = lance
+traîtresse
+Daern's instant fortress = forteresse
+de Daern
+dagger of venom = dague venimeuse
+dancing ; +X dancing <weapon> =
+dansant ; <arme> +X dansant(e)
+darkskull = crâne des ténèbres
+darkwood buckler = targe en ébénite
+darkwood heavy shield = écu en
+ébénite
+darkwood light shield = rondache en
+ébénite
+darkwood shield = écu en ébénite
+decanter of endless water = carafe
+intarissable
+deck of illusions = cartes
+fantasmagoriques
+deck of many things = cartes
+merveilleuses
+deep blue spinel = spinelle bleu nuit
+deep green spinel = spinelle vert
+sombre
+defending ; +X defending
+<weapon> = gardien ; <arme> +X
+gardien(ne)
+demon armor = armure démoniaque
+diamond = diamant
+dimensional shackles = chaînes
+dimensionnelles
+disguise kit = trousse de déguisement
+disruption ; +X disruption
+<weapon> = destruction ; <arme>
++X de destruction
+distance ; +X distance <weapon> =
+longue portée ; <arme> +X à
+longue portée
+dragonhide plate = harnois en peau
+de dragon
+druid's vestment = chasuble de druide
+drums of panic = timbales de panique
+dust of appearance = poudre
+d'apparition
+dust of disappearance = poudre de
+disparition
+dust of dryness = poudre dessiccative
+dust of illusion = poudre d'illusion
+dust of sneezing and choking =
+poudre à éternuer
+dust of tracelessness = poudre de
+dissimulation des traces
+dwarven plate = harnois nain
+dwarven thrower = marteau de lancer
+nain
+dynamite = dynamite
+earth elemental gem = gemme à
+élémentaire de Terre
+efreeti bottle = urne du mauvais génie
+electricity resistance = résistance à
+l'électricité
+elemental gem = gemme à
+élémentaire
+elixir of fire breath = élixir de souffle
+enflammé
+elixir of hiding = élixir de discrétion
+instinctive
+elixir of love = philtre d'amour
+elixir of sneaking = élixir de
+déplacement furtif
+elixir of swimming = élixir de nage
+elixir of thruth = sérum de vérité
+elixir of vision = élixir d'acuité
+visuelle
+elven chain = cotte de mailles elfique
+emerald = émeraude
+empower metamagic rod ; metamagic
+rod (empower) = sceptre de
+métamagie (extension d'effet)
+energy pack = recharge énergétique
+enlarge metamagic rod ; metamagic
+rod (enlarge) = sceptre de
+métamagie (extension de portée)
+entertainer's outfit = costume
+d'artiste
+etherealness = éthéré(e)
+everburning torch = torche éternelle
+eversmoking bottle = urne fumigène
+exotic saddle = selle spéciale
+explorer's outfit = tenue d'explorateur
+extend metamagic rod ; metamagic
+rod (extend) = sceptre de métamagie
+(extension de durée)
+eye agate = œil-de-chat
+eye of Vecna = œil de Vecna
+eyes of charming = yeux de charme
+eyes of doom = yeux d'anathème
+eyes of petrification = yeux de
+pétrification
+eyes of the eagle = yeux de lynx
+feed = nourriture pour animaux
+fiery yellow corundum = corindon
+jaune ambré
+figurine of wondrous power =
+statuette merveilleuse
+figurine of wondrous power (bronze
+griffon) = statuette merveilleuse
+(griffon de bronze)
+figurine of wondrous power (ebony
+fly) = statuette merveilleuse
+(mouche d'ébène)
+figurine of wondrous power (golden
+lions) = statuette merveilleuse (lions
+d'or)
+figurine of wondrous power (ivory
+goats) = statuette merveilleuse
+(chèvres d'ivoire)
+figurine of wondrous power (marble
+elephant) = statuette merveilleuse
+(éléphant de marbre)
+figurine of wondrous power
+(obsidian steed) = statuette
+merveilleuse (destrier d'obsidienne)
+figurine of wondrous power (onyx
+dog) = statuette merveilleuse (chien
+d'onyx)
+figurine of wondrous power
+(serpentine owl) = statuette
+merveilleuse (hibou de chrysolite)
+figurine of wondrous power (silver
+raven) = statuette merveilleuse
+(corbeau d'argent)
+figurine of wondrous power (the goat
+of terror) = statuette merveilleuse
+(chèvre de la terreur)
+figurine of wondrous power (the goat
+of travail) = statuette merveilleuse
+(chèvre des titans)
+figurine of wondrous power (the goat
+of traveling) = statuette
+merveilleuse (chèvre de voyage)
+fine wine = vin de bon cru
+fire elemental gem = gemme à
+élémentaire de Feu
+fire opal = opale de feu
+fire resistance = résistance au feu
+firewood = bois de chauffage
+fishhook = hameçon
+fishing net = filet de pêche
+flame tongue = épée ardente
+flamer = lance-flammes
+flamer fuel pack = recharge de
+combustible pour lance-flammes
+flaming ; +X flaming <weapon> =
+feu ; <arme> +X de feu
+flaming burst ; +X flaming burst
+<weapon> = feu intense ; <arme>
++X de feu intense
+flask = flasque
+flask of curses = flasque maudite
+flesh golem manual = traité de
+création des golems de chair
+flint and steel = silex et amorce
+folding boat = bateau pliant
+fortification = de défense
+fragmentation grenade = grenade à
+fragmentation
+freshwater pearl = perle d'eau douce
+frost ; +X frost <weapon> = froid ;
+<arme> +X de froid
+frost brand = épée de givre
+fuel pack = recharge de combustible
+galley = trirème
+garnet = grenat
+gate toll = droit d'entrée
+gauntlet of rust = gantelet de rouille
+gauntlets of fumbling = gants de
+maladresse
+gauntlets of ogre power = gantelets
+d'ogre
+gem of brightness = gemme
+d'illumination
+gem of seeing = gemme de vision
+ghost touch = spectral(e)
+ghost touch ; +X ghost touch
+<weapon> = spectrale ; <arme> +X
+spectral(e)
+glamered = de mimétisme
+glass wine bottle = bouteille de vin en
+verre
+glove of storing = gant de rangement
+gloves of arrow snaring = gants
+antiprojectiles
+gloves of Dexterity = gants de
+Dextérité
+gloves of swimming and climbing =
+gants de nage et d'escalade
+goggles of minute seeing = lunettes
+grossissantes
+goggles of night = lunettes de
+nyctalope
+gold dragon orb of dragonkind =
+orbe du dragon d'or
+golden pearl = perle dorée
+golden yellow topaz = topaze jaune
+d'or
+golem manual = traité de création des
+golems
+golembane scarab = broche
+antigolems
+golembane scarab (any golem) =
+broche antigolems (tous les golems)
+golembane scarab (clay) = broche
+antigolems (golems d'argile)
+golembane scarab (flesh and clay) =
+broche antigolems (golems de chair
+ou d'argile)
+golembane scarab (flesh) = broche
+antigolems (golems de chair)
+golembane scarab (iron) = broche
+antigolems (golems de fer)
+golembane scarab (stone) = broche
+antigolems (golems de pierre)
+good inn stay = séjour à l'auberge de
+bonne qualité
+good lock = bon cadenas
+good meal = repas de bonne qualité
+grand house = grande maison
+grappling hook = grappin
+greater acid resistance = résistance à
+l'acide suprême
+greater bracers of archery = bracelets
+d'archer hors pair
+greater cold resistance = résistance
+au froid suprême
+greater electricity resistance =
+résistance à l'électricité suprême
+greater fire resistance = résistance au
+feu suprême
+greater horn of blasting = cor de
+dévastation suprême
+greater metamagic rod = sceptre de
+métamagie majeure
+greater shadow = d'ombre suprême
+greater silent moves = de
+déplacement furtif suprême
+greater slaying arrow = flèche
+mortelle supérieure
+greater slick = graisseux (ou
+graisseuse) suprême
+greater sonic resistance = résistance
+au son suprême
+greater stone golem manual = traité
+de création des golems de pierre
+monumentaux
+greater strand of prayer beads =
+chapelet de prières majeur
+green dragon orb of dragonkind =
+orbe du dragon vert
+grenade launcher = lance-grenades
+gunpowder = poudre
+hag eye = œil des sorcières
+hammer = marteau
+hammer of thunderbolts = marteau
+de tonnerre
+hand of glory = main miraculeuse
+hand of the mage = main du mage
+hand of Vecna = main de Vecna
+harp of charming = harpe de
+suggestion
+hat of disguise = couvre-chef de
+déguisement
+headband of intellect = bandeau
+d'Intelligence
+healer's kit = trousse de premiers
+secours
+heartstone = cardioline (f)
+heavy barding = barde lourd
+heavy catapult = catapulte lourde
+heavy fortification = de défense
+lourde
+helm of brilliance = casque de mille
+feux
+helm of comprehending languages
+and reading magic = casque de
+compréhension
+helm of opposite alignment = casque
+de changement d'alignement
+helm of telepathy = casque de
+télépathie
+helm of teleportation = casque de
+téléportation
+helm of underwater action = casque
+de l'homme-poisson
+hematite = hématite
+hemp rope = corde en chanvre
+Heward's handy haversack =
+havresac d'Hévard
+holly and mistletoe = houx et gui
+holy ; +X holy <weapon> = sainte ;
+<arme> +X saint(e)
+holy avenger = épée de justice
+holy symbol = symbole sacré
+holy water = eau bénite
+hooded lantern = lanterne à capote
+horn of blasting = cor de dévastation
+horn of evil = cor du Mal
+horn of fog = corne de brume
+horn of goodness = cor du Bien
+horn of goodness/evil = cor du
+Bien/du Mal
+horn of the tritons = conque des
+tritons
+horn of Valhalla = cor du Valhalla
+horn of Valhalla (brass) = cor du
+Valhalla (laiton)
+horn of Valhalla (bronze) = cor du
+Valhalla (bronze)
+horn of Valhalla (iron) = cor du
+Valhalla (fer)
+horn of Valhalla (silver) = cor du
+Valhalla (argent)
+horseshoes of a zephyr = fers à cheval
+du zéphyr
+horseshoes of speed = fers à cheval de
+rapidité
+hourglass = sablier
+huge castle = grand château
+icy burst ; +X icy burst <weapon> =
+froid intense ; <arme> +X de froid
+intense
+immovable rod = sceptre inamovible
+improved acid resistance =
+résistance à l'acide supérieure
+improved cold resistance =
+résistance au froid supérieure
+improved electricity resistance =
+résistance à l'électricité supérieure
+improved fire resistance = résistance
+au feu supérieure
+improved shadow = d'ombre
+supérieure
+improved silent moves = de
+déplacement furtif supérieur
+improved slick = graisseux (ou
+graisseuse) supérieur(e)
+improved sonic resistance =
+résistance au son supérieure
+incense of meditation = encens de
+méditation
+incense of obsession = encens
+d'obsession
+invulnerability = d'invulnérabilité
+ioun stone = pierre ioun
+ioun stone (clear spindle) = pierre
+ioun (fuseau translucide)
+ioun stone (dark blue rhomboid) =
+pierre ioun (rhombe bleu nuit)
+ioun stone (deep red sphere) = pierre
+ioun (sphère rouge sang)
+ioun stone (dull gray) = pierre ioun
+(gris terne)
+ioun stone (dusty rose prism) =
+pierre ioun (prisme rose laiteux)
+ioun stone (incandescent blue
+sphere) = pierre ioun (sphère bleu
+incandescent)
+ioun stone (iridescent spindle) =
+pierre ioun (fuseau irisé)
+ioun stone (lavender and green
+ellipsoid) = pierre ioun (ellipsoïde
+vert et lavande)
+ioun stone (orange prism) = pierre
+ioun (prisme orange)
+ioun stone (pale blue rhomboid) =
+pierre ioun (rhombe bleu pâle)
+ioun stone (pale green prism) =
+pierre ioun (prisme vert pâle)
+ioun stone (pale lavender
+ellipsoid) = pierre ioun (ellipsoïde
+lavande)
+ioun stone (pearly white spindle) =
+pierre ioun (fuseau blanc laiteux)
+ioun stone (pink and green sphere) =
+pierre ioun (sphère rose et verte)
+ioun stone (pink rhomboid) = pierre
+ioun (rhombe rose vif)
+ioun stone (scarlet and blue
+sphere) = pierre ioun (sphère rouge
+et bleue)
+ioun stone (vibrant purple prism) =
+pierre ioun (prisme violet vif)
+Iquel = Iquel
+iron bands of Bilarro = liens
+mystiques de Bilarro
+iron flask = flasque de fer
+iron golem manual = traité de
+création des golems de fer
+jacinth = hyacinthe
+jade = jade
+jasper = jaspe
+javelin of lightning = javeline de
+foudre
+jet = jais
+Jomnoth, Giantblight = Jomnoth,
+Ruine des géants
+katana = katana
+keelboat = bateau à fond plat
+keen ; +X keen <weapon> = acérée ;
+<arme> +X acéré(e)
+keep = fort
+Keoghtom's ointment = baume de
+Keoghtom
+kusari-gama = kusari-gama
+ladder = échelle
+lamp = lampe
+lantern of revealing = lanterne
+révélatrice
+lapis lazuli = lapis-lazuli
+laser pistol = pistolet-laser
+laser pistol energy pack = recharge
+énergétique pour pistolet-laser
+laser rifle = fusil-laser
+laser rifle energy pack = recharge
+énergétique pour fusil-laser
+lens of detection = loupe de détection
+lesser bracers of archery = bracelets
+d'archer
+lesser metamagic rod = sceptre de
+métamagie mineure
+lesser strand of prayer beads =
+chapelet de prières mineur
+life-drinker = hache dévitalisante
+light barding = barde léger
+light catapult = catapulte légère
+light fortification = de défense légère
+lightning resistance = résistant(e) à
+l'électricité
+lion's shield = bouclier du lion (ou
+écu du lion)
+lock = cadenas
+longship = drakkar
+luck blade = épée de bonne fortune
+luckstone = pierre porte-bonheur
+lyre of building = lyre de bâtisseur
+mace of blood = masse vampire
+mace of Cuthbert = masse de
+Cuthbert
+mace of smiting = masse de
+démolition
+mace of terror = masse d'épouvante
+magnifying glass = loupe
+major circlet of blasting = serre-tête
+de lumière dévastatrice
+major cloak of displacement = cape
+de déplacement
+malachite = malachite
+manacles = menottes
+mansion = belle demeure
+mantle of faith = chasuble de la foi
+mantle of spell resistance = écharpe
+de résistance à la magie
+manual of bodily health = manuel de
+vitalité
+manual of gainful exercise = manuel
+de remise en forme
+manual of quickness of action =
+manuel de coordination physique
+map case = étui à carte
+mask of the skull = masque de la
+camarde
+masterwork artisan's tools = outils
+de maître artisan
+masterwork climber's kit = matériel
+d'escalade de qualité supérieure
+masterwork cold iron longsword =
+épée longue de maître en fer froid
+masterwork disguise kit = trousse de
+déguisement de qualité supérieure
+masterwork healer's kit = trousse de
+premiers secours de qualité
+supérieure
+masterwork item = objet de maître
+masterwork manacles = menottes de
+qualité supérieure
+masterwork musical instrument =
+instrument de musique de maître
+masterwork piton = piton de qualité
+supérieure
+masterwork silver dagger = dague
+de maître en argent
+masterwork thieve's tools = outils de
+cambrioleur de qualité supérieure
+masterwork tool = outil de qualité
+supérieure
+masterwork weapon = arme de
+maître
+mattock of the titans = pioche des
+titans
+maul of the titans = maillet des titans
+maximize metamagic rod ;
+metamagic rod (maximize) =
+sceptre de métamagie (quintessence)
+meat = viande
+medallion of thought projection =
+médaillon d'émission de pensées
+medallion of thoughts = médaillon
+des pensées
+medium barding = barde
+intermédiaire
+merchant's scale = balance
+messenger = messager
+mighty cleaving ; +X mighty
+cleaving <weapon> = enchaînement
+; <arme> +X d'enchaînement
+military exotic saddle = selle spéciale
+de guerre
+military saddle = selle de guerre
+miner's pick = pioche de mineur
+minor circlet of blasting = serre-tête
+de lumière destructrice
+minor cloak of displacement = cape
+de moindre déplacement
+mirror of life trapping = miroir
+d'emprisonnement
+mirror of mental prowess = miroir de
+révélation
+mirror of opposition = miroir
+d'opposition
+mithral full plate of speed = harnois
+en mithral de vitesse
+mithral heavy shield = écu en mithral
+mithral shirt = chemise de mailles en
+mithral
+moaning diamond = diamant plaintif
+moat = douve
+moat with bridge = douve et pont
+moderate fortification = de défense
+intermédiaire
+monk's belt = ceinture de moine
+monk's outfit = habit de moine
+moonstone = pierre de lune
+moss agate = agate mousse
+Murlynd's spoon = cuillère de
+Murlynd
+musket = mousquet
+necklace of adaptation = collier
+d'adaptation
+necklace of fireballs = collier à
+boules de feu
+necklace of fireballs (type I) = collier
+à boules de feu (1er modèle)
+necklace of fireballs (type II) =
+collier à boules de feu (2e modèle)
+necklace of fireballs (type III) =
+collier à boules de feu (3e modèle)
+necklace of fireballs (type IV) =
+collier à boules de feu (4e modèle)
+necklace of fireballs (type V) =
+collier à boules de feu (5e modèle)
+necklace of fireballs (type VI) =
+collier à boules de feu (6e modèle)
+necklace of fireballs (type VII) =
+collier à boules de feu (7e modèle)
+necklace of prayer beads = chapelet
+de prières
+necklace of prayer beads (bead of
+blessing) = chapelet de prières
+(grain de bénédiction)
+necklace of prayer beads (bead of
+healing) = chapelet de prières
+(grain de guérison)
+necklace of prayer beads (bead of
+karma) = chapelet de prières (grain
+de karma)
+necklace of prayer beads (bead of
+smiting) = chapelet de prières (grain
+de châtiment)
+necklace of prayer beads (bead of
+summons) = chapelet de prières
+(grain de convocation)
+necklace of prayer beads (bead of
+wind walking) = chapelet de prières
+(grain de vent divin)
+necklace of strangulation = collier
+étrangleur
+net of snaring = filet aquatique
+nine lives stealer = épée des neuf vies
+noble's outfit = habit de noble
+Nolzur's marvelous pigments =
+pigments merveilleux de Nolzur
+oathbow = arc du long serment
+obsidian = obsidienne
+oil = huile
+oil of <spell> ; <spell> oil = huile de
+<sort>
+onyx = onyx
+opal = opale
+orb of storms = orbe des tempêtes
+orbs of dragonkind = orbes des
+dragons
+pack exotic saddle = selle spéciale de
+bât
+pack saddle = selle de bât
+paper = papier
+parchment = parchemin
+pearl = perle
+pearl of power = perle de
+thaumaturgie
+pearl of power (two spells) = perle de
+thaumaturgie (2 sorts ne dépassant
+pas le 6e niveau)
+pearl of the sirines = perle des sirènes
+peasant's outfit = habit de paysan
+periapt of foul rotting = charme
+d'infection
+periapt of health = charme de bonne
+santé
+periapt of proof against poison =
+charme antipoison
+periapt of Wisdom = médaillon de
+Sagesse
+periapt of wound closure = charme de
+coagulation
+peridot = péridot
+philosopher's stone = pierre
+philosophale
+phylactery of faithfulness =
+phylactère du croyant
+phylactery of undead turning =
+phylactère d'ascendant sur les
+morts-vivants
+pincer staff = longue pince
+pink diamond = diamant rose
+pink pearl = perle rose
+pipes of haunting = flûte de hantise
+pipes of pain = flûte de douleur
+pipes of sounding = flûte à bruitages
+pipes of the sewers = flûte d'Hameln
+pistol = pistolet
+pistol bullet = balle de pistolet
+pistol metal cartridge = cartouche
+pour pistolet (ou pour revolver)
+piton = piton
+plate armor of the deep = harnois des
+profondeurs
+pole = perche
+poor inn stay = séjour à l'auberge de
+qualité médiocre
+poor meal = repas de qualité
+médiocre
+portable hole = puits portable
+portable ram = bélier portable
+potion of <spell> ; <spell> potion =
+potion de <sort>
+potion of poison = potion toxique
+potion vial = fiole pour potion
+Quaal's feather token = plume de
+Quaal
+Quaal's feather token (anchor) =
+plume de Quaal (ancre)
+Quaal's feather token (bird) = plume
+de Quaal (oiseau)
+Quaal's feather token (fan) = plume
+de Quaal (éventail)
+Quaal's feather token (swan boat) =
+plume de Quaal (bateau cygne)
+Quaal's feather token (tree) = plume
+de Quaal (arbre)
+Quaal's feather token (whip) = plume
+de Quaal (fouet)
+quartz = quartz
+quicken metamagic rod ; metamagic
+rod (quicken) = sceptre de
+métamagie (incantation rapide)
+quiver of Ehlonna = carquois
+d'Ehlonna
+ram = bélier
+rapier of puncturing = rapière
+d'anémie
+red dragon orb of dragonkind = orbe
+du dragon rouge
+red garnet = grenat rouge
+red spinel = spinelle rouge
+red-brown spinel = spinelle brunrouge
+reflecting = réfléchissant(e)
+repeater rifle = fusil à répétition
+returning ; +X returning
+<weapon> = boomerang ; <arme>
++X boomerang
+revolver = revolver
+revolver pistol = revolver
+rhino hide = armure de peau de
+rhinocéros
+rhodocrosite = rhodocrosite
+rich purple corundum = corindon
+pourpre
+riding exotic saddle = selle spéciale
+d'équitation
+riding saddle = selle d'équitation
+rifle bullet = balle de mousquet
+rifle metal cartridge = cartouche
+pour fusil à répétition
+rifle metal cartridge clip = chargeur
+pour fusil automatique
+ring gates = anneaux de transport
+ring of animal friendship = anneau
+d'amitié avec les animaux
+ring of blinking = anneau de
+clignotement
+ring of chameleon power = anneau du
+caméléon
+ring of climbing = anneau d'escalade
+ring of clumsiness = anneau de
+gaucherie
+ring of counterspells = anneau de
+contresort
+ring of djinni calling = anneau du
+bon génie
+ring of elemental command = anneau
+de contrôle des éléments
+ring of elemental command (Air) ;
+ring of Air elemental command =
+anneau de contrôle des éléments
+(Air)
+ring of elemental command (Earth) ;
+ring of Earth elemental command =
+anneau de contrôle des éléments
+(Terre)
+ring of elemental command (Fire) ;
+ring of Fire elemental command =
+anneau de contrôle des éléments
+(Feu)
+ring of elemental command (Water) .
+ring of Water elemental
+command = anneau de contrôle des
+éléments (Eau)
+ring of energy resistance = anneau de
+résistance aux énergies destructives
+ring of evasion = anneau d'esquive
+totale
+ring of feather falling = anneau de
+feuille morte
+ring of force shield = anneau de
+bouclier de force
+ring of freedom of movement =
+anneau de liberté de mouvement
+ring of friend shield = anneau de
+protection mutuelle
+ring of greater energy resistance =
+anneau suprême de résistance aux
+énergies destructives
+ring of improved climbing = anneau
+d'escalade supérieure
+ring of improved jumping = anneau
+de saut supérieur
+ring of improved swimming = anneau
+de nage supérieure
+ring of invisibility = anneau
+d'invisibilité
+ring of jumping = anneau de saut
+ring of major energy resistance =
+anneau de grande résistance aux
+énergies destructives
+ring of major spell storing = anneau
+de stockage de sorts majeurs
+ring of mind shielding = anneau de
+barrière mentale
+ring of minor energy resistance =
+anneau mineur de résistance aux
+énergies destructives
+ring of minor spell storing = anneau
+de stockage de sorts mineurs
+ring of protection = anneau de
+protection
+ring of regeneration = anneau de
+régénération
+ring of shooting stars = anneau de feu
+d'étoiles
+ring of spell storing = anneau de
+stockage de sorts
+ring of spell turning = anneau de
+renvoi des sorts
+ring of sustenance = anneau de
+subsistance
+ring of swimming = anneau de nage
+ring of telekinesis = anneau de
+télékinésie
+ring of the ram = anneau du bélier
+ring of three wishes = anneau de
+triple souhait
+ring of water walking = anneau de
+marche sur l'onde
+ring of wizardry = anneau des
+arcanes
+ring of wizardry I = anneau des
+premiers arcanes
+ring of wizardry II = anneau des
+deuxièmes arcanes
+ring of wizardry III = anneau des
+troisièmes arcanes
+ring of wizardry IV = anneau des
+quatrièmes arcanes
+ring of X-ray vision = anneau de
+rayons X
+road toll = droit de passage
+robe of blending = robe de mimétisme
+robe of bones = robe d'ossements
+robe of eyes = robe de vision totale
+robe of powerlessness = robe
+d'impuissance
+robe of scintillating colors = robe
+prismatique
+robe of stars = robe étoilée
+robe of the archmagi = robe
+d'archimage
+robe of useful items = robe de
+camelot
+robe of vermin = robe de vermine
+rock crystal = cristal de roche
+rod of absorption = sceptre
+d'absorption
+rod of alertness = sceptre d'éternelle
+vigilance
+rod of cancellation = sceptre
+d'oblitération
+rod of enemy detection = sceptre de
+détection de l'hostilité
+rod of flailing = sceptre du grand
+fléau
+rod of flame extinguishing = sceptre
+d'extinction des feux
+rod of lordly might = sceptre des
+seigneurs de la guerre
+rod of metal and mineral detection =
+sceptre de détection des métaux et
+des minéraux
+rod of negation = sceptre d'annulation
+rod of rulership = sceptre de
+suzeraineté
+rod of security = sceptre de sécurité
+rod of splendor = sceptre de prestance
+rod of the python ; python rod =
+sceptre du python
+rod of thunder and lightning =
+sceptre de l'orage
+rod of withering = sceptre de
+flétrissement
+rod of wonder = sceptre merveilleux
+rof of the viper = sceptre de la vipère
+rope of climbing = corde d'escalade
+rope of entanglement = corde
+d'enchevêtrement
+rose quartz = quartz rose
+rowboat = barque
+royal outfit = toilette royale
+ruby = rubis
+sack = sac, sacoche ou besace
+saddle = selle
+saddlebags = fontes
+sailing ship = navire de haute mer
+salve of slipperiness = onguent
+d'insaisissabilité
+sapphire = saphir
+sard = sardoine
+sardonyx = onyx marbre
+scabbard of keen edges = fourreau
+d'affûtage
+scarab of death = broche du scarabée
+tueur
+scarab of protection = scarabée de
+protection
+scattergun = fusil à pompe
+scattergun shell = cartouche pour
+fusil à pompe
+scholar's outfit = habit d'érudit
+screaming bolt = carreau hurleur
+scroll case = étui à parchemin
+sealing wax = cire à cacheter
+sewing needle = aiguille à coudre
+shadow = d'ombre
+shadowstaff = bâton des ombres
+shield of Prator = bouclier de Prator
+shifter's sorrow = regret du
+changeant
+ship's passage = traversée en bateau
+shock ; +X shock <weapon> = foudre
+; <arme> +X de foudre
+shocking burst ; +X shocking burst
+<weapon> = foudre intense ;
+<arme> +X de foudre intense
+shortspear = épieu
+shovel = pelle
+shrouds of disintegration = suaire de
+désintégration
+siege tower = tour de siège
+signal whistle = sifflet
+signet ring = chevalière
+silent metamagic rod ; metamagic rod
+(silent) = sceptre de métamagie
+(incantation silencieuse)
+silent moves = de déplacement furtif
+silk rope = corde en soie
+silver dragon orb of dragonkind =
+orbe du dragon d'argent
+silver holy symbol = symbole sacré
+en argent
+silver pearl = perle argentée
+silver unholy symbol = symbole
+maudit en argent
+silversheen = lustrargent
+simple house = maison
+slaying arrow = flèche mortelle
+sled = traîneau
+sledge = masse
+sleep arrow = flèche endormante
+slick = graisseux (ou graisseuse)
+slippers of spider climbing =
+chaussons d'araignée
+small steel mirror = petit miroir en
+acier
+smoke grenade = grenade fumigène
+smokebomb = bombe fumigène
+smokestick = bâton fumigène
+smoky quartz = quartz laiteux
+soap = savon
+sonic resistance = résistance au son
+sovereign glue = colle universelle
+spade = pelle
+spear = lance
+speed ; +X speed <weapon> =
+rapidité ; <arme> +X de rapidité
+spell component pouch = sacoche à
+composantes
+spell resistance = résistance à la
+magie
+spell storing ; +X spell storing
+<weapon> = stockage de sort ;
+<arme> +X de stockage de sort
+sphere of annihilation = sphère
+d'annihilation
+spined shield = bouclier de la
+manticore (ou écu de la manticore)
+spinel = spinelle
+spyglass = longue-vue
+stabling = écurie
+staff of charming = bâton
+d'envoûtement
+staff of defense = bâton de défense
+staff of earth and stone = bâton de la
+pierre et de la terre
+staff of fire = bâton du feu
+staff of frost = bâton du givre
+staff of healing = bâton de guérison
+staff of life = bâton de vie
+staff of passage = bâton de transport
+staff of power = bâton de
+surpuissance
+staff of size alteration = bâton
+d'altération de taille
+staff of swarming insects = bâton du
+grand essaim
+staff of the magi = bâton de
+thaumaturge
+staff of the woodlands = bâton de la
+forêt profonde
+star rose quartz = quartz rutilé
+star ruby = rubis
+stone golem manual = traité de
+création des golems de pierre
+stone horse = cheval de pierre
+stone horse (courser) = cheval de
+pierre (coursier)
+stone horse (destrier) = cheval de
+pierre (destrier)
+stone of alarm = pierre d'alerte
+stone of controlling earth
+elementals = pierre de contrôle des
+élémentaires de la Terre
+stone of good luck ; luckstone =
+pierre porte-bonheur
+stone of weight ; loadstone = pierre
+de lest
+stone salve = onguent des roches
+strand of prayer beads = chapelet de
+prières courant
+sun blade = épée radieuse
+sunrod = bâton éclairant
+sword of Kas = épée de Kas
+sword of life stealing = épée voleuse
+de vie
+sword of subtlety = épée de précision
+sword of the planes = épée des plans
+sylvan scimitar = cimeterre des bois
+talisman of pure good = talisman du
+Bien ultime
+talisman of the sphere = talisman des
+sphères
+talisman of ultimate evil = talisman
+du Mal absolu
+talisman of Zagy = talisman de Zagy
+tanglefoot bag = sacoche
+immobilisante
+teleportation = téléportation
+tent = tente
+thieve's tools = outils de cambrioleur
+throwing ; +X throwing <weapon> =
+lancer ; <arme> +X de lancer
+thundering ; +X thundering
+<weapon> = tonnerre ; <arme> +X
+de tonnerre
+thunderstone = pierre à tonnerre
+tiger eye turquoise = œil-de-tigre
+tindertwig = allume-feu
+tome of clear thought = traité de
+perspicacité
+tome of leadership and influence =
+traité d'autorité et d'influence
+tome of understanding = traité de
+compréhension
+topaz = topaze
+torch = torche
+tourmaline = tourmaline
+tower = tour
+trail rations = rations de survie
+traveler's outfit = tenue de voyage
+trident of fish command = trident de
+domination aquatique
+trident of warning = trident d'alerte
+sous-marine
+turquoise = turquoise
+unguent of timelessness = onguent
+d'intemporalité
+unholy ; +X unholy <weapon> =
+impie ; <arme> +X impie
+unholy symbol = symbole maudit
+unholy water = eau maudite
+universal solvent = solvant universel
+vacuous grimoire = grimoire de
+vacuité
+very simple lock = cadenas très
+simple
+Vesac, la Menteuse = Vésac, la
+Menteuse
+vest of escape = gilet d'évasion
+vial = fiole
+violet garnet = grenat almandin
+vorpal ; +X vorpal <weapon> =
+vorpale ; <arme> +X vorpal(e)
+wagon = chariot
+wakizashi = wakizashi
+wand of <spell> ; <spell> wand =
+baguette de <sort>
+warship = vaisseau de guerre
+water clock = clepsydre
+water elemental gem = gemme à
+élémentaire d'Eau
+waterskin = outre
+well of many worlds = puits des
+mondes
+whetstone = pierre à aiguiser
+white dragon orb of dragonkind =
+orbe du dragon blanc
+white opal = opale blanche
+white pearl = perle blanche
+wild = forme animale
+wind fan = éventail enchanté
+winged boots = bottes ailées
+winged shield = bouclier ailé (ou écu
+ailé)
+wings of flying = cape de vol
+winter blanket = couverture d'hiver
+wizard's spellbook = grimoire
+wooden holy symbol = symbole sacré
+en bois
+wooden unholy symbol = symbole
+maudit en bois
+wounding ; +X wounding
+<weapon> = sanglante ; <arme> +X
+sanglant(e)
+Zax, Cloak of Kings = Zax, Manteau
+des Rois
+zircon = zircon
+aasimar = aasimar(s)
+aboleth = aboleth (m)
+aboleth mage = mage aboleth
+abyssal dire rat = rat sanguinaire
+fiélon
+abyssal greater basilisk ; greater
+abyssal basilisk = grand basilic des
+abysses
+achaierai = achaïeraï (m)
+air elemental = élémentaire de l'Air
+air mephit = méphite aérien (m)
+allip = allip (m)
+androsphinx = androsphinx (m)
+animated object = objet animé
+ankheg = ankheg (m)
+annis = annis (f)
+ape = gorille
+aquatic elf = elfe aquatique
+aquatic ogre = ogre aquatique
+aranea = arachnéa (f)
+arrowhawk = arrawak (m)
+assassin vine = liane chasseresse (f)
+astral deva = déva astral (m)
+athach = ath-atch (inv.)
+average salamander = salamandre
+commune (f)
+avoral = avoral (m)
+azer = azer (m)
+babau = babau (pluriel: babaus)
+baboon = babouin
+badger = blaireau
+baleen whale = baleine
+balor = balor(s)
+barbazu = barbazu (m)
+barbed devil = diable barbelé
+barghest = barghest (m)
+basilisk = basilic (m)
+bat = chauve-souris
+bearded devil = diable barbu
+bebilith = bébilith(s)
+behir = béhir (m)
+beholder = tyrannœil (plur.
+tyrannœils) (m)
+belker = fumigon (m)
+bezekira = bazorka (m)
+bezerika = bazorka (m)
+bison = bison
+black bear = ours noir
+black dragon = dragon noir
+black pudding = pouding noir (m)
+blink dog = chien esquiveur
+blue dragon = dragon bleu
+blue slaad = slaad bleu (m)
+boar = sanglier
+bodak = bodak (m)
+bone devil = diable osseux
+bralani = bralani
+brass dragon = dragon d'airain
+bronze dragon = dragon de bronze
+brown bear = ours brun
+bugbear = gobelours (m)
+bulette = bulette (f)
+cachalot whale = cachalot
+camel = chameau
+carrion crawler = charognard
+rampant
+cat = chat
+celestial creature = créature céleste
+celestial lion = lion céleste
+centaur = centaure (m)
+centipede swarm = nuée de millepattes
+chain devil = diable à chaînes
+chaos beast = chaosien (m)
+cheetah = guépard
+chimera = chimère (f)
+choker = étrangleur (m)
+chuul = cthuul (m)
+clay golem = golem d'argile
+cloaker = manteleur (m)
+cloud giant = géant des nuages
+cockatrice = cockatrice (f)
+Colossal monstrous centipede =
+colossal mille-pattes monstrueux
+Colossal monstrous scorpion =
+colossal scorpion monstrueux
+Colossal monstrous spider =
+colossale araignée monstrueuse
+constrictor snake = serpent
+constricteur
+copper dragon = dragon de cuivre
+cornugon = cornugon (m)
+couatl = couatl (m)
+criosphinx = criocéphale (m)
+crocodile = crocodile
+cryohydra = cryohydre (f)
+dark elf = elfe noir
+dark naga = naga ténébreux (m)
+darkmantle = mante obscure
+death slaad = slaad funeste (m)
+deep dwarf = nain des profondeurs
+deep gnome = gnome des profondeurs
+deep halfling = halfelin des
+profondeurs (h muet, f: halfeline)
+deinonychus = deinonychus (m)
+delver = foreur (m)
+derro = derro(s) (m)
+destrachan = destrakhan (m)
+devourer = dévoreur d'âme
+digester = sécréteur (m)
+dire ape = gorille sanguinaire
+dire badger = blaireau sanguinaire
+dire bat = chauve-souris sanguinaire
+dire bear = ours sanguinaire
+dire boar = sanglier sanguinaire
+dire lion = lion sanguinaire
+dire rat = rat sanguinaire
+dire shark = requin sanguinaire
+dire tiger = tigre sanguinaire
+dire weasel = belette sanguinaire
+dire wolf = loup sanguinaire
+dire wolverine = glouton sanguinaire
+displacer beast = bête éclipsante (f)
+djinni (plur. djinn) = djinn (m)
+dog = chien
+donkey = âne
+doppelganger = doppelganger (m)
+dragon turtle = dragon-tortue
+dragonne = dragonne (f)
+dread wraith = âme-en-peine
+vénérable
+dretch = dretch(s)
+drider = drider (m)
+drow = drow(s)
+dryad = dryade (f)
+duergar = duergar(s) (m)
+dust mephit = méphite(s) poussiéreux
+dwarf = nain (f: naine)
+eagle = aigle
+earth elemental = élémentaire de la
+Terre
+earth mephit = méphite terreux (m)
+efreeti (plur. efreet) = éfrit (m)
+eight-headed hydra = hydre à huit
+têtes (f)
+elasmosaurus = élasmosaure (m)
+elder elemental = seigneur
+élémentaire
+elephant = éléphant
+eleven-headed hydra = hydre à onze
+têtes (f)
+elf = elfe (f: elfe)
+erinyes = érinye (f)
+ethereal filcher = chapardeur éthéré
+ethereal marauder = maraudeur
+éthéré
+ettercap = ettercap
+ettin = ettin
+eye tyrant = tyrannœil (m) (plur.
+tyrannœils)
+fiendish creature = créature fiélon
+fire elemental = élémentaire du Feu
+fire giant = géant du feu
+fire mephit = méphite enflammé (m)
+five-headed hydra = hydre à cinq
+têtes (f)
+flamebrother = flamion (m)
+flesh golem = golem de chair
+forest gnome = gnome des forêts
+formian myrmarch = myrmarque
+formian queen = reine formienne
+formian taskmaster = contremaître
+formien
+formian warrior = soldat formien
+formian worker = ouvrier formien
+frost giant = géant du givre
+frost worm = ver des glaces
+Gargantuan monstrous centipede =
+gigantesque mille-pattes monstrueux
+Gargantuan monstrous scorpion =
+gigantesque scorpion monstrueux
+Gargantuan monstrous spider =
+gigantesque araignée monstrueuse
+gargoyle = gargouille
+gauth = gauth
+gelatinous cube = cube gélatineux
+gelugon = gélugon (m)
+ghaele = ghaele (m)
+ghast = blême (f)
+ghost = fantôme
+ghoul = goule (f)
+giant ant = fourmi géante
+giant ant queen = reine fourmi géante
+giant ant soldier = fourmi soldat
+géante
+giant ant worker = fourmi ouvrière
+géante
+giant bee = abeille géante
+giant beetle = coléoptère géant
+giant bombardier beetle = scarabée
+géant
+giant constrictor snake = serpent
+constricteur géant
+giant crocodile = crocodile géant
+giant eagle = aigle géant
+giant fire beetle = punaise de feu
+géante
+giant lizard = lézard géant
+giant octopus = pieuvre géante
+giant owl = hibou géant
+giant praying mantis = mante
+religieuse géante
+giant squid = calmar géant
+giant stag beetle = charançon géant
+giant wasp = guêpe géante
+gibbering mouther = babélien (m)
+girallon = girallon (m)
+glabrezu = glabrezu (m)
+gnoll = gnoll
+gnome = gnome (f: gnome)
+goblin = gobelin
+gold dragon = dragon d'or
+gorgon = gorgone (f)
+gray dwarf = nain gris
+gray elf = elfe gris
+gray ooze = vase grise
+gray render = ravageur gris
+gray slaad = slaad gris (m)
+greater barghest = barghest noble
+(m)
+greater elemental = élémentaire
+noble
+greater stone golem = golem de
+pierre monumental
+green dragon = dragon vert
+green hag = guenaude verte (f)
+green slaad = slaad vert (m)
+grick = grick (m)
+griffon = griffon (m)
+grig = grig (m)
+grimlock = torve (m)
+grugach = grugach(s)
+guardian naga = naga gardien (m)
+gynosphinx = sphinge (f)
+half-celestial = demi-céleste
+half-dragon = demi-dragon
+half-elf = demi-elfe (f: demi-elfe)
+half-fiend = demi-fiélon
+halfling = halfelin (h muet, f:
+halfeline)
+half-medusa = demi-méduse
+half-ogre = demi-ogre
+half-orc = demi-orque (f: demi-orque)
+half-unicorn = demi-licorne
+hamatula = hamatula (m, h muet)
+harpy = harpie (f, h aspiré)
+hawk = faucon
+heavy horse = cheval lourd
+heavy war horse = cheval de guerre
+lourd (ou destrier lourd)
+heavy warhorse = destrier lourd
+hell hound = molosse satanique
+hellcat = chat d'enfer
+hezrou = hezrou (m, h aspiré, pl.
+hezrous)
+hieracosphinx = hiéracosphinx (m)
+high elf = haut-elfe (pl. hauts-elfes)
+hill dwarf = nain des collines
+hill giant = géant des collines
+hippogriff = hippogriffe (m)
+hobgoblin = hobgobelin (m)
+homonculus (plur. homonculi) =
+homoncule
+homunculus (plur. homunculi) =
+homoncule
+horned devil = diable cornu
+horse = cheval
+hound archon = archon canin (m)
+howler = hurleur
+Huge elemental = très grand
+élémentaire
+Huge monstrous centipede = très
+grand mille-pattes monstrueux
+Huge monstrous scorpion = très
+grand scorpion monstrueux
+Huge monstrous spider = très grande
+araignée monstrueuse
+Huge shark = très grand requin
+Huge viper = très grand serpent
+venimeux
+human = humain (f: humaine)
+human skeleton = squelette humain
+human zombie = zombi humain
+hydra = hydre (f)
+ice devil = diable gelé
+ice mephit = méphite gelé (m)
+illithid = illithid (m)
+imp = diablotin
+incubus (plur. incubi) = incube (m)
+janni (plur. jann) = jann (m)
+kapoacinth = kapoacinth (m)
+kobold = kobold (m)
+kraken = kraken (m)
+krenshar = krenshar (m)
+kuo-toa = kuo-toa (m) (plur. kuo-toas)
+kyton = kyton (m)
+lacedon = lacédon (f)
+lamia = lamie (f)
+lammasu = lammasu (m)
+lantern archon = archon lumineux
+(m)
+Large elemental = grand élémentaire
+Large monstrous centipede = grand
+mille-pattes monstrueux
+Large monstrous scorpion = grand
+scorpion monstrueux
+Large monstrous spider = grande
+araignée monstrueuse
+Large shark = grand requin
+Large viper = grand serpent
+venimeux
+lemure = lémure (m)
+leonal = léonal (m)
+leopard = léopard
+Lernean hydra = hydre de Lerne (f)
+lich = liche (f)
+light horse = cheval léger
+light war horse = cheval de guerre
+léger (ou destrier léger)
+light warhorse = destrier léger
+lightfoot halfling = pied-léger (plur.
+pieds-légers)
+lillend = lilende (f)
+lion = lion
+lizard = lézard
+lizardfolk = homme-lézard (p:
+hommes-lézards)
+locathah = locathah (m)
+locust swarm = nuée de criquets
+lycanthrope = lycanthrope (m)
+magma mephit = méphite
+magmatique (m)
+magmin = magmatique (m)
+malenti = malenti
+manta ray = raie manta
+manticore = manticore (f)
+marilith = marilith (f)
+Medium-size elemental =
+élémentaire de taille moyenne
+Medium-size monstrous centipede =
+mille-pattes monstrueux de taille
+moyenne
+Medium-size monstrous scorpion =
+scorpion monstrueux de taille
+moyenne
+Medium-size monstrous spider =
+araignée monstrueuse de taille
+moyenne
+Medium-size shark = requin de taille
+moyenne
+Medium-size viper = serpent
+venimeux de taille moyenne
+medusa = méduse (f)
+megaraptor = mégaraptor (m)
+merfolk = homme-poisson (plur.
+hommes-poissons)
+merrow = merrhow
+mimic = mimique (f)
+mind flayer = flagelleur mental (m)
+minotaur = minotaure
+mohrg = mohrg (m)
+monitor = contrôleur
+monkey = singe
+monstrous centipede = mille-pattes
+monstrueux
+monstrous scorpion = scorpion
+monstrueux
+monstrous spider = araignée
+monstrueuse
+mountain dwarf = nain des
+montagnes
+mule = mulet
+mummy = momie
+nalfeshnee = nalfeshnie (m)
+night hag = tormante (f)
+nightcrawler = ténébreux rampant
+nightmare = destrier noir
+nightwalker = ténébreux bipède
+nightwing = ténébreux ailé
+nine-headed hydra = hydre à neuf
+têtes (f)
+nixie = nixe (f)
+noble djinni (plur. noble djinn) =
+djinn noble
+noble salamander = salamandre
+noble (f)
+nymph = nymphe (f)
+ochre jelly = gelée ocre
+octopus = pieuvre
+ogre = ogre
+ogre mage = ogre mage
+ooze mephit = méphite vaseux (m)
+orc = orque (m)
+orca = orque épaulard
+orca whale = orque épaulard
+osyluth = osyluth (m)
+otyugh = otyugh (m)
+owl = chouette
+owlbear = ours-hibou (m)
+pegasus = pégase
+phantom fungus = thallophyte
+spectrale (f)
+phase spider = araignée de phase
+phasm = plasme (m)
+pit fiend = diantrefosse (m)
+pixie = pixie (m)
+planetar = planétar (m)
+polar bear = ours polaire
+pony = poney
+porpoise = marsouin
+pseudodragon = pseudo-dragon (m)
+purple worm = ver pourpre
+pyrohydra = pyrohydre (f)
+quasit = quasit (m)
+rakshasa = rakshasa (m)
+rast = rhast (m)
+rat = rat
+rat swarm = nuée de rats
+raven = corbeau
+ravid = ravid (m)
+red dragon = dragon rouge
+red slaad = slaad rouge (m)
+remorhaz (plur. remorhazes) =
+remorhaz (m)
+retriever = horreur chasseresse (f)
+rhinoceros = rhinocéros
+riding dog = chien de selle
+roc = rukh (m)
+rock gnome = gnome des roches
+roper = enlaceur (m)
+rust monster = oxydeur (m)
+sahuagin = sahuagin (m)
+salamander = salamandre (f)
+salt mephit = méphite salin (m)
+satyr = satyre (m)
+scrag = scrag (m)
+sea cat = félin marin
+sea devil = diable des mers
+sea elf = elfe(s) des mers
+sea hag = guenaude marine (f)
+sea lion = lion de mer
+seven-headed hydra = hydre à sept
+têtes (f)
+shadow = ombre
+shadow mastiff = molosse d'ombre
+shambling mound = tertre errant (m)
+shark = requin
+shield guardian = garde animé
+shocker lizard = lézard voltaïque
+shrieker = criard (m)
+silver dragon = dragon d'argent
+six-headed hydra = hydre à six têtes
+(f)
+skeleton = squelette
+skum = amphibe (m)
+Small elemental = petit élémentaire
+Small monstrous centipede = petit
+mille-pattes monstrueux
+Small monstrous scorpion = petit
+scorpion monstrueux
+Small monstrous spider = petite
+araignée monstrueuse
+Small viper = petit serpent venimeux
+snake = serpent
+solar = solar (m)
+spectre = spectre
+sphere of many eyes = globe aux
+mille yeux
+sphinx = sphinx
+spider eater = arachnophage (m)
+spirit naga = naga corrupteur (m)
+squid = calmar
+steam mephit = méphite vaporeux
+(m)
+stirge = strige (f)
+stone giant = géant des pierres
+stone giant elder = ancien géant des
+pierres
+stone golem = golem de pierre
+storm giant = géant des tempêtes
+succubus (plur. succubi) = succube
+(m)
+svirfneblin = svirfnebelin
+sylvan elf = elfe sylvestre
+tallfellow = Grand (halfelin)
+tallfellow halfling = Grand
+tarrasque = tarasque (f)
+tendriculos = tendriculaire (m)
+ten-headed hydra = hydre à dix têtes
+(f)
+terrible lizard = terrible lézard
+thoqqua = thoqqua (m)
+tiefling = tieffelin(s)
+tiger = tigre
+Tiny monstrous centipede = très
+petit mille-pattes monstrueux
+Tiny monstrous scorpion = très petit
+scorpion monstrueux
+Tiny monstrous spider = très petite
+araignée monstrueuse
+Tiny viper = très petit serpent
+venimeux
+titan = titan (f: titanide)
+toad = crapaud
+tojanida = tojanida (m)
+treant = sylvanien (m)
+triceratops = tricératops (m)
+triton = triton
+troglodyte = troglodyte (m)
+troll = troll (m)
+trumpet archon = archon messager
+(m)
+twelve-headed hydra = hydre à
+douze têtes (f)
+tyrannosaurus = tyrannosaure (m)
+umber hulk = ombre des roches
+unicorn = licorne
+vampire = vampire
+vampire spawn = vampirien (m)
+vargouille = vargouille (f)
+velociraptor = vélociraptor (m)
+violet fungus = thallophyte violette
+viper = serpent venimeux
+vrock = vrock (m)
+war pony = poney de guerre
+warpony = poney de guerre
+water elemental = élémentaire de
+l'Eau
+water mephit = méphite aqueux (m)
+water naga = naga aquatique (m)
+weasel = belette
+werebear = ours-garou
+wereboar = sanglier-garou
+wererat = rat-garou
+weretiger = tigre-garou
+werewolf = loup-garou
+whip = fouet
+white dragon = dragon blanc
+wight = nécrophage (m)
+wild elf = elfe sauvage
+will-o'-wisp = feu follet
+winter wolf = loup arctique
+wolf = loup
+wolverine = glouton
+wood elf = elfe des bois
+worg = worg (m)
+wraith = âme-en-peine (f)
+wyvern = wiverne (f)
+xill = xill (m)
+xorn = xorn (m)
+yeth hound = chien de Yeth
+yrthak = yrthak (m)
+yuan-ti = yuan-ti (m) (pl. yuan-tis)
+zombie = zombi (m)
