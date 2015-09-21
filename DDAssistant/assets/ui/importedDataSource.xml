@@ -1,0 +1,4 @@
+<xml resource="data/data.xml" id="importedDataSource" styleSheet="?">
+	<item text="Appended Item 1"/>
+	<item text="Appended Item 2"/>
+</xml>

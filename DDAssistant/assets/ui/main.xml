@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%" height="100%">
+		<menubar>
+	<!--
+			<menubutton text="File" id="menu-file">
+				<sys:import resource="ui/menus/file.xml" />
+			</menubutton>
+			<menubutton text="Search" id="menu-search">
+				<sys:import resource="ui/menus/search.xml" />
+			</menubutton>
+			<menubutton text="Program">
+				<sys:import resource="ui/menus/program.xml" />
+			</menubutton>
+			<menubutton text="Help" id="menu-help">
+				<sys:import resource="ui/menus/help.xml" />
+			</menubutton>
+	-->	
+			<button text="Test" id="test" />
+		</menubar>
+		<tabview width="100%" height="100%" id="mainTabs">
+				<vbox text="Tab 1">
+					<button text="bob1" />
+				</vbox>
+				<vbox text="Tab 2">
+					<button text="bob2" />
+				</vbox>
+				<vbox text="Tab 3">
+					<button text="bob3" />
+				</vbox>
+		</tabview>
+</vbox>

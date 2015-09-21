@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hbox>
+	<button text="Imported 1" />
+	<button text="Imported 2" />
+	<button text="Toggle" toggle="true" selected="true" />
+</hbox>
