@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" tools:context="com.example.gbeurier.ddassistant.Carac">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/caracsLayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/caracTopLayout"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:text="CAR"
+                android:textAlignment="gravity"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/caracName"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:autoText="false"
+                android:elegantTextHeight="false"
+                android:gravity="center|center_vertical|center_horizontal"
+                android:layout_weight="2"
+                android:background="@color/true_black"
+                android:textColor="@color/true_white"
+                android:textSize="32dp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:ems="2"
+                android:id="@+id/inputValue"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                android:layout_toRightOf="@+id/caracName"
+                android:layout_alignTop="@+id/caracName"
+                android:layout_alignBottom="@+id/caracName"
+                android:gravity="center_horizontal|fill_vertical"
+                android:textAlignment="gravity"
+                android:text="0"
+                android:numeric="integer"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:background="@color/true_white"
+                android:textColor="@color/true_black"
+                android:singleLine="true"
+                android:textSize="34dp"
+                android:digits="0123456789-"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/caracBotLayout"
+            android:layout_weight="2">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/addA"
+                android:layout_below="@+id/caracName"
+                android:layout_alignParentStart="true"
+                android:gravity="fill_horizontal|fill_vertical"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:background="@mipmap/calculation1"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/true_lgrey"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="4dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/subA"
+                android:layout_below="@+id/caracName"
+                android:layout_toEndOf="@+id/addA"
+                android:gravity="fill_horizontal|fill_vertical"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_marginRight="8dp"
+                android:background="@mipmap/minus99"
+                android:layout_weight="1"
+                android:backgroundTint="@color/true_lgrey"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="4dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/resetA"
+                android:layout_below="@+id/inputValue"
+                android:layout_toEndOf="@+id/subA"
+                android:gravity="fill_horizontal|fill_vertical"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:layout_marginRight="8dp"
+                android:background="@mipmap/cross93"
+                android:layout_weight="1"
+                android:backgroundTint="@color/true_lgrey"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="4dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

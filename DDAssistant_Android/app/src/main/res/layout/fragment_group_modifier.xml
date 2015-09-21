@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.gbeurier.ddassistant.GroupModifier">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/uiLayout">
+
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|top"
+            android:id="@+id/actionsLayout"
+            android:layout_weight="1">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/addA"
+                android:layout_below="@+id/caracName"
+                android:layout_alignParentStart="true"
+                android:gravity="fill_horizontal|fill_vertical"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:background="@mipmap/calculation1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/subA"
+                android:layout_below="@+id/caracName"
+                android:layout_toEndOf="@+id/addA"
+                android:gravity="fill_horizontal|fill_vertical"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:background="@mipmap/minus99"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/resetA"
+                android:layout_below="@+id/inputValue"
+                android:layout_toEndOf="@+id/subA"
+                android:gravity="fill_horizontal|fill_vertical"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:background="@mipmap/cross93"
+                android:clickable="false" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,277 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.gbeurier.ddassistant.Attack">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hlayout">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/attackTitle"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:rotation="0"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="6"
+            android:capitalize="characters"
+            android:textColor="@color/true_black"
+            android:background="@mipmap/bow8"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/attackTitle"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/valuesLayout"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/attackTitle"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/attacks"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/attackTitle"
+                    android:layout_weight="0.7"
+                    android:textStyle="bold"
+                    android:autoText="true"
+                    android:text="21/21/12/8"
+                    android:textAlignment="gravity"
+                    android:textSize="24dp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:digits="0123456789/" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/addA"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/attacks"
+                    android:background="@mipmap/calculation1"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/subA"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/addA"
+                    android:background="@mipmap/minus99"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/resetA"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/subA"
+                    android:background="@mipmap/cross93"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/damages"
+                    android:gravity="center"
+                    android:textAlignment="gravity"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/subAA"
+                    android:layout_weight="0.7"
+                    android:textStyle="bold"
+                    android:text="2D6 + 1D12 + 3"
+                    android:textSize="24dp"
+                    android:singleLine="true"
+                    android:digits="0123456789dD+" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="+"
+                    android:id="@+id/addD"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/damages"
+                    android:background="@mipmap/calculation1"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="-"
+                    android:id="@+id/subD"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/addD"
+                    android:background="@mipmap/minus99"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/resetD"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/subD"
+                    android:background="@mipmap/cross93"
+                    android:layout_weight="1"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/launchLayout"
+                android:layout_below="@+id/valuesLayout"
+                android:layout_toEndOf="@+id/attackTitle"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/attackResult"
+                    android:layout_below="@+id/addA"
+                    android:layout_toStartOf="@+id/addA"
+                    android:layout_weight="0.7"
+                    android:textSize="24dp"
+                    android:textAlignment="gravity"
+                    android:gravity="center"
+                    android:textColor="@color/true_black" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/launchA"
+                    android:layout_alignTop="@+id/attackResult"
+                    android:layout_alignStart="@+id/addA"
+                    android:layout_toStartOf="@+id/addAA"
+                    android:background="@mipmap/dice21"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/addAA"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/resetA"
+                    android:background="@mipmap/add155"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="--"
+                    android:id="@+id/subAA"
+                    android:layout_alignTop="@+id/launchA"
+                    android:layout_toEndOf="@+id/resetA"
+                    android:background="@mipmap/minus78"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/damagesResult"
+                    android:layout_alignTop="@+id/launchD"
+                    android:layout_alignStart="@+id/damages"
+                    android:layout_weight="0.7"
+                    android:textSize="24dp"
+                    android:textAlignment="gravity"
+                    android:gravity="center"
+                    android:textColor="@color/true_black" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/launchD"
+                    android:layout_below="@+id/damages"
+                    android:layout_alignEnd="@+id/resetD"
+                    android:layout_toEndOf="@+id/damages"
+                    android:background="@mipmap/dice13"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/launchDAll"
+                    android:layout_alignTop="@+id/attackResult"
+                    android:layout_alignStart="@+id/addA"
+                    android:layout_toStartOf="@+id/addAA"
+                    android:background="@mipmap/dice21"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/averageD"
+                    android:layout_below="@+id/damages"
+                    android:layout_alignEnd="@+id/resetD"
+                    android:layout_toEndOf="@+id/damages"
+                    android:background="@mipmap/chart34"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_marginLeft="4dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

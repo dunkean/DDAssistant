@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp" tools:context=".MainActivity"
+    android:background="@color/true_white">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:id="@+id/caracsLayout"
+
+        android:layout_marginTop="-5dp">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentStart="true"
+            android:id="@+id/lFor"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"></FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/lFor"
+            android:layout_toEndOf="@+id/lFor"
+            android:id="@+id/lDex"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/lDex"
+            android:layout_toEndOf="@+id/lDex"
+            android:id="@+id/lCon"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/lCon"
+            android:layout_toEndOf="@+id/lCon"
+            android:id="@+id/lInt"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/lInt"
+            android:layout_toEndOf="@+id/lInt"
+            android:id="@+id/lSag"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/lSag"
+            android:layout_toEndOf="@+id/lSag"
+            android:id="@+id/lCha"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp" />
+
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lIni"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:id="@+id/JSLayout"
+        android:layout_below="@+id/caracsLayout"
+        android:layout_marginTop="10dp">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lRef"
+            android:layout_below="@+id/lFor"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lVig"
+            android:layout_alignTop="@+id/lRef"
+            android:layout_toEndOf="@+id/lRef"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lVol"
+            android:layout_alignTop="@+id/lVig"
+            android:layout_toEndOf="@+id/lVig"
+            android:layout_weight="1">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignTop="@+id/lVol"
+            android:layout_toEndOf="@+id/lVol"
+            android:id="@+id/lJS"
+            android:layout_weight="1"></FrameLayout>
+
+        <Space
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lFlat"
+            android:layout_alignTop="@+id/lBou"
+            android:layout_toStartOf="@+id/lBou"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lBou"
+            android:layout_alignTop="@+id/lCA"
+            android:layout_toStartOf="@+id/lCA"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/lCA"
+            android:layout_below="@+id/lIni"
+            android:layout_alignEnd="@+id/lIni"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/JSLayout"
+        android:layout_alignStart="@+id/JSLayout"
+        android:id="@+id/bottonMainLayout"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/attacksLayout"
+            android:layout_weight="0.3">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:id="@+id/LBow"
+                android:layout_weight="1"
+                android:layout_marginBottom="12dp"></FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:id="@+id/L1HSword"
+                android:layout_weight="1"
+                android:layout_marginBottom="12dp"></FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:id="@+id/L2HSword1"
+                android:layout_weight="1"
+                android:layout_marginBottom="12dp"></FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp"
+                android:id="@+id/L2HSword2"
+                android:layout_weight="1"
+                android:layout_marginBottom="12dp"></FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/HPLayout"
+            android:layout_weight="0.7"
+            android:background="@drawable/border"
+            android:layout_margin="10dp">
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

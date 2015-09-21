@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="true_black">#000000</color>
+    <color name="true_white">#FFFFFF</color>
+    <color name="true_lblue">#6666FF</color>
+    <color name="true_lgreen">#66BB66</color>
+    <color name="true_lred">#FF6666</color>
+    <color name="true_lyellow">#66BBBB</color>
+    <color name="true_lgrey">#666666</color>
+</resources>
