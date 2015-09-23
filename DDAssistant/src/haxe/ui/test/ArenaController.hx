@@ -6,12 +6,9 @@ import ddassistant.utils.UUID;
 import haxe.ui.toolkit.core.XMLController;
 import haxe.ui.toolkit.events.UIEvent;
 import haxe.xml.Check.Attrib;
-import hxnet.interfaces.Server;
-import hxnet.protocols.Telnet;
 import sys.net.Host;
 import sys.net.Socket;
 import cpp.vm.Thread;
-import threadserver.ServerExample;
 
 
 @:build(haxe.ui.toolkit.core.Macros.buildController ("ui/Arena.xml"))
@@ -59,7 +56,7 @@ class ArenaController extends XMLController {
 			//}
 		//}
 	//}
-	var server : ServerExample;
+	//var server : ServerExample;
 	public var x(get, set):Int;
 	
 	// required by field x
@@ -108,7 +105,7 @@ class ArenaController extends XMLController {
 	}
 	
 	public function launchServer() {
-		server.run("0.0.0.0", 1234);
+		//server.run("0.0.0.0", 1234);
 	}
 	
 	//private function threadPing(ip) {

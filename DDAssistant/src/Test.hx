@@ -33,6 +33,7 @@ class Test
 		trace("Testing $srcJson2");
 		try {
 			var map1:Map<String, String> = ["1" => "one", "2" => "two"];
+			trace(map1["1"]);
 			var obj = new DDResource();
 			obj.mapStringString = map1;
 			trace("Setting obj.int to -1");
