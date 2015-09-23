@@ -1,29 +1,41 @@
-package haxe.ui.test;
+package ddassistant;
+
+/**
+ * Main class of DDAssistant
+ * @author dunkean
+ */
 
 import ddassistant.models.Arena;
-import haxe.crypto.Md5;
-import haxe.io.Bytes;
 import haxe.ui.toolkit.containers.Stack;
-import haxe.ui.toolkit.controls.TabBar;
-import haxe.ui.toolkit.core.Macros;
-import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.core.Root;
-import haxe.ui.toolkit.resources.ResourceManager;
+import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.themes.GradientTheme;
 
-class Main {
-	
-	
-  
+class Main
+{
+
+
 	public static function main() {
-		var arena = new Arena();
-		arena.round = 2;
-		trace(arena);
-		var serObj = Serializer.run(arena);
-		trace(serObj);
-		var unserObj: Arena = Unserializer.run(serObj);
-		trace(unserObj);
-		trace(unserObj.round);
+		Toolkit.theme = new GradientTheme();
+		Toolkit.setTransitionForClass(Stack, "none");
+		Toolkit.init();
+		Toolkit.openFullscreen(function(root:Root) {
+			var controller = new DDAssistant();
+			root.addChild(controller.view);
+		});
+	}
+	
+}
+
+
+//var arena = new Arena();
+		//arena.round = 2;
+		//trace(arena);
+		//var serObj = Serializer.run(arena);
+		//trace(serObj);
+		//var unserObj: Arena = Unserializer.run(serObj);
+		//trace(unserObj);
+		//trace(unserObj.round);
 		
 		
 		
@@ -54,20 +66,3 @@ class Main {
 		////for (n in Reflect.fields(res))
 			////trace(n);
 		//return;
-		
-		
-		
-		Toolkit.theme = new GradientTheme();
-		Toolkit.setTransitionForClass(Stack, "none");
-		Toolkit.init();
-		Toolkit.openFullscreen(function(root:Root) {
-			var controller = new ArenaController();
-			root.addChild(controller.view);
-			//try{
-				//trace(Json.stringify(controller));
-			//}catch (e: Dynamic) {
-				//trace(e);
-			//}
-		});
-	}
-}

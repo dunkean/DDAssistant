@@ -69,12 +69,12 @@ class ArenaController extends XMLController {
 	}
   
 	public function new() {
-		trace(x);
-		Reflect.setField(this, "x", 7);
-		trace(x);
-		x = 8;
-		trace(x);
-		
+		//trace(x);
+		//Reflect.setField(this, "x", 7);
+		//trace(x);
+		//x = 8;
+		//trace(x);
+		//
 		//myButton.addEventListener (UIEvent.CLICK, myButtonClicked);
 		//new Peer();
 		

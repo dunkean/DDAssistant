@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox id="main" width="400" height="400" autoSize="true">
 		
-	<button id="serverBtn" text="Start server" width="50%" />
-	<button id="clientBtn" text="Connect to server" width="50%" />
+	<button id="btn1" text="Bouton 1" width="50%" />
+	<button id="btn2" text="Bouton 2" width="50%" />
 	
 		
 	<scrollview width="100%" height="100%">

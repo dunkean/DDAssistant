@@ -3,10 +3,10 @@
 	<!-- NMML reference: https://gist.github.com/1763850 -->
 	
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="Haxe UI" package="haxe.ui.test.haxeuitestapp" version="1.0.0" company="" />
+	<meta title="DDAssistant" package="ddassistant.ddassistantapp" version="1.0.0" company="" />
 	
 	<!-- output -->
-	<app main="haxe.ui.test.Main" file="haxeuitestapp" path="bin" />
+	<app main="ddassistant.Main" file="ddassistantapp" path="bin" />
 	
 	<window background="#FFFFFF" fps="60" />
 	<window width="800" height="600" unless="mobile" />

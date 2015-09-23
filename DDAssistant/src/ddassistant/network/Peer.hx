@@ -11,20 +11,16 @@ import sys.net.Socket;
 import cpp.vm.Thread;
 import ddassistant.utils.UUID;
 
+
 class Peer
 {
 	private static inline var PORT: Int = 31337;
-	
-	public var uuid:String;
-	public var name:String;
 	
 	private var socket: Socket;
 	private var peers:Array<PeerInfo>;
 	private var peersListener:Map<String, PeerListener>;
 	
-	public function new(?id: String, ?nam: String) {
-		if (nam == null) name = ''; else name = nam;
-		if (id == null) uuid = UUID.uuid(16,16); else uuid = id;
+	public function new() {
 		try {
 			trace('Launching P2P service');
 			socket = new Socket();
@@ -58,8 +54,8 @@ class Peer
 				var peer = new PeerInfo(sk);
 				trace('Client > Connected to server ' + peer.toString());
 				Thread.create(listenMessages(peer));
-				peer.send('ClientID', uuid);
-				peer.send('ClientName', name);
+				peer.send('uuid', uuid);
+				peer.send('name', name);
 			}catch (e:Dynamic) {
 			}
 		}
@@ -73,8 +69,8 @@ class Peer
 				var peer = new PeerInfo(sk);
 				trace('Server > Connected to client ' + peer.toString());
 				Thread.create(listenMessages(peer));
-				peer.send('ServerID', uuid);
-				peer.send('ServerName', name);
+				peer.send('uuid', uuid);
+				peer.send('name', name);
 			}
 		}
 	}
