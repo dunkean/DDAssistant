@@ -4,12 +4,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>176</y>
+      <x>488</x>
+      <y>168</y>
       <w>128</w>
-      <h>48</h>
+      <h>72</h>
     </coordinates>
-    <panel_attributes>Context
+    <panel_attributes>Sheet
 --
 new(json): Context
 toJson(): json</panel_attributes>
@@ -18,8 +18,8 @@ toJson(): json</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>552</x>
-      <y>64</y>
+      <x>680</x>
+      <y>72</y>
       <w>80</w>
       <h>80</h>
     </coordinates>
@@ -35,8 +35,8 @@ loadLayout()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>424</x>
-      <y>472</y>
+      <x>552</x>
+      <y>480</y>
       <w>112</w>
       <h>24</h>
     </coordinates>
@@ -46,90 +46,43 @@ loadLayout()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>88</y>
+      <x>544</x>
+      <y>96</y>
       <w>152</w>
-      <h>104</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>170.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>632</x>
-      <y>168</y>
-      <w>200</w>
+      <x>832</x>
+      <y>176</y>
+      <w>128</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 &lt;&lt;update(uuid, json)&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
-      <y>136</y>
-      <w>24</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>544</x>
-      <y>176</y>
-      <w>96</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>GlobalContext
-&lt;&lt;transient class&gt;&gt;</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>480</x>
-      <y>168</y>
-      <w>80</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-</panel_attributes>
-    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>464</x>
-      <y>216</y>
-      <w>424</w>
-      <h>56</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-&lt;&lt;update(uuid, json)&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0;510.0;50.0;510.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>424</x>
-      <y>216</y>
+      <x>552</x>
+      <y>232</y>
       <w>40</w>
-      <h>96</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>816</x>
-      <y>136</y>
+      <x>944</x>
+      <y>144</y>
       <w>120</w>
       <h>96</h>
     </coordinates>
@@ -146,8 +99,8 @@ new(id, name): Peer</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
-      <y>88</y>
+      <x>752</x>
+      <y>96</y>
       <w>208</w>
       <h>96</h>
     </coordinates>
@@ -157,8 +110,8 @@ new(id, name): Peer</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1008</x>
-      <y>48</y>
+      <x>1136</x>
+      <y>56</y>
       <w>136</w>
       <h>88</h>
     </coordinates>
@@ -177,8 +130,8 @@ index(x,y): int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1000</x>
-      <y>216</y>
+      <x>1128</x>
+      <y>224</y>
       <w>136</w>
       <h>80</h>
     </coordinates>
@@ -194,8 +147,8 @@ toJson(): json</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>328</x>
-      <y>296</y>
+      <x>456</x>
+      <y>304</y>
       <w>216</w>
       <h>112</h>
     </coordinates>
@@ -213,8 +166,8 @@ emitResourceChanged(json)</panel_attributes>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>632</x>
-      <y>336</y>
+      <x>760</x>
+      <y>344</y>
       <w>248</w>
       <h>64</h>
     </coordinates>
@@ -226,8 +179,8 @@ resourceChanged(header: string, content: json)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>296</x>
-      <y>472</y>
+      <x>424</x>
+      <y>480</y>
       <w>112</w>
       <h>24</h>
     </coordinates>
@@ -237,19 +190,8 @@ resourceChanged(header: string, content: json)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>344</x>
-      <y>400</y>
-      <w>24</w>
-      <h>88</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
       <x>472</x>
-      <y>400</y>
+      <y>408</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
@@ -259,8 +201,19 @@ resourceChanged(header: string, content: json)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>536</x>
-      <y>344</y>
+      <x>600</x>
+      <y>408</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>664</x>
+      <y>352</y>
       <w>224</w>
       <h>32</h>
     </coordinates>
@@ -271,8 +224,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
-      <y>72</y>
+      <x>752</x>
+      <y>80</y>
       <w>400</w>
       <h>24</h>
     </coordinates>
@@ -282,8 +235,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1056</x>
-      <y>128</y>
+      <x>1184</x>
+      <y>136</y>
       <w>40</w>
       <h>104</h>
     </coordinates>
@@ -294,8 +247,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>968</x>
-      <y>416</y>
+      <x>1096</x>
+      <y>424</y>
       <w>216</w>
       <h>32</h>
     </coordinates>
@@ -305,8 +258,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1088</x>
-      <y>504</y>
+      <x>1216</x>
+      <y>512</y>
       <w>112</w>
       <h>24</h>
     </coordinates>
@@ -316,8 +269,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1016</x>
-      <y>440</y>
+      <x>1144</x>
+      <y>448</y>
       <w>24</w>
       <h>80</h>
     </coordinates>
@@ -327,8 +280,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1136</x>
-      <y>440</y>
+      <x>1264</x>
+      <y>448</y>
       <w>24</w>
       <h>80</h>
     </coordinates>
@@ -338,8 +291,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>960</x>
-      <y>504</y>
+      <x>1088</x>
+      <y>512</y>
       <w>112</w>
       <h>24</h>
     </coordinates>
@@ -349,8 +302,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>400</y>
+      <x>648</x>
+      <y>408</y>
       <w>480</w>
       <h>80</h>
     </coordinates>
@@ -361,8 +314,8 @@ get() / set()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>344</x>
-      <y>488</y>
+      <x>472</x>
+      <y>496</y>
       <w>816</w>
       <h>96</h>
     </coordinates>
@@ -373,8 +326,8 @@ get() / set()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>488</y>
+      <x>592</x>
+      <y>496</y>
       <w>576</w>
       <h>72</h>
     </coordinates>
@@ -385,8 +338,8 @@ get() / set()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>928</x>
-      <y>344</y>
+      <x>1056</x>
+      <y>352</y>
       <w>104</w>
       <h>24</h>
     </coordinates>
@@ -396,8 +349,8 @@ get() / set()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>344</y>
+      <x>888</x>
+      <y>352</y>
       <w>184</w>
       <h>24</h>
     </coordinates>
@@ -407,8 +360,8 @@ get() / set()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>288</y>
+      <x>1232</x>
+      <y>296</y>
       <w>24</w>
       <h>144</h>
     </coordinates>
@@ -418,12 +371,23 @@ get() / set()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1008</x>
-      <y>288</y>
+      <x>1136</x>
+      <y>296</y>
       <w>24</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>184</y>
+      <w>144</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>ResourceController</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

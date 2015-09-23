@@ -1,8 +1,9 @@
 package ddassistant.network;
 
 /**
- * Network management of the DDAssistant
+ * Network peer for the D&D Combat Assistant
  * @author dunkean
+ * @version 0.1
  */
  
 import sys.net.Host;
@@ -23,7 +24,7 @@ class Peer
 	
 	public function new(?id: String, ?nam: String) {
 		if (nam == null) name = ''; else name = nam;
-		if (id == null) uuid = UUID.uuid(16,16);  else uuid = id;
+		if (id == null) uuid = UUID.uuid(16,16); else uuid = id;
 		try {
 			trace('Launching P2P service');
 			socket = new Socket();
@@ -34,13 +35,10 @@ class Peer
 			trace('Ensure that no server is running on port ' + PORT + '.\n');
 			return;
 		}
-		
 		peers = [];
-		
 		
 		trace('P2P service up.\n');
 		Thread.create(listenConnections);
-		
 		exploreLan();
 	}
 	
@@ -57,18 +55,12 @@ class Peer
 			try {
 				var sk = new Socket();
 				sk.connect(new Host(ip), PORT);
-				trace('Connected to client ' + ip);
-				//var peerId = sk.input.readLine();
-				//var peerName = sk.input.readLine();
-				//var peer = new PeerInfo(sk, peerId, peerName);
 				var peer = new PeerInfo(sk);
-				trace('Connected to client ' + peer.toString());
+				trace('Client > Connected to server ' + peer.toString());
 				Thread.create(listenMessages(peer));
-				peer.send('ID', uuid);
-				peer.send('Name', name);
+				peer.send('ClientID', uuid);
+				peer.send('ClientName', name);
 			}catch (e:Dynamic) {
-				//connection failed
-				//trace("failed ", ip);
 			}
 		}
 	}
@@ -78,13 +70,11 @@ class Peer
 		while (true) {
 			var sk = socket.accept();
 			if (sk != null) {
-				//sk.output.writeString(uuid);
-				//sk.output.writeString(name);
-				//var peerId = sk.input.readLine();
-				//var peerName = sk.input.readLine();
 				var peer = new PeerInfo(sk);
-				trace('Connected to client ' + peer.toString());
+				trace('Server > Connected to client ' + peer.toString());
 				Thread.create(listenMessages(peer));
+				peer.send('ServerID', uuid);
+				peer.send('ServerName', name);
 			}
 		}
 	}
@@ -95,11 +85,15 @@ class Peer
 			peers.push(cl);
 			while (cl.active) {
 				try {
-					var text = cl.socket.input.readLine();
+					var header = cl.socket.input.readLine();
+					var content = cl.socket.input.readLine();
 					if (cl.active)
-						trace(text);
+						trace('socket message: $header > $content');
+					//var content = cl.socket.input.readAll().toString();
+					//if (cl.active)
+						//trace('socket message: $content');
 				} catch (z:Dynamic) {
-					
+					trace("unable to read socker $cl");
 					break;
 				}
 			}

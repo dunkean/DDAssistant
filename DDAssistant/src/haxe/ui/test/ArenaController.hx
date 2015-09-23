@@ -1,7 +1,6 @@
 package haxe.ui.test;
 
 
-import chat.Client;
 import ddassistant.network.Peer;
 import ddassistant.utils.UUID;
 import haxe.ui.toolkit.core.XMLController;
@@ -12,6 +11,7 @@ import hxnet.protocols.Telnet;
 import sys.net.Host;
 import sys.net.Socket;
 import cpp.vm.Thread;
+import threadserver.ServerExample;
 
 
 @:build(haxe.ui.toolkit.core.Macros.buildController ("ui/Arena.xml"))
@@ -59,11 +59,56 @@ class ArenaController extends XMLController {
 			//}
 		//}
 	//}
+	var server : ServerExample;
+	public var x(get, set):Int;
 	
+	// required by field x
+	function get_x() return 1;
+
+	// required by field x
+	function set_x(x) { 
+		trace(x);
+		return x;
+	}
+  
 	public function new() {
-		 //myButton.addEventListener (UIEvent.CLICK, myButtonClicked);
-		new Peer();
+		trace(x);
+		Reflect.setField(this, "x", 7);
+		trace(x);
+		x = 8;
+		trace(x);
+		
+		//myButton.addEventListener (UIEvent.CLICK, myButtonClicked);
+		//new Peer();
+		
+		
+		//new ServerExample();
+		//server = new ServerExample();
+		//Thread.create(launchServer);
+		////Client
+		//try{
+		//trace("opening connection");
+		//var sock = new Socket();
+		//sock.connect(new Host("192.168.0.15"), 1234);
+		//
+		//trace("sending messages");
+		//sock.write("this is a test.");            Sys.sleep(.1);
+		//sock.write("this is another test.");      Sys.sleep(.1);
+		//sock.write("this is a third test.");      Sys.sleep(.1);
+		//sock.write("this is the last test.");
+//
+		//sock.close();
+		//trace("client done");
+		//}catch (e: Dynamic) {
+			//trace(e);
+		//}
+		//
+		
 		//trace(UUID.uuid(12,16));
+	}
+	
+	public function launchServer() {
+		server.run("0.0.0.0", 1234);
 	}
 	
 	//private function threadPing(ip) {
