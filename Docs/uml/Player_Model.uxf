@@ -4,103 +4,110 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>190</x>
-      <y>20</y>
-      <w>100</w>
-      <h>60</h>
+      <x>130</x>
+      <y>40</y>
+      <w>160</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Player
 --
 name: string
+*level: int
+*class: string/enum
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>130</y>
-      <w>100</w>
-      <h>50</h>
+      <x>690</x>
+      <y>20</y>
+      <w>130</w>
+      <h>90</h>
     </coordinates>
-    <panel_attributes>Carac
+    <panel_attributes>Charac
 --
-value:int</panel_attributes>
+name: string
+bonus: int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>110</x>
-      <y>140</y>
+      <x>190</x>
+      <y>160</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>Attack</panel_attributes>
+    <panel_attributes>Attack
+group=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
-      <y>230</y>
-      <w>120</w>
+      <x>20</x>
+      <y>250</y>
+      <w>180</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>Touch
 --
 rolls: int[]
 caracModifier: int
-globalModifier: int</panel_attributes>
+globalModifier: int
+group=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
-      <y>230</y>
-      <w>130</w>
+      <x>240</x>
+      <y>250</y>
+      <w>160</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>Damages
 --
 caracModifier: int
 globalModifier: int
-</panel_attributes>
+
+group=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>220</y>
+      <x>690</x>
+      <y>160</y>
       <w>130</w>
       <h>60</h>
     </coordinates>
     <panel_attributes>BonusCarac
 --
-</panel_attributes>
+c</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>370</y>
+      <x>410</x>
+      <y>390</y>
       <w>140</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>MagicalBlow
 --
 savingThrow:int
-effect:float</panel_attributes>
+effect:float
+group=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>220</x>
-      <y>360</y>
+      <x>230</x>
+      <y>380</y>
       <w>130</w>
       <h>80</h>
     </coordinates>
@@ -108,27 +115,29 @@ effect:float</panel_attributes>
 --
 count:int
 dice:int
-type:DamageType</panel_attributes>
+type:DamageType
+group=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>370</y>
+      <x>30</x>
+      <y>390</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>MagicalTouch
 --
-mageLvl:int &lt;&lt;vsMR&gt;&gt;</panel_attributes>
+mageLvl:int &lt;&lt;vsMR&gt;&gt;
+group=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
-      <y>500</y>
+      <x>1280</x>
+      <y>90</y>
       <w>110</w>
       <h>420</h>
     </coordinates>
@@ -163,19 +172,8 @@ Typeless</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>270</x>
-      <y>430</y>
-      <w>30</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>340</x>
-      <y>400</y>
+      <x>350</x>
+      <y>420</y>
       <w>80</w>
       <h>30</h>
     </coordinates>
@@ -185,19 +183,19 @@ Typeless</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>220</x>
-      <y>300</y>
-      <w>70</w>
+      <x>290</x>
+      <y>320</y>
+      <w>30</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>80</x>
-      <y>300</y>
+      <x>90</x>
+      <y>320</y>
       <w>30</w>
       <h>90</h>
     </coordinates>
@@ -207,76 +205,53 @@ Typeless</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>90</x>
-      <y>160</y>
+      <x>120</x>
+      <y>180</y>
+      <w>120</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>180</y>
       <w>70</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>50.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;50.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>160</x>
-      <y>160</y>
-      <w>80</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;60.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>370</x>
-      <y>170</y>
-      <w>50</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;50.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>230</x>
-      <y>70</y>
-      <w>150</w>
+      <x>740</x>
+      <y>100</y>
+      <w>30</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=*</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;60.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
-      <y>70</y>
-      <w>100</w>
-      <h>90</h>
+      <x>200</x>
+      <y>110</y>
+      <w>60</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=*</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;70.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>580</x>
-      <y>140</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>BonusCarac</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>690</x>
-      <y>140</y>
+      <x>840</x>
+      <y>170</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
@@ -284,140 +259,52 @@ m1=*</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1080</x>
-      <y>270</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Player
-
-group=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1080</x>
-      <y>390</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Attack
-group=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>880</x>
-      <y>280</y>
-      <w>100</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Carac
-group=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>970</x>
-      <y>280</y>
+      <x>1160</x>
+      <y>50</y>
       <w>130</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=*
-group=1</panel_attributes>
+m1=*</panel_attributes>
     <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1120</x>
-      <y>290</y>
-      <w>30</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=*
-group=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>480</y>
-      <w>130</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Damages
-
-group=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>980</x>
-      <y>480</y>
-      <w>120</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Touch
-group=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1040</x>
-      <y>410</y>
-      <w>90</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-group=1</panel_attributes>
-    <additional_attributes>70.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1130</x>
-      <y>410</y>
-      <w>50</w>
-      <h>90</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-group=1</panel_attributes>
-    <additional_attributes>10.0;10.0;30.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1080</x>
+      <x>330</x>
       <y>160</y>
       <w>100</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>Properties
-group=1</panel_attributes>
+    <panel_attributes>Properties</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>Relation</id>
+    <id>UMLClass</id>
     <coordinates>
-      <x>1120</x>
-      <y>180</y>
-      <w>30</w>
-      <h>110</h>
+      <x>690</x>
+      <y>390</y>
+      <w>560</w>
+      <h>440</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=*
-group=1</panel_attributes>
-    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+    <panel_attributes>Characteristics list
+--
+- Lvl
+- Size, Age
+- Ability: Score + Modifiers -&gt; Bonus 
+   - STR, DEX, CON, INT, CHAR, SAG
+- Saving Throws: PlayerBase(lvl,class) + AbilityBonus + Modifiers
+   - FOR, REF, WIL
+- Initiative: 0 + AbilityBonus + Modifiers
+- AC: 10 + NaturalArmor + ArmorBonus + Shield + Size + MaxAbilityBonus + Modifiers
+- TOUCH_AC: AC - NaturalArmor - ArmorBonus - Size
+- FF_AC: AC - DexBonus
+- GRAPPLE: PlayerBase(lvl,class) + AbilityBonus + Modifiers + size
+- Spells(School,Lvl): count
+- HitPoints
+- Skill: Ranks + AbilityModifier + Modifiers</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>176</y>
+      <x>352</x>
+      <y>168</y>
       <w>128</w>
       <h>48</h>
     </coordinates>
@@ -18,9 +18,9 @@ toJson(): json</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>552</x>
-      <y>64</y>
-      <w>80</w>
+      <x>584</x>
+      <y>56</y>
+      <w>96</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>Assistant
@@ -35,8 +35,8 @@ loadLayout()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>424</x>
-      <y>472</y>
+      <x>416</x>
+      <y>496</y>
       <w>112</w>
       <h>24</h>
     </coordinates>
@@ -46,31 +46,31 @@ loadLayout()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>88</y>
-      <w>152</w>
+      <x>408</x>
+      <y>80</y>
+      <w>192</w>
       <h>104</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>170.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>220.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>632</x>
-      <y>168</y>
-      <w>200</w>
+      <x>672</x>
+      <y>160</y>
+      <w>152</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 &lt;&lt;update(uuid, json)&gt;&gt;</panel_attributes>
-    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>584</x>
-      <y>136</y>
+      <x>616</x>
+      <y>128</y>
       <w>24</w>
       <h>56</h>
     </coordinates>
@@ -80,9 +80,9 @@ loadLayout()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>544</x>
-      <y>176</y>
-      <w>96</w>
+      <x>576</x>
+      <y>168</y>
+      <w>104</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>GlobalContext
@@ -92,20 +92,20 @@ loadLayout()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>480</x>
-      <y>168</y>
-      <w>80</w>
+      <x>472</x>
+      <y>160</y>
+      <w>120</w>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 </panel_attributes>
-    <additional_attributes>10.0;20.0;80.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>216</y>
+      <x>456</x>
+      <y>208</y>
       <w>424</w>
       <h>56</h>
     </coordinates>
@@ -116,8 +116,8 @@ loadLayout()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>424</x>
-      <y>216</y>
+      <x>416</x>
+      <y>208</y>
       <w>40</w>
       <h>96</h>
     </coordinates>
@@ -128,8 +128,8 @@ m1=0..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>816</x>
-      <y>136</y>
+      <x>808</x>
+      <y>128</y>
       <w>120</w>
       <h>96</h>
     </coordinates>
@@ -146,21 +146,21 @@ new(id, name): Peer</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
-      <y>88</y>
-      <w>208</w>
+      <x>672</x>
+      <y>80</y>
+      <w>152</w>
       <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;240.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;170.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1008</x>
-      <y>48</y>
+      <x>1000</x>
+      <y>8</y>
       <w>136</w>
-      <h>88</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>Layout
 --
@@ -177,16 +177,17 @@ index(x,y): int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1000</x>
-      <y>216</y>
+      <x>992</x>
+      <y>184</y>
       <w>136</w>
-      <h>80</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>Dock
-&lt;&lt;abstract class&gt;
+&lt;&lt;abstract class&gt;&gt;
 --
 content: Resource
 --
+new(Resource): Dock
 new(json): Dock
 toJson(): json</panel_attributes>
     <additional_attributes/>
@@ -194,10 +195,10 @@ toJson(): json</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>328</x>
-      <y>296</y>
+      <x>320</x>
+      <y>288</y>
       <w>216</w>
-      <h>112</h>
+      <h>96</h>
     </coordinates>
     <panel_attributes>Resource
 --
@@ -206,28 +207,25 @@ name: string
 --
 new(json): Resource
 toJSon(): json
-addResourceListener(ResourceListener)
-emitResourceChanged(json)</panel_attributes>
+addResourceListener(ResourceListener)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>632</x>
-      <y>336</y>
-      <w>248</w>
-      <h>64</h>
+      <x>712</x>
+      <y>328</y>
+      <w>104</w>
+      <h>48</h>
     </coordinates>
-    <panel_attributes>ResourceListener
---
-resourceChanged(header: string, content: json)</panel_attributes>
+    <panel_attributes>ResourceListener</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>296</x>
-      <y>472</y>
+      <x>288</x>
+      <y>496</y>
       <w>112</w>
       <h>24</h>
     </coordinates>
@@ -237,132 +235,136 @@ resourceChanged(header: string, content: json)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>344</x>
-      <y>400</y>
+      <x>336</x>
+      <y>376</y>
       <w>24</w>
-      <h>88</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>472</x>
-      <y>400</y>
+      <x>464</x>
+      <y>376</y>
       <w>24</w>
-      <h>88</h>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>536</x>
-      <y>344</y>
-      <w>224</w>
-      <h>32</h>
+      <x>528</x>
+      <y>328</y>
+      <w>240</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;260.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=0..n
+resourceChanged(json)</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
-      <y>72</y>
-      <w>400</w>
+      <x>672</x>
+      <y>64</y>
+      <w>344</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;480.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;410.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1056</x>
-      <y>128</y>
+      <x>1048</x>
+      <y>120</y>
       <w>40</w>
-      <h>104</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=0..n</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>968</x>
-      <y>416</y>
-      <w>216</w>
-      <h>32</h>
-    </coordinates>
-    <panel_attributes>ResourceController</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1088</x>
-      <y>504</y>
-      <w>112</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>PlayerController</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1016</x>
-      <y>440</y>
-      <w>24</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1136</x>
-      <y>440</y>
-      <w>24</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
       <x>960</x>
-      <y>504</y>
-      <w>112</w>
-      <h>24</h>
+      <y>432</y>
+      <w>216</w>
+      <h>32</h>
     </coordinates>
-    <panel_attributes>ArenaController</panel_attributes>
+    <panel_attributes>ResourceController
+&lt;&lt;abstract class&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1080</x>
+      <y>520</y>
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>PlayerController
+&lt;&lt;abstract class&gt;&gt;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>520</x>
-      <y>400</y>
-      <w>480</w>
+      <x>1008</x>
+      <y>456</y>
+      <w>24</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-
-get() / set()</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0;580.0;80.0;580.0;60.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>344</x>
-      <y>488</y>
+      <x>1128</x>
+      <y>456</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>952</x>
+      <y>520</y>
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>ArenaController
+&lt;&lt;abstract class&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>376</y>
+      <w>480</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+get() / set()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0;580.0;130.0;580.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>512</y>
       <w>816</w>
       <h>96</h>
     </coordinates>
@@ -374,56 +376,95 @@ get() / set()</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>464</x>
-      <y>488</y>
-      <w>576</w>
+      <y>512</y>
+      <w>568</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 get() / set()</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0;700.0;70.0;700.0;50.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;690.0;70.0;690.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>928</x>
-      <y>344</y>
-      <w>104</w>
-      <h>24</h>
+      <x>880</x>
+      <y>328</y>
+      <w>248</w>
+      <h>48</h>
     </coordinates>
-    <panel_attributes>ResourceView</panel_attributes>
+    <panel_attributes>ResourceView (haxeui)
+&lt;&lt;abstract class&gt;&gt;
+--
+resourceChanged(header: string, content: json)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>344</y>
-      <w>184</w>
+      <x>768</x>
+      <y>336</y>
+      <w>128</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;210.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>288</y>
+      <x>1040</x>
+      <y>280</y>
       <w>24</w>
-      <h>144</h>
+      <h>64</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1184</x>
+      <y>120</y>
+      <w>192</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>DockFactory
+--
+createDock(Resource, Type): Dock</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1008</x>
-      <y>288</y>
-      <w>24</w>
-      <h>72</h>
+      <x>1040</x>
+      <y>368</y>
+      <w>112</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+&lt;&lt;uiEvent(sender)&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>176</y>
+      <w>184</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;210.0;90.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1128</x>
+      <y>56</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;80.0;190.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
