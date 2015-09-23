@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>352</x>
+=======
+      <x>488</x>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <y>168</y>
+      <w>128</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Sheet
+--
+new(json): Context
+toJson(): json</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>584</x>
+      <y>56</y>
+      <w>96</w>
+=======
+      <x>680</x>
+      <y>72</y>
+      <w>80</w>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Assistant
+--
+saveContext()
+loadContext()
+saveLayout()
+loadLayout()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>416</x>
+      <y>496</y>
+=======
+      <x>552</x>
+      <y>480</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Arena</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>408</x>
+      <y>80</y>
+      <w>192</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;110.0</additional_attributes>
+=======
+      <x>544</x>
+      <y>96</y>
+      <w>152</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0;10.0;90.0</additional_attributes>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>672</x>
+      <y>160</y>
+      <w>152</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+&lt;&lt;update(uuid, json)&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>128</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>168</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>GlobalContext
+&lt;&lt;transient class&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>472</x>
+      <y>160</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>456</x>
+      <y>208</y>
+      <w>424</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+=======
+      <x>832</x>
+      <y>176</y>
+      <w>128</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+&lt;&lt;update(uuid, json)&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>416</x>
+      <y>208</y>
+=======
+      <x>552</x>
+      <y>232</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>808</x>
+      <y>128</y>
+=======
+      <x>944</x>
+      <y>144</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>120</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Peer
+&lt;&lt;ThreadServer&gt;&gt;
+--
+peers: Peer[]
+id: UUID
+name: string
+--
+new(id, name): Peer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>672</x>
+      <y>80</y>
+      <w>152</w>
+=======
+      <x>752</x>
+      <y>96</y>
+      <w>208</w>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>1000</x>
+      <y>8</y>
+=======
+      <x>1136</x>
+      <y>56</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>136</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Layout
+--
+new(json): Layout
+toJson(): json
+closeDock(Dock)
+iconify(Dock)
+smallify(Dock)
+moveDock(Dock, index)
+index(x,y): int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>992</x>
+      <y>184</y>
+=======
+      <x>1128</x>
+      <y>224</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>136</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Dock
+&lt;&lt;abstract class&gt;&gt;
+--
+content: Resource
+--
+new(Resource): Dock
+new(json): Dock
+toJson(): json</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>320</x>
+      <y>288</y>
+=======
+      <x>456</x>
+      <y>304</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>216</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Resource
+--
+id: UUID
+name: string
+--
+new(json): Resource
+toJSon(): json
+addResourceListener(ResourceListener)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>712</x>
+      <y>328</y>
+      <w>104</w>
+      <h>48</h>
+=======
+      <x>760</x>
+      <y>344</y>
+      <w>248</w>
+      <h>64</h>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+    </coordinates>
+    <panel_attributes>ResourceListener</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>288</x>
+      <y>496</y>
+=======
+      <x>424</x>
+      <y>480</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>112</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Player</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>336</x>
+      <y>376</y>
+=======
+      <x>472</x>
+      <y>408</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>24</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>464</x>
+      <y>376</y>
+=======
+      <x>600</x>
+      <y>408</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>24</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>528</x>
+      <y>328</y>
+      <w>240</w>
+      <h>40</h>
+=======
+      <x>664</x>
+      <y>352</y>
+      <w>224</w>
+      <h>32</h>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;
+m1=0..n
+resourceChanged(json)</panel_attributes>
+    <additional_attributes>10.0;20.0;280.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>672</x>
+      <y>64</y>
+      <w>344</w>
+=======
+      <x>752</x>
+      <y>80</y>
+      <w>400</w>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>1048</x>
+      <y>120</y>
+=======
+      <x>1184</x>
+      <y>136</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>960</x>
+      <y>432</y>
+=======
+      <x>1096</x>
+      <y>424</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>216</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>ResourceController
+&lt;&lt;abstract class&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>1080</x>
+      <y>520</y>
+=======
+      <x>1216</x>
+      <y>512</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>PlayerController
+&lt;&lt;abstract class&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>1008</x>
+      <y>456</y>
+=======
+      <x>1144</x>
+      <y>448</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>1128</x>
+      <y>456</y>
+=======
+      <x>1264</x>
+      <y>448</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>952</x>
+      <y>520</y>
+=======
+      <x>1088</x>
+      <y>512</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>ArenaController
+&lt;&lt;abstract class&gt;&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>504</x>
+      <y>376</y>
+=======
+      <x>648</x>
+      <y>408</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>480</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+get() / set()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0;580.0;130.0;580.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>336</x>
+      <y>512</y>
+=======
+      <x>472</x>
+      <y>496</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>816</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+get() / set()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;1000.0;100.0;1000.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>464</x>
+      <y>512</y>
+      <w>568</w>
+=======
+      <x>592</x>
+      <y>496</y>
+      <w>576</w>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+get() / set()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;690.0;70.0;690.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>880</x>
+      <y>328</y>
+      <w>248</w>
+      <h>48</h>
+=======
+      <x>1056</x>
+      <y>352</y>
+      <w>104</w>
+      <h>24</h>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+    </coordinates>
+    <panel_attributes>ResourceView (haxeui)
+&lt;&lt;abstract class&gt;&gt;
+--
+resourceChanged(header: string, content: json)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>768</x>
+      <y>336</y>
+      <w>128</w>
+=======
+      <x>888</x>
+      <y>352</y>
+      <w>184</w>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>1040</x>
+      <y>280</y>
+=======
+      <x>1232</x>
+      <y>296</y>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+      <w>24</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1184</x>
+      <y>120</y>
+      <w>192</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>DockFactory
+--
+createDock(Resource, Type): Dock</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+<<<<<<< HEAD:Docs/uml/Assistant_Model.uxf
+      <x>1040</x>
+      <y>368</y>
+      <w>112</w>
+      <h>80</h>
+=======
+      <x>1136</x>
+      <y>296</y>
+      <w>24</w>
+      <h>72</h>
+>>>>>>> a426bf5878eb3774da8d9a0516fcea05734423f5:Docs/uml/Global_Model.uxf
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;
+&lt;&lt;uiEvent(sender)&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1120</x>
+      <y>176</y>
+      <w>184</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;210.0;90.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1128</x>
+      <y>56</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>190.0;80.0;190.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>184</y>
+      <w>144</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>ResourceController</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

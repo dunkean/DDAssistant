@@ -1,0 +1,90 @@
+- Lvl, Classes/Lvl, Race
+- HitPoints: *lvl, hitdices, ability, feats, modifiers, damages
+- Speed
+- Alignment, God
+- Size, Age, Gender, Weight, 
+- *Ability: Score + Modifiers -> Bonus 
+   - STR, DEX, CON, INT, CHAR, SAG
+- *Saving Throws: PlayerBase(lvl,class) + AbilityBonus + Modifiers
+   - FOR, REF, WIL
+- Initiative: 0 + AbilityBonus + Modifiers
+- AC: 10 + NaturalArmor + ArmorBonus + Shield + Size + MaxAbilityBonus + Modifiers
+- TOUCH_AC: AC - NaturalArmor - ArmorBonus - Size
+- FF_AC: AC - DexBonus
+- GRAPPLE: PlayerBase(lvl,class) + AbilityBonus + Modifiers + size
+- Skill: Ranks + AbilityModifier + Modifiers
+- *Armors: name + max Dex + armorPen + weight + BaseValue + MagicModifs
+- *Shield: name + max Dex + armorPen + weight + BaseValue + MagicModifs
+- *Item: name + description + effectIfWorn + weight
+- *WornItem (slots): name + effect
+- *Spells(School,Lvl): count
+- *Powers: rage, monk, etc.
+- *Feats: name, effect
+- *Langages: name / ALL
+- *Attacks: *Touchs / Crit<ratio,range> / *dmg<roll,energy> / weapon
+- Touchs: Grapple + feats + weapon
+- Weapons: dmg / modifiers / effect
+- Effect: *(jsonSet) / duration / charge / recharge
+
+
+V1 NumCarac
+********
+- MOD: BONUS TYPES > Bonus {RefBonus(Abilities/Skills) || ConditionalBonus(synergies/situations) || TemporalBonus(spell/buffs) || PowerBonus(feat/worn/racial/} 
+- Lvl: SUM[classLvl*]
+- HitPoints: ( SUM[*classLvl x *classHPDice] || SUM[*RolledHpDice] ) + (RefBonus_Ability x Lvl) + *MOD
+- HitPoints: Value + (MOD_CON * Lvl) + *MOD
+- Speed: Value + *MOD
+- AbilityValue: Value + *MOD
+- AbilityBonusValue: FUNC(AbilityValue)
+- BaseSavingThrows: FUNC(*class,*Lvl)
+- SavingThrows: BaseSavingThrows + RefBonus_Ability + *MOD
+- Initiative: RefBonus_Ability + *MOD
+- WornArmorBonus/WornShieldBonus: Value=FUNC(type) + MagicalBonus + *MOD
+- AC: 10 + NaturalArmorBonus + WornArmorBonus + WornShieldBonus + FUNC(RefBonus_Ability, WornArmorLimit) + FUNC(Size) + MOD*
+- TOUCH_AC: AC - (NaturalArmorBonus + WornArmorBonus + WornShieldBonus + FUNC(Size))
+- TOUCH_AC: 10 + FUNC(RefBonus_Ability, WornArmorLimit) + MOD*
+- FF_AC: AC - FUNC(RefBonus_Ability, WornArmorLimit)
+- FF_AC: 10 + NaturalArmorBonus + WornArmorBonus + WornShieldBonus + FUNC(Size) + MOD*
+- BaseAttackBonus: FUNC(*class,*Lvl)
+- Grapple: BaseAttackBonus + RefBonus_Ability + FUNC(Size) + MOD*
+- WeaponBonus: Value + MagicalBonus
+- Attack: BaseAttackBonus + RefBonus_Ability + FUNC(Size) + WeaponBonus + MOD*
+- Skill: Value + RefBonus_Ability + MOD*
+
+
+Values: HitPoints, Speed, AbilityValue, 
+Bonus:
+
+
+
+
+BONUS TYPES
+***********
+
+Ability Modifier 
+Alchemical Bonus 
+Armor Bonus 
+Circumstance Modifier 
+Competence Modifier 
+Deflection Bonus 
+Dodge Bonus 
+Enhancement Bonus
+Inherent Bonus
+Epic Bonus
+Insight Bonus 
+Luck Modifier 
+Morale Modifier 
+Natural Armor Bonus 
+Profane Modifier 
+Racial Bonus 
+Resistance Bonus 
+Sacred Modifier 
+Shield Bonus 
+Size Modifier 
+Divine Modifier
+Feat Bonus
+Exalted Bonus
+Deformity Bonus
+
+Hast bonus
+Slow malus
