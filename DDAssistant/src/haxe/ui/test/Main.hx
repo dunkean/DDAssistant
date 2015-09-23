@@ -5,6 +5,7 @@ import flash.utils.ByteArray;
 import haxe.crypto.Md5;
 import haxe.io.Bytes;
 import haxe.macro.Context;
+import haxe.ui.test.Main.Test;
 import haxe.ui.toolkit.containers.Stack;
 import haxe.ui.toolkit.controls.TabBar;
 import haxe.ui.toolkit.core.Macros;
@@ -12,12 +13,27 @@ import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.core.Root;
 import haxe.ui.toolkit.resources.ResourceManager;
 import haxe.ui.toolkit.themes.GradientTheme;
+import prime.bindable.Bindable;
+using prime.utils.Bind;
+
+class Test {
+	public function test() : Void{
+			
+	}
+	
+	public function new() {
+		var a = new Bindable("test");
+		test.on(a.change, this);
+		a.value = "euheh";
+	}
+}
 
 class Main {
 	
 	
   
 	public static function main() {
+		new Test();
 		//var str = '{"test":{"toto":{"mama":["berer","flmekfl"],"bobo":12},"active":true}}';
 		//trace(Md5.encode(str));
 		//x = 8;

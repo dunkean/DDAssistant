@@ -18,6 +18,7 @@
 	<haxelib name="actuate" />
 	<haxelib name="haxeui" />
 	<haxelib name="haxeui-rich-text" />
+	<haxelib name="prime" />
 	
 	<!-- assets -->
 	<icon path="assets/application-default-icon.svg" />
