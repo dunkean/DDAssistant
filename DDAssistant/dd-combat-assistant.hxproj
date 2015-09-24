@@ -49,7 +49,7 @@
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="True" />
-    <option additional="--remap flash:openfl&#xA;-dce std&#xA;-resource assets/data/code.txt@data/code.txt&#xA;-resource assets/data/data.json@data/data.json&#xA;-resource assets/data/data.txt@data/data.txt&#xA;-resource assets/data/data.xml@data/data.xml&#xA;-resource assets/data/rtf.txt@data/rtf.txt&#xA;-resource assets/ui/customPopup.xml@ui/customPopup.xml&#xA;-resource assets/ui/import01.xml@ui/import01.xml&#xA;-resource assets/ui/import02.xml@ui/import02.xml&#xA;-resource assets/ui/import03.xml@ui/import03.xml&#xA;-resource assets/ui/importedDataSource.xml@ui/importedDataSource.xml&#xA;-resource assets/ui/main.xml@ui/main.xml&#xA;-resource assets/ui/menu.xml@ui/menu.xml&#xA;-resource assets/ui/temp.xml@ui/temp.xml&#xA;-resource assets/ui/test.css@ui/test.css&#xA;-resource assets/ui/test01.xml@ui/test01.xml&#xA;-resource assets/ui/test02.xml@ui/test02.xml&#xA;-resource assets/ui/test03.xml@ui/test03.xml&#xA;-resource assets/ui/html_test.xml@ui/html_test.xml&#xA;#--macro keep(&quot;ddassistant.Main&quot;)" />
+    <option additional="--remap flash:openfl&#xA;-dce std&#xA;#--macro keep(&quot;ddassistant.Main&quot;)" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>

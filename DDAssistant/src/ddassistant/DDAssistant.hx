@@ -25,7 +25,7 @@ class DDAssistant extends XMLController
 		//else
 		uuid = UUID.uuid(12, 16);
 		name = 'Device';
-		peer = new Peer(uuid, name);
+		peer = new Peer();
 				
 		addListeners();
 	}

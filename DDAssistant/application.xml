@@ -21,12 +21,12 @@
 	<!-- assets -->
 	<icon path="assets/application-default-icon.svg" />
 	<assets path="assets" rename="assets" />
-	<assets path="assets/img" rename="img" />
+	<!-- <assets path="assets/img" rename="img" />
 	
 	<assets path="assets/ui" rename="ui" exclude="*.xml|*.css" if="html5" />
 	<assets path="assets/ui" rename="ui" unless="html5" />
 	<assets path="assets/data" rename="data" exclude="*.json|*.txt|*.xml" if="html5" />
-	<assets path="assets/data" rename="data" unless="html5" />
+	<assets path="assets/data" rename="data" unless="html5" /> -->
 	
 	<!-- optimize output -->
 	<haxeflag name="-dce std" if="haxe3" />

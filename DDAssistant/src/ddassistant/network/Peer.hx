@@ -54,8 +54,8 @@ class Peer
 				var peer = new PeerInfo(sk);
 				trace('Client > Connected to server ' + peer.toString());
 				Thread.create(listenMessages(peer));
-				peer.send('uuid', uuid);
-				peer.send('name', name);
+				peer.send('uuid', DDAssistant.uuid);
+				peer.send('name', DDAssistant.name);
 			}catch (e:Dynamic) {
 			}
 		}
@@ -69,8 +69,8 @@ class Peer
 				var peer = new PeerInfo(sk);
 				trace('Server > Connected to client ' + peer.toString());
 				Thread.create(listenMessages(peer));
-				peer.send('uuid', uuid);
-				peer.send('name', name);
+				peer.send('uuid', DDAssistant.uuid);
+				peer.send('name', DDAssistant.name);
 			}
 		}
 	}
