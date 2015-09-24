@@ -16,7 +16,7 @@ class DDAssistant extends XMLController
 	public static var uuid:String;
 	public static var name:String;
 	public static var peer:Peer;
-	//public static var resourceManager:ResourceManager;
+	public static var resourceManager:ResourceManager;
 	
 	public function new() 
 	{
@@ -26,7 +26,7 @@ class DDAssistant extends XMLController
 		uuid = UUID.uuid(12, 16);
 		name = 'Device';
 		peer = new Peer();
-				
+		resourceManager = new ResourceManager();
 		addListeners();
 	}
 	

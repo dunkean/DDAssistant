@@ -5,10 +5,22 @@ package ddassistant.models;
  * @author dunkean
  * @version 0.1
  */
-class ResourceManager
+class ResourceManager implements ResourceListener
 {
 	public static var resources: Map<String,Resource>;
 	
+	public function new() {
+		resources = new  Map<String,Resource>();
+	}
 	
+	//@:access(Resource.new)
+	public function shareObj(obj: Dynamic, ?uuid: String) {
+		var resource = new Resource(obj, uuid);
+		resources.set(resource.uuid, resource);
+	}
+	
+	public function resourceChanged(attribute: String, serialChangeSet: String) {
+		
+	}
 	
 }

@@ -17,6 +17,7 @@
 	<haxelib name="haxeui" />
 	<haxelib name="haxeui-rich-text" />
 	<haxelib name="prime" />
+	<haxelib name="bindx2" />
 	
 	<!-- assets -->
 	<icon path="assets/application-default-icon.svg" />
