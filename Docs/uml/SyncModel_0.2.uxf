@@ -7,7 +7,7 @@
       <x>1140</x>
       <y>270</y>
       <w>100</w>
-      <h>70</h>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Peer</panel_attributes>
     <additional_attributes/>
@@ -18,7 +18,7 @@
       <x>790</x>
       <y>260</y>
       <w>170</w>
-      <h>80</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>ResourceManager
 --
@@ -32,7 +32,7 @@ addResource(obj)
       <x>520</x>
       <y>260</y>
       <w>120</w>
-      <h>80</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Resource
 --
@@ -255,13 +255,14 @@ bg=white</panel_attributes>
     <id>UMLNote</id>
     <coordinates>
       <x>470</x>
-      <y>150</y>
-      <w>260</w>
-      <h>100</h>
+      <y>80</y>
+      <w>250</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>Revoir la relation de binding/reflection entre resource / resourceManager.
 Resource est pas forcément utile (notification directement dans ResourceManager)
 
+Voir si on peut automatiser le notify + send avec des macros: genre @sendable qui génère les bindings
 bg=gray</panel_attributes>
     <additional_attributes/>
   </element>
