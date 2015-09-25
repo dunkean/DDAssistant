@@ -1,4 +1,4 @@
-package ddassistant.models;
+package ddassistant.sync;
 
 /**
  * Resource class for p2p sync

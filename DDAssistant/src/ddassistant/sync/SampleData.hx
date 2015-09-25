@@ -1,4 +1,4 @@
-package src.ddassistant.models;
+package ddassistant.sync;
 
 /**
  * Sample Data class for p2p sync test
@@ -10,11 +10,11 @@ package src.ddassistant.models;
 @:bindable
 class SampleData implements IBindable
 {
-	
+	public var sampleText: String;
 
 	public function new() 
 	{
-		
+		this.sampleText = "SampleText";
 	}
 	
 }

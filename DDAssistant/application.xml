@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
-	<meta title="DDAssistant" package="ddassistant.ddassistantapp" version="1.0.0" company="Turmish" />
+	<meta title="DDAssistant" package="org.turmish.ddassistantapp" version="1.0.0" company="Turmish" />
 	
 	<!-- output -->
 	<app main="ddassistant.Main" file="ddassistantapp" path="bin" />
 	
 	<window background="#FFFFFF" fps="60" />
-	<window width="800" height="600" unless="mobile" />
+	<window width="768" height="1024" unless="mobile" />
 	<!--window orientation="landscape" vsync="false" antialiasing="0" if="cpp" /-->
 	
 	<!-- classpath, haxe libs -->
@@ -15,7 +15,7 @@
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
 	<haxelib name="haxeui" />
-	<haxelib name="haxeui-rich-text" />
+	<!--<haxelib name="haxeui-rich-text" />-->
 	<haxelib name="prime" />
 	<haxelib name="bindx2" />
 	

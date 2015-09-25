@@ -1,5 +1,5 @@
 package ddassistant.network;
-import ddassistant.models.Resource;
+import ddassistant.sync.Resource;
 
 /**
  * ...

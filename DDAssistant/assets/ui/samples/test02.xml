@@ -28,6 +28,7 @@
 	<style>
 		#nopadding {
 			paddingLeft: 0;
+			paddingLeft: 0;
 			paddingTop: 0;
 			paddingBottom: 0;
 			paddingRight: 0;

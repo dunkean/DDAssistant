@@ -1,4 +1,4 @@
-package ddassistant.models;
+package ddassistant.sync;
 
 /**
  * @author 

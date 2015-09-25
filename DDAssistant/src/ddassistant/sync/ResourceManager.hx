@@ -1,4 +1,5 @@
-package ddassistant.models;
+package ddassistant.sync;
+import ddassistant.sync.Resource;
 
 /**
  * Resource manager for data sync
