@@ -2,9 +2,22 @@ package ddassistant.network;
 import ddassistant.sync.Resource;
 
 /**
- * ...
+ * Messages classes for combatAssistant
  * @author 
  */
+
+//*****SYNC******//
+// senderId, resOwnerId should be equal except disconnection, updateRequire
+// newResource: (senderId, resOwnerId, resId, resMd5, resource) 
+
+// senderId, resOwnerId should be equal except disconnection, updateRequire
+// resourceChanged: (senderId, resOwnerId, resId, resMd5, changedField, resource) 
+
+// senderId, effectLauncherId should be equal. effectLauncherId, resOwnerID should be different, if equal launch resourcheChanged
+// applyEffect: (senderId, effectLauncherId, resOwnerID, resId, resMd5, changedField, resource)
+
+// newTextMessage: (fromId, toId, content)
+
 class Message
 {
 	private static inline var SEPARATOR: String = "*-*_*-*";

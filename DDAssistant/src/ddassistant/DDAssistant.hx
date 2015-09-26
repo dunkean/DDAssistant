@@ -16,7 +16,7 @@ import bindx.Bind;
  * @author dunkean
  * @version 0.1
  */
-@:build(haxe.ui.toolkit.core.Macros.buildController ("ui/Assistant.xml"))
+@:build(haxe.ui.toolkit.core.Macros.buildController ("Assistant.xml"))
 class DDAssistant extends XMLController
 {
 	public static var uuid:String;
@@ -43,15 +43,23 @@ class DDAssistant extends XMLController
 	}
 	
 	private function buildUI() {
-		Macros.addStyleSheet("assets/ui/style.css");
+		Macros.addStyleSheet("assets/style.css");
 	}
 	
 	
 	private function testFunction() {
 		testObj = new SampleData();
 		
-		var unbindOldUser = BindExt.exprTo('Text binded >' + testObj.sampleText, label.text);
-		Bind.bind(testObj.sampleText, onSampleTextChanged);
+		//var unbindOldUser = BindExt.exprTo('Text binded >' + testObj.sampleText, label.text);
+		//Bind.bind(testObj.sampleText, onSampleTextChanged);
+		Bind.bindAll(testObj, onObjChanged);
+	}
+	
+	function onObjChanged(field:String, from: Dynamic, to:Dynamic) {
+		trace("ALL");
+		trace(field);
+		trace(from);
+		trace(to);
 	}
 	
 	function onSampleTextChanged(from:String, to:String) {
@@ -80,5 +88,13 @@ class DDAssistant extends XMLController
 		btn1.addEventListener(UIEvent.CLICK, btn1Clicked);
 		btn2.addEventListener(UIEvent.CLICK, btn2Clicked);
 		btn3.addEventListener(UIEvent.CLICK, btn3Clicked);
+		
+		//newAbilityPanel.addEventListener(UIEvent.CLICK, addAbilityPanel);
+	}
+	
+	
+	
+	private function addAbilityPanel(e:UIEvent) {
+		//mainLayout.addChild(new XMLController());	
 	}
 }

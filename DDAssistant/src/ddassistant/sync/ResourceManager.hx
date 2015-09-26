@@ -20,7 +20,7 @@ class ResourceManager implements ResourceListener
 		resources.set(resource.uuid, resource);
 	}
 	
-	public function resourceChanged(attribute: String, serialChangeSet: String) {
+	public function resourceChangedLocally(resource:Resource, field: String, from: Dynamic, to: Dynamic) {
 		
 	}
 	
