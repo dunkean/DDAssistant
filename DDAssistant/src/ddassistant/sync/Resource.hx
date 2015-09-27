@@ -10,6 +10,7 @@ import bindx.Bind;
 import bindx.IBindable;
 import ddassistant.utils.UUID;
 import haxe.crypto.Md5;
+import haxe.macro.Expr;
 import haxe.Serializer;
  
 class Resource
@@ -20,7 +21,7 @@ class Resource
 	public var obj: Dynamic;
 	public var serialObj: String;
 	
-	var unbindCallBack;
+	var unbindAll: Void -> Void;
 	
 	//@:allow(ddassistant.ResourceManager)
 	public function new(obj: IBindable, ?uuid:String) 
@@ -30,21 +31,28 @@ class Resource
 		this.serialObj = Serializer.run(obj);
 		this.uuid = (uuid == null) ? UUID.uuid(12, 16) : uuid;
 		this.md5 = Md5.encode(serialObj);
+		unbindAll = Bind.bindAll(obj, objLocallyChanged);
 		
-		unbindCallBack = Bind.bindAll(obj, objLocallyChanged);
+		trace(md5);
+		trace(serialObj);
 	}
 	
 	public function objLocallyChanged(field: String, from: Dynamic, to: Dynamic) {
+		trace(field + " changed from " + from + " to " + to);
+		unbindAll();
 		this.serialObj = Serializer.run(obj);
 		this.md5 = Md5.encode(serialObj);
-		DDAssistant.resourceManager.resourceChangedLocally(this, field, from, to);
+		trace(md5);
+		trace(serialObj);
+		////unbindAll = Bind.bindAll(obj, objLocallyChanged);
+		DDAssistant.resourceManager.resourceLocallyChanged(this, field, from, to);
 	}
 	
 	public function objRemotelyChanged(field: String, from: Dynamic, to: Dynamic) {
-		unbindCallBack(
+		unbindAll();
 		this.serialObj = Serializer.run(obj);
 		this.md5 = Md5.encode(serialObj);
-		
+		Reflect.setField(obj, field, to);
 	}
 	
 }

@@ -3,10 +3,11 @@ package ddassistant.ui;
 import haxe.ui.toolkit.containers.TabView;
 
 /**
- * ...
- * @author 
+ * DDCombatAssistant main layout
+ * @author dunkean
+ * @version 0.1
  */
-class AssistantTab extends TabView
+class _AssistantTab extends TabView
 {
 
 	public function new() 

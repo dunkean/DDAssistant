@@ -1,13 +1,16 @@
 package ddassistant;
+import ddassistant.models.Player;
 import ddassistant.network.Peer;
 import ddassistant.sync.ResourceManager;
 import ddassistant.sync.SampleData;
 import ddassistant.utils.UUID;
+import ddassistant.views.AbilitiesView;
 import haxe.ui.toolkit.containers.HBox;
 import haxe.ui.toolkit.controls.Text;
 import haxe.ui.toolkit.core.Macros;
 import haxe.ui.toolkit.core.XMLController;
 import haxe.ui.toolkit.events.UIEvent;
+import haxe.ui.toolkit.events.MenuEvent;
 import bindx.BindExt;
 import bindx.Bind;
 
@@ -16,7 +19,7 @@ import bindx.Bind;
  * @author dunkean
  * @version 0.1
  */
-@:build(haxe.ui.toolkit.core.Macros.buildController ("Assistant.xml"))
+@:build(haxe.ui.toolkit.core.Macros.buildController ("assistant.xml"))
 class DDAssistant extends XMLController
 {
 	public static var uuid:String;
@@ -27,6 +30,9 @@ class DDAssistant extends XMLController
 	
 	var testObj: SampleData;
 	
+	/**
+	 * Instanciate peer, resourceManager. Load last settings. 
+	 */
 	public function new() 
 	{
 		//if settings exit
@@ -49,10 +55,8 @@ class DDAssistant extends XMLController
 	
 	private function testFunction() {
 		testObj = new SampleData();
-		
-		//var unbindOldUser = BindExt.exprTo('Text binded >' + testObj.sampleText, label.text);
-		//Bind.bind(testObj.sampleText, onSampleTextChanged);
 		Bind.bindAll(testObj, onObjChanged);
+		Bind.bind(testObj.sampleText, onSampleTextChanged);
 	}
 	
 	function onObjChanged(field:String, from: Dynamic, to:Dynamic) {
@@ -63,16 +67,20 @@ class DDAssistant extends XMLController
 	}
 	
 	function onSampleTextChanged(from:String, to:String) {
-		trace(from + " " + to);
-		abilities.visible = !abilities.visible;
+		trace("MONOBIND > from " + from + " to "  + to);
 	}
 	
 	private function btn1Clicked(e:UIEvent) : Void {
 		testObj.sampleText = "Bouton 1";
+		Reflect.setField(testObj, "sampleText", "ReflectiveText");
+		trace("final value " + testObj.sampleText);
+		//player.Charisma = "45";
 	}
 	
 	private function btn2Clicked(e:UIEvent) : Void {
-		testObj.sampleText = "Bouton 2";
+		//testObj.sampleText = "Bouton 2";
+		player.Charisma = "12";
+		player.Strength = "15";
 	}
 	
 	private function btn3Clicked(e:UIEvent) : Void {
@@ -89,12 +97,34 @@ class DDAssistant extends XMLController
 		btn2.addEventListener(UIEvent.CLICK, btn2Clicked);
 		btn3.addEventListener(UIEvent.CLICK, btn3Clicked);
 		
-		//newAbilityPanel.addEventListener(UIEvent.CLICK, addAbilityPanel);
+		attachEvent("newMenu", MenuEvent.SELECT, addModel);
+		attachEvent("joinMenu", MenuEvent.SELECT, join);
+		attachEvent("viewsMenu", MenuEvent.SELECT, addView);
+	}
+
+	
+	//tmp test variable
+	var player: Player;
+	private function addView(e:MenuEvent) {
+		switch(e.menuItem.id) {
+			case "abilities":
+				var viewController = new AbilitiesView(player);
+				mainLayout.addChild(viewController.view);
+				trace("added $e.menuItem.id");
+			default:
+		}
 	}
 	
+	private function addModel(e:MenuEvent) {
+		switch(e.menuItem.id) {
+			case "newPlayer":
+				player = new Player();
+				var id: String = resourceManager.registerLocalResource(player);
+				trace(id);
+			default:
+		}
+	}
 	
-	
-	private function addAbilityPanel(e:UIEvent) {
-		//mainLayout.addChild(new XMLController());	
+	private function join(e:MenuEvent) {
 	}
 }

@@ -1,4 +1,5 @@
 package ddassistant.sync;
+import bindx.IBindable;
 import ddassistant.sync.Resource;
 
 /**
@@ -6,7 +7,7 @@ import ddassistant.sync.Resource;
  * @author dunkean
  * @version 0.1
  */
-class ResourceManager implements ResourceListener
+class ResourceManager //implements ResourceListener
 {
 	public static var resources: Map<String,Resource>;
 	
@@ -15,13 +16,25 @@ class ResourceManager implements ResourceListener
 	}
 	
 	//@:access(Resource.new)
-	public function shareObj(obj: Dynamic, ?uuid: String) {
+	public function registerLocalResource(obj: IBindable, ?uuid: String) : String{
 		var resource = new Resource(obj, uuid);
 		resources.set(resource.uuid, resource);
+		return resource.uuid;
 	}
 	
-	public function resourceChangedLocally(resource:Resource, field: String, from: Dynamic, to: Dynamic) {
+		
+	public function registerRemoteResource(serialObj: String, ?uuid: String): Void {
 		
 	}
 	
+	
+	public function resourceLocallyChanged(resource:Resource, field: String, from: Dynamic, to: Dynamic) {
+		//create Msg
+		//broadcast Msg
+	}
+	
+	public function resourceRemotelyChanged(msg): Void {
+		
+	}
+
 }

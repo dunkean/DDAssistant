@@ -3,7 +3,7 @@ import ddassistant.sync.Resource;
 
 /**
  * Messages classes for combatAssistant
- * @author 
+ * @author dunkean
  */
 
 //*****SYNC******//

@@ -3,7 +3,7 @@ package ddassistant.sync;
 /**
  * @author 
  */
-interface ResourceListener 
+interface _ResourceListener 
 {
 	public function resourceChanged(attribute: String, serialChangeSet: String): Void;
 }
