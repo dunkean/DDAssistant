@@ -3,6 +3,7 @@ import ddassistant.models.Player;
 import ddassistant.network.Peer;
 import ddassistant.sync.ResourceManager;
 import ddassistant.sync.SampleData;
+import ddassistant.sync.TestClass;
 import ddassistant.utils.UUID;
 import ddassistant.views.AbilitiesView;
 import haxe.ui.toolkit.containers.HBox;
@@ -11,8 +12,8 @@ import haxe.ui.toolkit.core.Macros;
 import haxe.ui.toolkit.core.XMLController;
 import haxe.ui.toolkit.events.UIEvent;
 import haxe.ui.toolkit.events.MenuEvent;
-import bindx.BindExt;
-import bindx.Bind;
+//import bindx.BindExt;
+//import bindx.Bind;
 
 /**
  * DDAssistant main window
@@ -55,8 +56,8 @@ class DDAssistant extends XMLController
 	
 	private function testFunction() {
 		testObj = new SampleData();
-		Bind.bindAll(testObj, onObjChanged);
-		Bind.bind(testObj.sampleText, onSampleTextChanged);
+		//Bind.bindAll(testObj, onObjChanged);
+		//Bind.bind(testObj.sampleText, onSampleTextChanged);
 	}
 	
 	function onObjChanged(field:String, from: Dynamic, to:Dynamic) {
@@ -79,8 +80,8 @@ class DDAssistant extends XMLController
 	
 	private function btn2Clicked(e:UIEvent) : Void {
 		//testObj.sampleText = "Bouton 2";
-		player.Charisma = "12";
-		player.Strength = "15";
+		//player.Charisma = "12";
+		//player.Strength = "15";
 	}
 	
 	private function btn3Clicked(e:UIEvent) : Void {
@@ -118,9 +119,19 @@ class DDAssistant extends XMLController
 	private function addModel(e:MenuEvent) {
 		switch(e.menuItem.id) {
 			case "newPlayer":
-				player = new Player();
-				var id: String = resourceManager.registerLocalResource(player);
-				trace(id);
+				var player = new Player();
+				player.Charisma = "25";
+				trace("Done 1 > " + player.Charisma);
+				player = new Player("123123123");
+				Reflect.setField(player, "Strength", 45);
+				trace("Done 2 > " + player.Strength);
+				
+				
+				//var test = new TestClass();
+				//test.test1 = "SETTED TEST 1";
+				
+				//var id: String = resourceManager.registerLocalResource(player);
+				//trace(id);
 			default:
 		}
 	}

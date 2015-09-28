@@ -1,6 +1,4 @@
 package ddassistant.views;
-import bindx.BindExt;
-import bindx.Bind;
 import ddassistant.models.Player;
 import haxe.ui.toolkit.core.XMLController;
 
@@ -17,12 +15,12 @@ class AbilitiesView extends XMLController
 
 	public function new(player:Player) 
 	{
-		BindExt.exprTo(player.Strength, FORVal.text);
-		BindExt.exprTo(player.Dexterity, DEXVal.text);
-		BindExt.exprTo(player.Constitution, CONVal.text);
-		BindExt.exprTo(player.Intelligence, INTVal.text);
-		BindExt.exprTo(player.Wisdom, SAGVal.text);
-		BindExt.exprTo(player.Charisma, CHAVal.text);
+		//BindExt.exprTo(player.Strength, FORVal.text);
+		//BindExt.exprTo(player.Dexterity, DEXVal.text);
+		//BindExt.exprTo(player.Constitution, CONVal.text);
+		//BindExt.exprTo(player.Intelligence, INTVal.text);
+		//BindExt.exprTo(player.Wisdom, SAGVal.text);
+		//BindExt.exprTo(player.Charisma, CHAVal.text);
 		//Bind.bindAll(player, changed);
 	}
 	

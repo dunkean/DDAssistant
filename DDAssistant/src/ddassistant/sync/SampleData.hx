@@ -5,10 +5,10 @@ package ddassistant.sync;
  * @author dunkean
  */
 
- import bindx.IBindable;
+ //import bindx.IBindable;
 
-@:bindable
-class SampleData implements IBindable
+//@:bindable
+class SampleData// implements IBindable
 {
 	public var sampleText: String;
 	

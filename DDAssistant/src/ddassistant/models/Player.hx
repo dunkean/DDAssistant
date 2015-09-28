@@ -3,13 +3,13 @@ package ddassistant.models;
 /**
  * D&D 3.5 player datamodel
  * @author dunkean
- * @version 0.1
+ * @version 0.2
  */
 
-import bindx.IBindable;
+import ddassistant.sync.Syncable;
+import ddassistant.sync.Synced;
 
-@:bindable
-class Player implements IBindable
+class Player extends Synced implements Syncable
 {
 	//Abilities
 	public var Strength: String = "10";
@@ -19,11 +19,9 @@ class Player implements IBindable
 	public var Wisdom: String = "10";
 	public var Charisma: String = "10";
 	
-	public function new() 
-	{
-		
+	static public function sync(uuid: String, field: String, from: Dynamic, to: Dynamic): Void {
+		trace(uuid+ " " + field + " > " + from + " > " + to);
 	}
-	
 }
 
 

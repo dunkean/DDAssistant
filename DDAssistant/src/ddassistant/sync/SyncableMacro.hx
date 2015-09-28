@@ -1,25 +1,23 @@
-package;
+package ddassistant.sync;
 
 import haxe.macro.Expr;
 import haxe.macro.Context;
+import ddassistant.sync.TestClass;
+import ddassistant.models.Player;
 
 /**
- * ...
+ * Add static notifications to syncable class
  * @author dunkean
+ * @version 0.1
  */
 class SyncableMacro
 {
- #if macro
+	#if macro
+ 
     macro static public function buildSyncableMacro():Array<Field> {
         var fields = Context.getBuildFields();
         var res = [];
 
-		//var uuid = "NO UUID";
-		//for (o in fields) {
-            //if (o.name == "uuid")
-				//uuid = this.
-        //}
-		
         for (o in fields) {
             if (isSyncable(o)) buildField(o, res)
             else res.push(o);
@@ -47,8 +45,8 @@ class SyncableMacro
                 field.kind = FProp("default", "set", type, expr);
 
                 var setter = macro function foo(value:$type) {
-                    //this.$fieldName = value + "MACRO";
-					TestClass.sync(this.uuid, '$fieldName', value );
+					Player.sync(this.uuid, '$fieldName', this.$fieldName, value);
+					this.$fieldName = value;
                     return value;
                 };
 

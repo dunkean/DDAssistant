@@ -1,16 +1,16 @@
-package;
+package ddassistant.sync;
 
 /**
  * ...
  * @author dunkean
  */
-class TestClass extends Syncable
+class TestClass //extends Synced implements Syncable
 {
-	public var test1: String;
+	public var test1: String = "BONJOUR";
 	public var test2: String;
 
-	static public function sync(uuid: String, field: String, value: String): Void {
-		trace(uuid+ " " + field + " > " + value);
+	static public function sync(uuid: String, field: String, from: Dynamic, to: Dynamic): Void {
+		trace(uuid+ " " + field + " > " + from + " > " + to);
 	}
 
 }

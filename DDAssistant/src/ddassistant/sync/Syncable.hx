@@ -1,28 +1,16 @@
-package;
-import haxe.crypto.Md5;
-import haxe.Serializer;
+package ddassistant.sync;
+
+import ddassistant.sync.TestClass;
 
 /**
- * ...
+ * Syncable class
  * @author dunkean
  */
 
-@:autoBuild(SyncableMacro.buildSyncableMacro())
-class Syncable
+#if !macro
+@:autoBuild(ddassistant.sync.SyncableMacro.buildSyncableMacro()) 
+#end
+interface Syncable
 {
-	var uuid: String;
-	public function new(?uuid: String) {
-		if (uuid == null)
-			this.uuid = "newUUID";
-		else
-			this.uuid = uuid;
-	}
 	
-	public function serialize(): String {
-		return Serializer.run(this);
-	}
-	
-	public function md5(): String {
-		return Md5(serialize());
-	}
 }

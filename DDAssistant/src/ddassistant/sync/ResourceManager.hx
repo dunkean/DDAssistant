@@ -1,5 +1,5 @@
 package ddassistant.sync;
-import bindx.IBindable;
+//import bindx.IBindable;
 import ddassistant.sync.Resource;
 
 /**
@@ -9,26 +9,15 @@ import ddassistant.sync.Resource;
  */
 class ResourceManager //implements ResourceListener
 {
-	public static var resources: Map<String,Resource>;
+	//public static var resources: Map<String,Resource>;
 	
 	public function new() {
-		resources = new  Map<String,Resource>();
-	}
-	
-	//@:access(Resource.new)
-	public function registerLocalResource(obj: IBindable, ?uuid: String) : String{
-		var resource = new Resource(obj, uuid);
-		resources.set(resource.uuid, resource);
-		return resource.uuid;
-	}
-	
-		
-	public function registerRemoteResource(serialObj: String, ?uuid: String): Void {
-		
+		//resources = new  Map<String,Resource>();
 	}
 	
 	
-	public function resourceLocallyChanged(resource:Resource, field: String, from: Dynamic, to: Dynamic) {
+	
+	public function resourceLocallyChanged(resourceId:String, field: String, from: Dynamic, to: Dynamic) {
 		//create Msg
 		//broadcast Msg
 	}
