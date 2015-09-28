@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menubar styleName="blackStyle">
+	<menubutton text="Nouveau" id="newMenu" styleName="blackStyle">
+		<menuitem text="Joueur" id="newPlayer" styleName="blackStyle"/>
+		<menuitem text="Arène" id="newArena" styleName="blackStyle"/>
+	</menubutton>
+	<menubutton text="Joindre" id="joinMenu" styleName="blackStyle">
+		<menuitem text="Arène 1" id="newArenaPanel" styleName="blackStyle"/> <!--dynamic-->
+	</menubutton>
+	<menubutton text="Vues" id="viewsMenu" styleName="blackStyle">
+		<menuitem text="Carac" id="abilities" styleName="blackStyle"/><!--dynamic-->
+		<menuitem text="Défense" id="defense" styleName="blackStyle"/><!--dynamic-->
+		<menuitem text="Vie" id="life" styleName="blackStyle"/><!--dynamic-->
+		<menuitem text="Attaque" id="attack" styleName="blackStyle"/><!--dynamic-->
+		<menuitem text="Compétences" id="skills" styleName="blackStyle"/><!--dynamic-->
+	</menubutton>
+</menubar>
+	
