@@ -19,24 +19,24 @@ class Main
 
 	public function new() 
 	{
-		var testClass = new models.TestClass();
-		testClass.test1 = "TEST1";
-		testClass.test2 = "TEST2";
-		testClass.serialize();
-		testClass = new models.TestClass("OWNID");
-		testClass.test1 = "TEST1";
-		testClass.test2 = "TEST2";
-		testClass.serialize();
-		
-		var testClass2 = new models.TestClass2();
-		testClass2.test1 = "TEST1-2";
-		testClass2.test2 = "TEST2-2";
-		testClass2.serialize();
-		testClass2 = new models.TestClass2("OWNID-2");
-		testClass2.test1 = "TEST1-2";
-		testClass2.test2 = "TEST2-2";
-		testClass2.serialize();
-		
+		//var testClass = new models.TestClass();
+		//testClass.test1 = "TEST1";
+		//testClass.test2 = "TEST2";
+		//testClass.serialize();
+		//testClass = new models.TestClass("OWNID");
+		//testClass.test1 = "TEST1";
+		//testClass.test2 = "TEST2";
+		//testClass.serialize();
+		//
+		//var testClass2 = new models.TestClass2();
+		//testClass2.test1 = "TEST1-2";
+		//testClass2.test2 = "TEST2-2";
+		//testClass2.serialize();
+		//testClass2 = new models.TestClass2("OWNID-2");
+		//testClass2.test1 = "TEST1-2";
+		//testClass2.test2 = "TEST2-2";
+		//testClass2.serialize();
+		//
 		var player = new Player();
 		player.Charisma = "13";
 		player.Strength = "10";

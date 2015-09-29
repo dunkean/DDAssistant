@@ -1,5 +1,5 @@
 package models;
-import sync.Syncable;
+import network.Syncable;
 
 /**
  * D&D 3.5 player datamodel

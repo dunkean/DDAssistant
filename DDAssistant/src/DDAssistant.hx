@@ -2,7 +2,7 @@ package;
 import haxe.Json;
 import models.Player;
 import network.Peer;
-import sync.SyncManager;
+import network.SyncManager;
 import utils.UUID;
 import views.AbilitiesView;
 import haxe.ui.toolkit.containers.HBox;

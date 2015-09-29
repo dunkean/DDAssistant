@@ -1,4 +1,4 @@
-package sync;
+package network.macros;
 
 import haxe.macro.Expr;
 import haxe.macro.Context;
@@ -19,6 +19,17 @@ class SyncMacro
             if (isSyncable(o)) buildField(o, res)
             else res.push(o);
         }
+		
+		var syncable_type = Context.getLocalClass().toString();
+		var newField = {
+		  name: "_classType",
+		  doc: null,
+		  meta: [],
+		  access: [APublic],
+		  kind: FVar(macro : String, macro '$syncable_type'),
+		  pos: Context.currentPos()
+		};
+		res.push(newField);
 
         return res;
     }
@@ -45,7 +56,7 @@ class SyncMacro
 					var from = this.$fieldName;
                     this.$fieldName = to;
 					if(from != to)
-						sync.SyncManager.localUpdate(this.uuid, '$fieldName', from, to);
+						network.SyncManager.localUpdate(this.uuid, '$fieldName', from, to);
                     return to;
                 };
 
@@ -104,7 +115,7 @@ class SyncMacro
     //}
 
 //
-//package sync macros;
+//package network.macros macros;
 //
 //import haxe.macro.Context;
 //import haxe.macro.Expr;

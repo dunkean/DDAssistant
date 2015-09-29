@@ -13,13 +13,13 @@ import cpp.vm.Thread;
 import utils.UUID;
 
 
+//@TODO passer le Peer en static
 class Peer
 {
 	private static inline var PORT: Int = 31337;
 	
 	private var socket: Socket;
 	private var peers:Array<PeerInfo>;
-	//private var peersListener:Map<String, PeerListener>;
 	
 	public function new() {
 		try {
@@ -63,6 +63,7 @@ class Peer
 	}
 	
 	/** Accepts new sockets and spawns new threads for them */
+	//@TODO remove self as connection
 	function listenConnections() {
 		while (true) {
 			var sk = socket.accept();
