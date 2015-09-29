@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="DDCombatAssistant" package="DDCombatAssistant" version="1.0.0" company="dunkean" />
+	
+	<!-- output -->
+	<app main="Main" file="NewProject" path="bin" />
+	
+	<window background="#000000" fps="60" />
+	<window width="480" height="800" unless="mobile" />
+	<!-- <window width="800" height="480" unless="mobile" /> -->
+	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	<haxelib name="haxeui" />
+	
+	<!-- assets -->
+	<icon path="ui/img/icon.png" />
+	<assets path="ui" rename="ui" />
+	<assets path="ui/img" rename="img" />
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>
