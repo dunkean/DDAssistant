@@ -11,8 +11,8 @@ import utils.UUID;
 
 class PeerInfo
 {
-	public var uuid:String = "";
-	public var name:String = "";
+	public var uuid:String;
+	public var name:String;
 	public var socket:Socket;	
 	public var active:Bool;
 	
@@ -24,16 +24,14 @@ class PeerInfo
 	public function toString():String {
 		var peer = socket.peer();
 		var pstr = Std.string(peer.host) + ':' + peer.port;
-		return "";
-		//return ((name == null) ? 'noname' : name)
-				//+ '-' + ((uuid == null) ? 'nouuid' : uuid)
-				//+ '-' + pstr;
+		var name = ((name == null) ? 'noname' : name);
+		var uuid = ((uuid == null) ? 'nouuid' : uuid);
+		return name + "-" + uuid + ": " + pstr;
 	}
 	
-	//@TODO manage peer deactivation
+	//@TODO manage peer deactivation and reconnection
 	public function send(msg: String) {
 		try {
-			trace("Sending > " + msg);
 			socket.output.writeString(msg + "\n");
 		} catch (z:Dynamic) {
 			active = false; 

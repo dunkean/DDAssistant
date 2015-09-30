@@ -136,7 +136,7 @@ class Peer
 	/** Broadcast method */
 	public static function broadcast(msg: String) {
 		for (peer in peers) {
-			trace("Sending to " + peer + ' > ' + msg);
+			trace("Sending to " + peer.toString() + ' > ' + msg);
 			peer.send(msg);
 		}
 	}
