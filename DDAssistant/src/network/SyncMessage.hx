@@ -16,18 +16,24 @@ typedef UpdateContent = {
 }
 class SyncMessage
 {
-	private static inline var SEPARATOR: String = "*-*_*-*";
+	private static inline var SEPARATOR: String = "____";
 	public var senderId: String;
+	public var senderName: String;
 	public var type: String;
 	public var md5: String;
 	public var content: String;
+	public var className: String;
 	public var uuid: String;
 	public var updateContent: UpdateContent;
 	
-	public function new(){}
+	public function new() { }
+
+	public static function newHandshakeMessage() {
+		return DDAssistant.uuid + SEPARATOR + "assistant" + SEPARATOR + DDAssistant.name;
+	}
 	
 	public static function newCreateMessage(syncable: Syncable): String {
-		return DDAssistant.uuid + SEPARATOR + "create" + SEPARATOR + syncable.serialize() + SEPARATOR + syncable.md5();
+		return DDAssistant.uuid + SEPARATOR + "create" + SEPARATOR + syncable._explicitType + SEPARATOR + syncable.serialize() + SEPARATOR + syncable.md5();
 	}
 	
 	public static function newReadMessage(uuid: String): String {
@@ -51,9 +57,13 @@ class SyncMessage
 		syncMessage.senderId = msgSplit[0];
 		syncMessage.type = msgSplit[1];
 		switch(syncMessage.type) {
-			case "create":{
-				syncMessage.content = msgSplit[2];
-				syncMessage.md5 = msgSplit[3];
+			case "assistant":{
+				syncMessage.senderName = msgSplit[2];
+			}
+			case "create": {
+				syncMessage.className = msgSplit[2];
+				syncMessage.content = msgSplit[3];
+				syncMessage.md5 = msgSplit[4];
 			}
 			case "read":{
 				syncMessage.uuid = msgSplit[2];

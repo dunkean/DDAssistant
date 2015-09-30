@@ -20,16 +20,17 @@ class SyncMacro
             else res.push(o);
         }
 		
-		var syncable_type = Context.getLocalClass().toString();
-		var newField = {
-		  name: "_classType",
-		  doc: null,
-		  meta: [],
-		  access: [APublic],
-		  kind: FVar(macro : String, macro '$syncable_type'),
-		  pos: Context.currentPos()
-		};
-		res.push(newField);
+		//var syncable_type = Context.getLocalClass().toString();
+		//
+		//var newField = {
+		  //name: "_classType",
+		  //doc: null,
+		  //meta: [],
+		  //access: [APublic],
+		  //kind: FVar(macro : String, macro '$syncable_type'),
+		  //pos: Context.currentPos()
+		//};
+		//res.push(newField);
 
         return res;
     }

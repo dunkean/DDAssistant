@@ -17,6 +17,7 @@ class Player extends Syncable
 	public var Intelligence: String = "10";
 	public var Wisdom: String = "10";
 	public var Charisma: String = "10";
+	
 }
 
 

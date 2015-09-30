@@ -22,7 +22,7 @@ class DDAssistant extends XMLController
 {
 	public static var uuid:String;
 	public static var name:String;
-	public static var peer:Peer;
+	public static var ddAssistant: DDAssistant;
 	
 	/**
 	 * Instanciate peer, resourceManager. Load last settings. 
@@ -31,14 +31,17 @@ class DDAssistant extends XMLController
 	{
 		Macros.addStyleSheet("ui/style.css");
 		
-		//if settings exit
+		//if settings exist
 			//load
 		//else
 		uuid = UUID.uuid(12, 16);
-		name = 'Device';
+		name = 'Device-' + UUID.uuid(2, 16);
 		trace("DDAssistant Constructed");
-		peer = new Peer();
 		addListeners();
+		
+		Peer.start();
+		if (ddAssistant == null)
+			ddAssistant = this;
 	}
 	
 	private function addListeners() {
@@ -68,6 +71,14 @@ class DDAssistant extends XMLController
 		mainLayout.addChild(panel);
 	}
 	
+	public static function addCompoTest(str:String) {
+		var panel = new HBox();
+		var newText = new Text();
+		newText.text = str;
+		panel.addChild(newText);
+		ddAssistant.mainLayout.addChild(panel);
+	}
+	
 	var player: Player; //tmp test variable
 	
 	private function addView(e:MenuEvent) {
@@ -75,7 +86,7 @@ class DDAssistant extends XMLController
 			case "abilities":
 				var viewController = new AbilitiesView(player);
 				mainLayout.addChild(viewController.view);
-				trace("added $e.menuItem.id");
+				//trace("added $e.menuItem.id");
 			default:
 		}
 	}

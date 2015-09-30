@@ -11,33 +11,32 @@ import utils.UUID;
 
 class PeerInfo
 {
-	public var uuid:String;
-	public var name:String;
+	public var uuid:String = "";
+	public var name:String = "";
 	public var socket:Socket;	
-	
 	public var active:Bool;
 	
-	public function new(skt:Socket, ?id: String, ?nam: String) {
+	public function new(skt:Socket) {
 		socket = skt;
-		if (nam == null) name = ''; else name = nam;
-		if (id == null) uuid = ''; else uuid = id;
 		active = true;
 	}
-	
 	
 	public function toString():String {
 		var peer = socket.peer();
 		var pstr = Std.string(peer.host) + ':' + peer.port;
-		return name + '-' + uuid + '-' + pstr;
+		return "";
+		//return ((name == null) ? 'noname' : name)
+				//+ '-' + ((uuid == null) ? 'nouuid' : uuid)
+				//+ '-' + pstr;
 	}
 	
-	
-	public function send(header:String, content:String) {
+	//@TODO manage peer deactivation
+	public function send(msg: String) {
 		try {
-			socket.output.writeString(header + "\n");
-			socket.output.writeString(content + "\n");
+			trace("Sending > " + msg);
+			socket.output.writeString(msg + "\n");
 		} catch (z:Dynamic) {
-			active = false; //TODO manage deactivation ?
+			active = false; 
 		}
 	}
 	

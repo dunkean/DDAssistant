@@ -13,89 +13,115 @@ import cpp.vm.Thread;
 import utils.UUID;
 
 
-//@TODO passer le Peer en static
 class Peer
 {
 	private static inline var PORT: Int = 31337;
 	
-	private var socket: Socket;
-	private var peers:Array<PeerInfo>;
+	private static var socket: Socket = new Socket();
+	private static var peers:Array<PeerInfo> = [];
+	private static var myIp: String;
 	
-	public function new() {
+	public static function start() {
+		createServerSocket();
+		trace(DDAssistant.uuid + ' Exploring network...');
+		for (i in 0...255) {
+			Thread.create(Peer.connect("192.168.0." + i));
+			Thread.create(Peer.connect("192.168.1." + i));
+		}
+	}
+	
+	//Server
+	/** Create server socket and thread connections listening */
+	public static function createServerSocket() {
 		try {
-			trace('Launching P2P service');
-			socket = new Socket();
 			socket.bind(new Host('0.0.0.0'), PORT);
 			socket.listen(10);
 		} catch (z:Dynamic) {
-			trace('Could not bind to port.\n');
-			trace('Ensure that no server is running on port ' + PORT + '.\n');
+			trace(DDAssistant.uuid + ' Could not bind to port.\n');
+			trace(DDAssistant.uuid + ' Ensure that no server is running on port ' + PORT + '.\n');
 			return;
 		}
-		peers = [];
-		
-		trace('P2P service up.\n');
-		Thread.create(listenConnections);
-		exploreLan();
+		trace('Server socket up.');
+		Thread.create(Peer.listenClientsConnections);
 	}
 	
-	private function exploreLan() {
-		trace('Exploring network.\n');
-		for (i in 0...255) {
-			Thread.create(connect("192.168.0." + i));
-			Thread.create(connect("192.168.1." + i));
+	/** Accepts new sockets and spawns new threads for them */
+	private static function listenClientsConnections() {
+		while (true) {
+			var sk = socket.accept();
+			if (sk != null) {
+				var doNotConnect = false;
+				if (sk.host().host.ip == sk.peer().host.ip)
+					doNotConnect = true;
+				for (peer in peers) {
+					if (peer.socket.peer().host.ip == sk.peer().host.ip) {
+						doNotConnect = true;
+					}
+				}
+				
+				if (doNotConnect) {
+					try {
+						sk.shutdown(true, true);
+						sk.close();
+					} catch (e:Dynamic) {
+					}
+					return;	
+				}
+				
+				var peer = new PeerInfo(sk);
+				peers.push(peer);
+				trace(DDAssistant.uuid + " connect client " + peer.toString());
+				Thread.create(Peer.listenMessages(peer));
+				peer.send(SyncMessage.newHandshakeMessage());
+				SyncManager.sendAllMySyncables(peer);
+			}
 		}
 	}
 	
-	private function connect(ip) {
+	//CLIENT SIDE
+	/** Socket connection request */
+	private static function connect(ip: String) {
 		return function() {
 			try {
 				var sk = new Socket();
 				sk.connect(new Host(ip), PORT);
 				var peer = new PeerInfo(sk);
-				trace('Client > Connected to server ' + peer.toString());
-				Thread.create(listenMessages(peer));
-				peer.send('uuid', DDAssistant.uuid);
-				peer.send('name', DDAssistant.name);
+				if (sk.host().host.ip == sk.peer().host.ip) {
+					try {
+						sk.shutdown(true, true);
+						sk.close();
+					} catch (e:Dynamic) {
+							
+					}
+					return;	
+				}
+				trace(DDAssistant.uuid + " Connecting server " + peer.toString());
+				peers.push(peer);
+				Thread.create(Peer.listenMessages(peer));
+				peer.send(SyncMessage.newHandshakeMessage());
+				SyncManager.sendAllMySyncables(peer);
 			}catch (e:Dynamic) {
 			}
 		}
 	}
 	
-	/** Accepts new sockets and spawns new threads for them */
-	//@TODO remove self as connection
-	function listenConnections() {
-		while (true) {
-			var sk = socket.accept();
-			if (sk != null) {
-				var peer = new PeerInfo(sk);
-				trace('Server > Connected to client ' + peer.toString());
-				Thread.create(listenMessages(peer));
-				peer.send('uuid', DDAssistant.uuid);
-				peer.send('name', DDAssistant.name);
-			}
-		}
-	}
-
+	//P2P 
 	/** Creates a new thread function to handle given Peer */
-	function listenMessages(cl:PeerInfo) {
+	private static function listenMessages(cl:PeerInfo) {
 		return function() {
-			peers.push(cl);
 			while (cl.active) {
 				try {
-					var header = cl.socket.input.readLine();
 					var content = cl.socket.input.readLine();
-					if (cl.active)
-						trace('socket message: $header > $content');
-					//var content = cl.socket.input.readAll().toString();
-					//if (cl.active)
-						//trace('socket message: $content');
+					trace(DDAssistant.uuid + " New Message >\n" + content);
+					var message = SyncMessage.parseMessage(content);
+					processMessage(message, cl);
 				} catch (z:Dynamic) {
-					trace("unable to read socker $cl");
+					cl.active = false;
+					trace(DDAssistant.uuid + " Unable to read socket " + cl.toString());
 					break;
 				}
 			}
-			//broadcast(cl.name + ' disconnected.\n');
+			//broadcast(cl.name + " disconnected.\n");
 			peers.remove(cl);
 			try {
 				cl.socket.shutdown(true, true);
@@ -103,6 +129,36 @@ class Peer
 			} catch (e:Dynamic) {
 				
 			}
+		}
+	}
+	
+	//@TODO manage peer deactivation
+	/** Broadcast method */
+	public static function broadcast(msg: String) {
+		for (peer in peers) {
+			trace("Sending to " + peer + ' > ' + msg);
+			peer.send(msg);
+		}
+	}
+	
+	private static function processMessage(syncMessage: SyncMessage, peer: PeerInfo) {
+		if (syncMessage.senderId == DDAssistant.uuid) { //It's me !!
+			trace(DDAssistant.uuid + " it's me");
+			peers.remove(peer);
+			try {
+				peer.socket.shutdown(true, true);
+				peer.socket.close();
+			} catch (e:Dynamic) {
+				
+			}
+			return;
+		}
+		switch(syncMessage.type) {
+			case "assistant":
+				peer.name = syncMessage.senderName;
+				peer.uuid = syncMessage.senderId;
+			default:
+				SyncManager.remoteMessage(syncMessage, peer);
 		}
 	}
 	
