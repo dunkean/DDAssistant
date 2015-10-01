@@ -1,5 +1,7 @@
 package;
 import haxe.Json;
+import openfl.utils.SystemPath;
+import lime.system.System;
 import models.Player;
 import network.Peer;
 import network.SyncManager;
@@ -30,6 +32,8 @@ class DDAssistant extends XMLController
 	public function new() 
 	{
 		Macros.addStyleSheet("ui/style.css");
+		
+		trace(System.applicationStorageDirectory);
 		
 		//if settings exist
 			//load

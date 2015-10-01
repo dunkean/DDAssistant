@@ -18,13 +18,14 @@
 	<haxelib name="openfl" />
 	<haxelib name="haxeui" />
 	<haxelib name="tjson" />
+	<haxelib name="lime" />
 	
 	<!-- assets -->
 	<icon path="ui/img/icon.png" />
 	<assets path="ui" rename="ui" />
 	<assets path="ui/img" rename="img" />
 	
-	<!-- optimize output
-	<haxeflag name="-dce full" /> -->
+	<!-- optimize output -->
+	<!--<haxeflag name="-dce full" />-->
 	
 </project>

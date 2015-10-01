@@ -1,9 +1,9 @@
 package;
 
-
 import haxe.Json;
 import haxe.Serializer;
 import haxe.Unserializer;
+import lime.app.Application;
 import models.TestClass;
 import models.TestClass2;
 import models.Player;
@@ -18,12 +18,12 @@ import network.SyncSerializer;
  * @author dunkean
  * @version 0.1
  */
-class Main
+class Main extends Application
 {
 
 	public function new() 
 	{
-		
+		//super();
 		Toolkit.theme = new GradientTheme();
 		Toolkit.setTransitionForClass(Stack, "none");
 		Toolkit.init();
