@@ -3,7 +3,6 @@ package;
 import haxe.Json;
 import haxe.Serializer;
 import haxe.Unserializer;
-import lime.app.Application;
 import models.TestClass;
 import models.TestClass2;
 import models.Player;
@@ -18,7 +17,7 @@ import network.SyncSerializer;
  * @author dunkean
  * @version 0.1
  */
-class Main extends Application
+class Main
 {
 
 	public function new() 
@@ -32,8 +31,12 @@ class Main extends Application
 			root.addChild(controller.view);
 		});
 	}
-	
-	////var testClass = new models.TestClass();
+}
+
+
+
+
+////var testClass = new models.TestClass();
 		////testClass.test1 = "TEST1";
 		////testClass.test2 = "TEST2";
 		////testClass.serialize();
@@ -58,32 +61,30 @@ class Main extends Application
 		////Reflect.setField(player, "Wisdom", "14");
 		////player.uuid = "TESTEST";
 		//var stringified = SyncSerializer.encode(player);
-		//trace(stringified);
+		//DDAssistant.console(stringified);
 		//var player2:Player = SyncSerializer.decode(stringified, "models.Player");
 		//var test:Dynamic = player2;
 		//////var player2: Player = EXTJsonSerialization.decode<Player>(stringified, Type.getClass(player));
 		//test.Strength = "1515";
-		//trace(SyncSerializer.encode(test));
-		////trace(Type.getClassName(Type.getClass(player2)));
+		//DDAssistant.console(SyncSerializer.encode(test));
+		////DDAssistant.console(Type.getClassName(Type.getClass(player2)));
 		////var test: TestClass = Type.createInstance(Type.resolveClass("models.TestClass"), []);
 		////var test2 = Type.createInstance(Type.resolveClass("models.TestClass"), []);
-		////trace(Type.getClassName(Type.getClass(test)));
-		////trace(Type.getClassName(Type.getClass(test2)));
+		////DDAssistant.console(Type.getClassName(Type.getClass(test)));
+		////DDAssistant.console(Type.getClassName(Type.getClass(test2)));
 		////test.test1 = "12";
 		////test2.test1 = "12";
 		////Reflect.setProperty(test2, "test1", "18");
 		////test2.Strength = "19";
 		//
 		////for (field in Reflect.fields(test))
-			////trace(field);
+			////DDAssistant.console(field);
 			//
 		////for (field in Reflect.fields(test2))
-			////trace(field);
+			////DDAssistant.console(field);
 		//
 		////player.Strength = "12";
 		////test.Charisma = "13";
-		////trace(Json.stringify(test));
+		////DDAssistant.console(Json.stringify(test));
 		//
 		//
-
-}

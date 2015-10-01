@@ -1,18 +1,21 @@
 package;
 import haxe.Json;
-import openfl.utils.SystemPath;
-import lime.system.System;
-import models.Player;
-import network.Peer;
-import network.SyncManager;
-import utils.UUID;
-import views.AbilitiesView;
 import haxe.ui.toolkit.containers.HBox;
 import haxe.ui.toolkit.controls.Text;
 import haxe.ui.toolkit.core.Macros;
 import haxe.ui.toolkit.core.XMLController;
-import haxe.ui.toolkit.events.UIEvent;
 import haxe.ui.toolkit.events.MenuEvent;
+import haxe.ui.toolkit.events.UIEvent;
+import models.Player;
+import network.Peer;
+import utils.UUID;
+import views.AbilitiesView;
+
+
+typedef Settings = {
+	var name: String;
+	var uuid: String;
+}
 
 /**
  * DDAssistant main window
@@ -24,31 +27,73 @@ class DDAssistant extends XMLController
 {
 	public static var uuid:String;
 	public static var name:String;
-	public static var ddAssistant: DDAssistant;
+	public static var ddAssistant: DDAssistant; //Lazy singleton
 	
 	/**
 	 * Instanciate peer, resourceManager. Load last settings. 
 	 */
 	public function new() 
 	{
-		Macros.addStyleSheet("ui/style.css");
+		if (ddAssistant == null)
+			ddAssistant = this; //Lazy singleton instance
 		
-		trace(System.applicationStorageDirectory);
-		
-		//if settings exist
-			//load
-		//else
 		uuid = UUID.uuid(12, 16);
 		name = 'Device-' + UUID.uuid(2, 16);
-		trace("DDAssistant Constructed");
-		addListeners();
 		
+		Macros.addStyleSheet("ui/style.css");
+		loadSettings();
+		addControlsListeners();
 		Peer.start();
-		if (ddAssistant == null)
-			ddAssistant = this;
 	}
 	
-	private function addListeners() {
+	private function loadSettings() {
+		//if (!FileSystem.exists(SystemPath.applicationStorageDirectory)) {
+			//try{
+				//FileSystem.createDirectory(SystemPath.applicationStorageDirectory);
+			//}catch (e: Dynamic) {
+				//DDAssistant.console("Cannot create data folder >\n" + e); 
+			//}
+		//}
+		//
+		//var settingsPath = SystemPath.applicationStorageDirectory + "/settingsPath.json";
+		//
+		//if (FileSystem.exists(settingsPath)) {
+			//try{
+				//var json = File.getContent(settingsPath);
+				//var settings: Settings = Json.parse(json);
+				//uuid = settings.uuid;
+				//name = settings.name;
+				//DDAssistant.console("DDAssistant Loaded");
+			//}catch (e: Dynamic) {
+				//DDAssistant.console("Cannot load settings. Creating new.");
+				//return;
+			//}
+		//}else {
+			//uuid = UUID.uuid(12, 16);
+			//name = 'Device-' + UUID.uuid(2, 16);
+			//var settings: Settings = {
+				//name: DDAssistant.name,
+				//uuid: DDAssistant.uuid
+			//}
+			//DDAssistant.console("DDAssistant Constructed");
+			//var json = Json.stringify(settings);
+			//try {
+				//var f = File.append(settingsPath);
+				//f.writeString(json);
+				//f.close();
+			//}catch (e: Dynamic) {
+				//DDAssistant.console(e);
+			//}
+		//}
+	}
+	
+	
+	public static function console(text: String) {
+		ddAssistant.consoleOutput.text += "\n" + text;
+		trace(text);
+	}
+	
+	private function addControlsListeners() {
 		btn1.addEventListener(UIEvent.CLICK, btn1Clicked);
 		btn2.addEventListener(UIEvent.CLICK, btn2Clicked);
 		btn3.addEventListener(UIEvent.CLICK, btn3Clicked);
@@ -90,7 +135,6 @@ class DDAssistant extends XMLController
 			case "abilities":
 				var viewController = new AbilitiesView(player);
 				mainLayout.addChild(viewController.view);
-				//trace("added $e.menuItem.id");
 			default:
 		}
 	}
@@ -99,7 +143,7 @@ class DDAssistant extends XMLController
 		switch(e.menuItem.id) {
 			case "newPlayer":
 				player = new Player();
-				trace(Json.stringify(player));
+				DDAssistant.console(Json.stringify(player));
 			default:
 		}
 	}

@@ -26,7 +26,7 @@ class AbilitiesView extends XMLController
 	}
 	
 	public function changed(field:String, from: Dynamic, to:Dynamic) {
-		trace(field + " " + from + " " + to);
+		DDAssistant.console(field + " " + from + " " + to);
 	}
 	
 }

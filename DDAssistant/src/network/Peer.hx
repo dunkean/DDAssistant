@@ -23,7 +23,7 @@ class Peer
 	
 	public static function start() {
 		createServerSocket();
-		trace(DDAssistant.uuid + ' Exploring network...');
+		DDAssistant.console(DDAssistant.uuid + ' Exploring network...');
 		for (i in 0...255) {
 			Thread.create(Peer.connect("192.168.0." + i));
 			Thread.create(Peer.connect("192.168.1." + i));
@@ -37,11 +37,11 @@ class Peer
 			socket.bind(new Host('0.0.0.0'), PORT);
 			socket.listen(10);
 		} catch (z:Dynamic) {
-			trace(DDAssistant.uuid + ' Could not bind to port.\n');
-			trace(DDAssistant.uuid + ' Ensure that no server is running on port ' + PORT + '.\n');
+			DDAssistant.console(DDAssistant.uuid + ' Could not bind to port.\n');
+			DDAssistant.console(DDAssistant.uuid + ' Ensure that no server is running on port ' + PORT + '.\n');
 			return;
 		}
-		trace('Server socket up.');
+		DDAssistant.console('Server socket up.');
 		Thread.create(Peer.listenClientsConnections);
 	}
 	
@@ -70,7 +70,7 @@ class Peer
 				
 				var peer = new PeerInfo(sk);
 				peers.push(peer);
-				trace(DDAssistant.uuid + " connect client " + peer.toString());
+				DDAssistant.console(DDAssistant.uuid + " connect client " + peer.toString());
 				Thread.create(Peer.listenMessages(peer));
 				peer.send(SyncMessage.newHandshakeMessage());
 				SyncManager.sendAllMySyncables(peer);
@@ -95,7 +95,7 @@ class Peer
 					}
 					return;	
 				}
-				trace(DDAssistant.uuid + " Connecting server " + peer.toString());
+				DDAssistant.console(DDAssistant.uuid + " Connecting server " + peer.toString());
 				peers.push(peer);
 				Thread.create(Peer.listenMessages(peer));
 				peer.send(SyncMessage.newHandshakeMessage());
@@ -112,12 +112,12 @@ class Peer
 			while (cl.active) {
 				try {
 					var content = cl.socket.input.readLine();
-					trace(DDAssistant.uuid + " New Message >\n" + content);
+					DDAssistant.console(DDAssistant.uuid + " New Message >\n" + content);
 					var message = SyncMessage.parseMessage(content);
 					processMessage(message, cl);
 				} catch (z:Dynamic) {
 					cl.active = false;
-					trace(DDAssistant.uuid + " Unable to read socket " + cl.toString());
+					DDAssistant.console(DDAssistant.uuid + " Unable to read socket " + cl.toString());
 					break;
 				}
 			}
@@ -136,14 +136,14 @@ class Peer
 	/** Broadcast method */
 	public static function broadcast(msg: String) {
 		for (peer in peers) {
-			trace("Sending to " + peer.toString() + ' > ' + msg);
+			DDAssistant.console("Sending to " + peer.toString() + ' > ' + msg);
 			peer.send(msg);
 		}
 	}
 	
 	private static function processMessage(syncMessage: SyncMessage, peer: PeerInfo) {
 		if (syncMessage.senderId == DDAssistant.uuid) { //It's me !!
-			trace(DDAssistant.uuid + " it's me");
+			DDAssistant.console(DDAssistant.uuid + " it's me");
 			peers.remove(peer);
 			try {
 				peer.socket.shutdown(true, true);

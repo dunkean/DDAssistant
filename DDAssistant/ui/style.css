@@ -12,6 +12,14 @@
 		text-align: center;
 	}
 	
+	.console {
+		backgroundColor: 0x00;
+		borderColor: 0x00;
+		color: 0xFFFFFF;
+		text-align: left;
+		font-size: 12;
+	}
+	
 	Text {
 		font-size: 30;
 	}

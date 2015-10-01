@@ -18,7 +18,6 @@
 	<haxelib name="openfl" />
 	<haxelib name="haxeui" />
 	<haxelib name="tjson" />
-	<haxelib name="lime" />
 	
 	<!-- assets -->
 	<icon path="ui/img/icon.png" />
@@ -27,5 +26,8 @@
 	
 	<!-- optimize output -->
 	<!--<haxeflag name="-dce full" />-->
+	
+	<!-- native configurations -->
+	<template path="native/AndroidManifest.xml" rename="AndroidManifest.xml" if="android"/>
 	
 </project>

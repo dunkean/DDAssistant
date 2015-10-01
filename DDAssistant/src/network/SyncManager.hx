@@ -18,7 +18,7 @@ class SyncManager
 	}
 	
 	static public function localUpdate(syncableId:String, field: String, from: Dynamic, to: Dynamic): Void {
-		trace("SYNC INFO > " + syncableId + "." + field + ": from " + from + " to " + to);
+		DDAssistant.console("SYNC INFO > " + syncableId + "." + field + ": from " + from + " to " + to);
 		if(from != to){
 			Peer.broadcast(SyncMessage.newUpdateMessage(syncables.get(syncableId), field, from, to));
 			//Notify UI Views
@@ -34,7 +34,7 @@ class SyncManager
 					case "models.Player":
 						var syncable: Player = SyncSerializer.decode(syncMessage.content, syncMessage.className);
 						syncables.set(syncable.uuid, syncable);
-						trace(SyncSerializer.encode(syncable));
+						DDAssistant.console(SyncSerializer.encode(syncable));
 						DDAssistant.addCompoTest(SyncSerializer.encode(syncable));
 						//Notify views
 				}
