@@ -18,6 +18,7 @@ class Player extends Syncable
 	public var Wisdom: String = "10";
 	public var Charisma: String = "10";
 	
+	public var spells:SpellBook;
 }
 
 
