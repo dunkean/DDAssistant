@@ -26,12 +26,13 @@ class Main extends ru.stablex.ui.widgets.Widget{
         //register Main so we can use it in xml.
         UIBuilder.regClass("Main");
 		UIBuilder.regClass('MyScroll');
+		UIBuilder.regClass('Counter');
 
         //initialize StablexUI
         UIBuilder.init();
 
         //Create our UI
-        Lib.current.addChild( UIBuilder.buildFn('assets/ui/index.xml')() );
+        Lib.current.addChild( UIBuilder.buildFn('assets/ui/index2.xml')() );
 		
 		//var widget : Scroll = cast UIBuilder.get('scrollZone');
 		//var item1 : Widget = cast UIBuilder.get('item1');

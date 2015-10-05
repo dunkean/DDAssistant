@@ -3,12 +3,12 @@ package ;
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 import flash.events.Event;
-import flash.events.MouseEvent;
-import flash.events.TouchEvent;
 import flash.Lib;
 import ru.stablex.Assets;
 import ru.stablex.ui.ClassBuilder;
 import ru.stablex.ui.UIBuilder;
+import flash.events.MouseEvent;
+import flash.events.TouchEvent;
 import ru.stablex.ui.events.ScrollEvent;
 import ru.stablex.ui.events.WidgetEvent;
 import ru.stablex.ui.widgets.HBox;
@@ -48,6 +48,9 @@ class MyScroll extends Widget{
     public var hScrollKey : String = 'alt';
     //allow scrolling by dragging
     public var dragScroll : Bool = true;
+	
+	
+	
     /**
     * Container for content. Content is scrolled by moving this container.
     * This is always the first child of Scroll widget
