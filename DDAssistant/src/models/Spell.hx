@@ -1,5 +1,6 @@
 package models;
 
+import haxe.ui.toolkit.controls.Divider;
 import network.Syncable;
 import haxe.ds.StringMap;
 /**
@@ -22,6 +23,6 @@ class Spell extends Syncable
 	public var description:String= "";
 
 	
-	public var damage:Damage;
+	public var damage:Damage = new Damage();
 
 }

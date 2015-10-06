@@ -1,7 +1,6 @@
 package models;
 
 import network.Syncable;
-import haxe.ds.EnumValueMap;
 /**
  * ...
  * @author cda
@@ -9,28 +8,45 @@ import haxe.ds.EnumValueMap;
 class Damage extends Syncable
 {
 	
-	public var details:EnumValueMap<BaseElement, Dynamic> = new EnumValueMap<BaseElement, Dynamic>();
+	public var details:Map<BaseElement, Array<Dice>> = new Map<BaseElement, Array<Dice>>();
 	
 	public function new(?type:BaseElement, ?value:Dynamic, ?uuid:String) 
 	{
 		super(uuid);
 		if( value != null ) {
-			addDamage(type, value);
+			addDamageDice(type, value);
 		}
-	}
-	public function addDamage( ?type:BaseElement , value:Dynamic) {
-		/* Should add the dices
-		var val = details.get(type);
-		if ( val != null ) {
-			val = "0";
-		}
-		
-		details.set(type, Std.string( Std.parseInt(value) + Std.parseInt(val) ) );
-		*/
 	}
 	
-	public function roll() {
-		//var ret:Damage = new Damage();
+	public function addDamageDice( ?type:BaseElement , value:Dice) {
+		var val = details.get(type);
+		if ( details[type] == null ) {
+			details[type]= new Array<Dice>();
+		}
+		details[type].push(value);
+	}
+	public function addDamage(?type:BaseElement, value:String) {
+		var val = details.get(type);
+		if ( details[type] == null ) {
+			details[type]= new Array<Dice>();
+		}
+		details[type].push( new Dice(value) );
 		
+	}
+	
+	public function roll():Map<BaseElement, Int> {
+		DDAssistant.console("Rolling Damage " + details);
+		var damageOutput:Map<BaseElement, Int> = new Map<BaseElement, Int> ();
+		for ( type in details.keys() ) {
+			DDAssistant.console("damage type: " + type);
+			var output:Int=  0;
+			for ( detail in details[type] ) {
+				DDAssistant.console("rolling " + detail);
+				output += detail.roll();
+			}
+			damageOutput.set(type, output);
+			DDAssistant.console("damage result so far: " + damageOutput);
+		}
+		return damageOutput;
 	}
 }

@@ -3,6 +3,11 @@ package;
 import haxe.Json;
 import haxe.Serializer;
 import haxe.Unserializer;
+import models.BaseElement;
+import models.DiceType;
+import models.Dice;
+import models.Damage;
+import models.Spell;
 import models.TestClass;
 import models.TestClass2;
 import models.Player;
@@ -30,6 +35,11 @@ class Main
 			var controller = new DDAssistant();
 			root.addChild(controller.view);
 		});
+		var s1:Spell = new Spell();
+		s1.damage = new Damage( BaseElement.Acid, new Dice(2, DiceType.D6) );
+		s1.damage.addDamage( BaseElement.Cold , "2d20");
+		s1.damage.addDamage( BaseElement.Cold , "2.5d20");
+		DDAssistant.console('S1: ' + s1.damage.roll() );
 	}
 }
 
