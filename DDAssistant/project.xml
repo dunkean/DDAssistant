@@ -8,7 +8,7 @@
 	<!-- output -->
 	<app main="Main" file="DDCombatAssistant" path="bin" />
 	
-	<window background="#000000" fps="60" />
+	<window background="#333333" fps="60" />
 	<window width="480" height="800" unless="mobile" />
 	<!-- <window width="800" height="480" unless="mobile" /> -->
 	<window orientation="portrait" vsync="false" antialiasing="0" if="cpp" />

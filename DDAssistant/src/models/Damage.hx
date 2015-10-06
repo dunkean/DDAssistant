@@ -35,17 +35,13 @@ class Damage extends Syncable
 	}
 	
 	public function roll():Map<BaseElement, Int> {
-		DDAssistant.console("Rolling Damage " + details);
 		var damageOutput:Map<BaseElement, Int> = new Map<BaseElement, Int> ();
 		for ( type in details.keys() ) {
-			DDAssistant.console("damage type: " + type);
 			var output:Int=  0;
 			for ( detail in details[type] ) {
-				DDAssistant.console("rolling " + detail);
 				output += detail.roll();
 			}
 			damageOutput.set(type, output);
-			DDAssistant.console("damage result so far: " + damageOutput);
 		}
 		return damageOutput;
 	}
