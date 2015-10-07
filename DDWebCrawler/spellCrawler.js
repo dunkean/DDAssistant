@@ -53,12 +53,13 @@ var parseSpell = function (err, url, document){
   var $ = document.$;//cheerio.load(document.body);
   var searched= ['portee', 'duree', 'zoneeffet', 'effet', 'cible', 'incantation', 'jds', 'rm', 'composantes_materielles']
 
+
   var spell= {
-    nom: $('#title').text(),
+    nom: $('#title').text().trim(),
     niveau: {},
-    ecole: lastWord( $('#ecole_text').text(), ': '),
-    resume: $('#bulle').text(),
-    description: $('#text').text()
+    ecole: lastWord( $('#ecole_text').text(), ': ').trim(),
+    resume: $('#bulle').text().trim(),
+    description: $('#text').text().trim()
   }
   var niveauxArray= $('#classeniveau_text').text().split(':')[1].split(', ');
   for( var i= 0; i < niveauxArray.length; i++ ) {
@@ -75,15 +76,15 @@ var parseSpell = function (err, url, document){
       }
       var lastSpace= niveauxArray[i].lastIndexOf(' ');
       if( complIndex > 0 ) {
-        spell.niveau[niveauxArray[i].substring(0, lastSpace)] = niveauxArray[i].substring(lastSpace+1)+compl;
+        spell.niveau[niveauxArray[i].substring(0, lastSpace).trim()] = niveauxArray[i].substring(lastSpace+1)+compl;
       }
       else {
-        spell.niveau[niveauxArray[i].substring(0, lastSpace)] = Number(niveauxArray[i].substring(lastSpace+1) );
+        spell.niveau[niveauxArray[i].substring(0, lastSpace).trim()] = Number(niveauxArray[i].substring(lastSpace+1) );
       }
     }
   }
   for( var i= 0; i < searched.length; i++ ) {
-    spell[searched[i]]= lastWord( $('#'+searched[i]).text(), ': ');
+    spell[searched[i]]= lastWord( $('#'+searched[i]).text(), ': ').trim();
   }
   spells.push(spell);
   console.log(spell.nom);
