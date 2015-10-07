@@ -10,6 +10,10 @@ var spells= [];
 var errors = {};
 var $;
 
+var path= '../DDAssistant/db'
+if( !fs.existsSync(path) ){
+  fs.mkdirSync(path);
+}
 var spellsCrawler = new Crawler(
   {
     concurrent: 10,
@@ -53,7 +57,6 @@ var parseSpell = function (err, url, document){
   var $ = document.$;//cheerio.load(document.body);
   var searched= ['portee', 'duree', 'zoneeffet', 'effet', 'cible', 'incantation', 'jds', 'rm', 'composantes_materielles']
 
-
   var spell= {
     nom: $('#title').text().trim(),
     niveau: {},
@@ -72,7 +75,7 @@ var parseSpell = function (err, url, document){
       complIndex= niveauxArray[i].indexOf('(');
       if( complIndex > 0 ) {
         compl= niveauxArray[i].substring(complIndex);
-        niveauxArray[i]= niveauxArray[i].substring(0, complIndex);
+        niveauxArray[i]= niveauxArray[i].substring(0, complIndex).trim();
       }
       var lastSpace= niveauxArray[i].lastIndexOf(' ');
       if( complIndex > 0 ) {
@@ -86,9 +89,11 @@ var parseSpell = function (err, url, document){
   for( var i= 0; i < searched.length; i++ ) {
     spell[searched[i]]= lastWord( $('#'+searched[i]).text(), ': ').trim();
   }
-  spells.push(spell);
-  console.log(spell.nom);
-  console.log(spell.niveau)
+  if( spell.nom ) {
+    spells.push(spell);
+    console.log(spell.nom);
+    console.log(spell.niveau)
+  }
   if(spellsCrawler.pending.length == 0 && spellsCrawler.active.length == 0){
     fs.writeFile(targetFileName, JSON.stringify(spells), function (err) {
       if (err) return console.log(err);
@@ -116,7 +121,7 @@ var parseResultsPage=function(err, url, document){
 }
 var crawlSpells = function( casterClass, level){
   var params = "?p=all";
-  targetFileName= 'Spells';
+  targetFileName= path+'/Spells';
   if( casterClass ) {
     params+= "&filter_74="+casterClass;//Ensorceleur/Magicien";
     targetFileName+='_'+casterClass.substring(0,3);
