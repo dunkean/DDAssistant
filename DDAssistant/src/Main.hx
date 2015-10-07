@@ -8,6 +8,7 @@ import models.DiceType;
 import models.Dice;
 import models.Damage;
 import models.Spell;
+import models.SpellDB;
 import models.TestClass;
 import models.TestClass2;
 import models.Player;
@@ -35,6 +36,7 @@ class Main
 			var controller = new DDAssistant();
 			root.addChild(controller.view);
 		});
+		var spellDB = new SpellDB();
 		var s1:Spell = new Spell();
 		s1.damage = new Damage( BaseElement.Acid, new Dice(2, DiceType.D6) );
 		s1.damage.addDamage( BaseElement.Cold , "2d20");

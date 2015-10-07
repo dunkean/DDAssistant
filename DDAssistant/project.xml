@@ -23,6 +23,7 @@
 	<icon path="ui/img/icon.png" />
 	<assets path="ui" rename="ui" />
 	<assets path="ui/img" rename="img" />
+	<assets path="db" rename="db" />
 	
 	<!-- optimize output -->
 	<!--<haxeflag name="-dce full" />-->
