@@ -1,0 +1,7 @@
+.blackStyle{backgroundColor:0x00;borderColor:0x00;color:0xFFFFFF;text-align:center;}
+.whiteStyle{backgroundColor:0xFFFFFF;margin-right:15;color:0x00;text-align:center;}
+.console{backgroundColor:0x00;borderColor:0x00;color:0xFFFFFF;text-align:left;font-size:12;}
+Text{font-size:30;}
+MenuItem{font-size:15;}
+MenuButton{font-size:15;}
+MenuBar{font-size:15;}

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.3">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1140</x>
-      <y>270</y>
-      <w>100</w>
-      <h>80</h>
+      <x>1160</x>
+      <y>288</y>
+      <w>80</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Peer</panel_attributes>
     <additional_attributes/>
@@ -15,40 +15,44 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
-      <y>260</y>
-      <w>170</w>
-      <h>90</h>
+      <x>784</x>
+      <y>280</y>
+      <w>208</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>ResourceManager
 --
-addResource(obj)
----&gt; bind(resource)</panel_attributes>
+listener: &lt;Map, {uuid, field}&gt;
+--
+addListener(textComponent, uuid, field)
+static update(uuid, field, value)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>260</y>
-      <w>120</w>
-      <h>90</h>
+      <x>584</x>
+      <y>280</y>
+      <w>96</w>
+      <h>72</h>
     </coordinates>
-    <panel_attributes>Resource
+    <panel_attributes>Syncable
 --
 uuid: String
-crc: String</panel_attributes>
+--
+md5(): String
+serialize(): String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>250</y>
-      <w>180</w>
-      <h>100</h>
+      <x>552</x>
+      <y>384</y>
+      <w>144</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>DataModel: IBindable
+    <panel_attributes>DataModel
 --
 Attributes A
 Attributes B
@@ -59,10 +63,10 @@ Attributes n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>340</x>
-      <y>430</y>
-      <w>180</w>
-      <h>30</h>
+      <x>800</x>
+      <y>536</y>
+      <w>144</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>View</panel_attributes>
     <additional_attributes/>
@@ -70,10 +74,10 @@ Attributes n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>430</y>
-      <w>180</w>
-      <h>30</h>
+      <x>552</x>
+      <y>536</y>
+      <w>144</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>Controller</panel_attributes>
     <additional_attributes/>
@@ -81,107 +85,82 @@ Attributes n</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>290</y>
-      <w>170</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>330</x>
-      <y>340</y>
-      <w>120</w>
-      <h>110</h>
+      <x>912</x>
+      <y>344</y>
+      <w>152</w>
+      <h>208</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-&lt;binding&gt;
-changed(n)</panel_attributes>
-    <additional_attributes>10.0;10.0;100.0;90.0</additional_attributes>
+setTextComponent(value)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>260</y>
-      <w>170</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-&lt;binding&gt;
-changed(n)</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>150</x>
-      <y>340</y>
-      <w>100</w>
-      <h>110</h>
+      <x>616</x>
+      <y>456</y>
+      <w>48</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-set</panel_attributes>
-    <additional_attributes>80.0;10.0;10.0;90.0</additional_attributes>
+set()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>240</x>
-      <y>430</y>
-      <w>120</w>
-      <h>40</h>
+      <x>688</x>
+      <y>536</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-launch</panel_attributes>
-    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+hostCompo()</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>270</y>
-      <w>180</w>
-      <h>40</h>
+      <x>656</x>
+      <y>176</y>
+      <w>176</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-notifySet(n)</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+static update()</panel_attributes>
+    <additional_attributes>10.0;130.0;100.0;10.0;200.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>950</x>
-      <y>280</y>
-      <w>210</w>
-      <h>40</h>
+      <x>984</x>
+      <y>296</y>
+      <w>192</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-sendSetMsg(n)</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+sendSetMsg()</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>950</x>
-      <y>310</y>
-      <w>210</w>
-      <h>40</h>
+      <x>984</x>
+      <y>320</y>
+      <w>192</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-receiveSendMsg(n)</panel_attributes>
-    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+receiveSetMsg()</panel_attributes>
+    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1230</x>
-      <y>270</y>
-      <w>170</w>
-      <h>40</h>
+      <x>1232</x>
+      <y>296</y>
+      <w>136</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
 broadcast</panel_attributes>
@@ -190,48 +169,34 @@ broadcast</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>310</y>
-      <w>180</w>
-      <h>50</h>
+      <x>672</x>
+      <y>320</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-
-notifySet(n)</panel_attributes>
-    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+Reflect.set()</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>370</x>
-      <y>310</y>
-      <w>170</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-&lt;reflect&gt;
-set(n)</panel_attributes>
-    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>630</x>
-      <y>300</y>
-      <w>180</w>
-      <h>40</h>
+      <x>672</x>
+      <y>296</y>
+      <w>128</w>
+      <h>32</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=0..n</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1230</x>
-      <y>300</y>
-      <w>170</w>
-      <h>50</h>
+      <x>1232</x>
+      <y>312</y>
+      <w>136</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
 
@@ -241,10 +206,10 @@ broadlisten</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>1380</x>
-      <y>240</y>
-      <w>120</w>
-      <h>130</h>
+      <x>1352</x>
+      <y>264</y>
+      <w>96</w>
+      <h>104</h>
     </coordinates>
     <panel_attributes>lt=.
 Network
@@ -252,18 +217,60 @@ bg=white</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>344</y>
+      <w>24</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>688</x>
+      <y>152</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*Macros Engine*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>344</y>
+      <w>88</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+addListener()</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>1032</x>
+      <y>256</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*Message*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>470</x>
-      <y>80</y>
-      <w>250</w>
-      <h>170</h>
+      <x>792</x>
+      <y>464</y>
+      <w>168</w>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>Revoir la relation de binding/reflection entre resource / resourceManager.
-Resource est pas forcément utile (notification directement dans ResourceManager)
-
-Voir si on peut automatiser le notify + send avec des macros: genre @sendable qui génère les bindings
-bg=gray</panel_attributes>
+    <panel_attributes>Voir si les listeners compo n'ont pas a étre ajoutés par des macros sur l'Expr (MyComp.text)
+bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

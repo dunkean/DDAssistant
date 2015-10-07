@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<HBox w="800" h="600" childPadding="20">
+
+
+	<!-- List -->
+    <MyScroll
+		id				  = "'scrollZone'"
+        w                 = "84"
+        h                 = "70"
+        skin:Paint-border = "1"
+    >
+        <HBox  id="'box'" widthPt="100" h="770"> <!-- this widget will be taken by Scroll widget as scrolled content -->
+            <Widget id="'unit'" skin:Tile-src="'assets/img/numbers.png'" widthPt="100" h="770"/>
+			<Widget id="'tenth'" skin:Tile-src="'assets/img/numbers.png'" widthPt="100" h="770"/>
+			<Widget id="'negunit'" skin:Tile-src="'assets/img/reversenumbers.png'" widthPt="100" h="770" visible="false" />
+			<Widget id="'negtenth'" skin:Tile-src="'assets/img/reversenumbers.png'" widthPt="100" h="770" visible="false"/>
+        </HBox>
+		
+    </MyScroll>
+</HBox>
