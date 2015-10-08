@@ -64,42 +64,63 @@ var parseSpell = function (err, url, document){
     resume: $('#bulle').text().trim(),
     description: $('#text').text().trim()
   }
-  var niveauxArray= $('#classeniveau_text').text().split(':')[1].split(', ');
-  for( var i= 0; i < niveauxArray.length; i++ ) {
-    var ignore= niveauxArray[i].indexOf(',')
-    if( ignore >= 0 ) {
-      niveauxArray[i]= niveauxArray[i].substring(0, ignore);
+  var casterSplit= $('#classeniveau_text').text().split(':')
+  if( casterSplit && casterSplit.length > 1 ) {
+	  var niveauxArray= $('#classeniveau_text').text().split(':')[1].split(', ');
+	  for( var i= 0; i < niveauxArray.length; i++ ) {
+		var ignore= niveauxArray[i].indexOf(',')
+		if( ignore >= 0 ) {
+		  niveauxArray[i]= niveauxArray[i].substring(0, ignore);
+		}
+		if( niveauxArray[i].length > 0 ) {
+		  var compl='';
+		  complIndex= niveauxArray[i].indexOf('(');
+		  if( complIndex > 0 ) {
+			compl= niveauxArray[i].substring(complIndex);
+			niveauxArray[i]= niveauxArray[i].substring(0, complIndex).trim();
+		  }
+		  var lastSpace= niveauxArray[i].lastIndexOf(' ');
+		  if( complIndex > 0 ) {
+			spell.niveau[niveauxArray[i].substring(0, lastSpace).trim()] = niveauxArray[i].substring(lastSpace+1)+compl;
+		  }
+		  else {
+			spell.niveau[niveauxArray[i].substring(0, lastSpace).trim()] = Number(niveauxArray[i].substring(lastSpace+1) );
+		  }
+		}
+	  }
+	  for( var i= 0; i < searched.length; i++ ) {
+		spell[searched[i]]= lastWord( $('#'+searched[i]).text(), ': ').trim();
+	  }
+	  spells.push(spell);
+	  console.log(spell.nom);
+	  console.log(spell.niveau)
     }
-    if( niveauxArray[i].length > 0 ) {
-      var compl='';
-      complIndex= niveauxArray[i].indexOf('(');
-      if( complIndex > 0 ) {
-        compl= niveauxArray[i].substring(complIndex);
-        niveauxArray[i]= niveauxArray[i].substring(0, complIndex).trim();
-      }
-      var lastSpace= niveauxArray[i].lastIndexOf(' ');
-      if( complIndex > 0 ) {
-        spell.niveau[niveauxArray[i].substring(0, lastSpace).trim()] = niveauxArray[i].substring(lastSpace+1)+compl;
-      }
-      else {
-        spell.niveau[niveauxArray[i].substring(0, lastSpace).trim()] = Number(niveauxArray[i].substring(lastSpace+1) );
-      }
+    else {
+		console.log(document);
+		console.log( casterSplit , 'from' ,$('#classeniveau_text').text() );
+		if(!errors[url]){
+		  spellsCrawler.queue(url);
+		  errors[url] = 1;
+		}
+		else {
+		  errors[url] = errors[url] + 1;
+		  if(errors[url] > 10){
+			console.log('************* Error url: '+ url);
+			console.log('************* writingMode file anyway')
+			fs.writeFile(targetFileName, JSON.stringify(spells), function (err) {
+			  if (err) return console.log(err);
+			  console.log(errors);
+			});
+			throw err;
+		  }
+		}
+	}
+	if(spellsCrawler.pending.length == 0 && spellsCrawler.active.length == 0){
+	  fs.writeFile(targetFileName, JSON.stringify(spells), function (err) {
+	    if (err) return console.log(err);
+	    console.log(errors);
+	  });
     }
-  }
-  for( var i= 0; i < searched.length; i++ ) {
-    spell[searched[i]]= lastWord( $('#'+searched[i]).text(), ': ').trim();
-  }
-  if( spell.nom ) {
-    spells.push(spell);
-    console.log(spell.nom);
-    console.log(spell.niveau)
-  }
-  if(spellsCrawler.pending.length == 0 && spellsCrawler.active.length == 0){
-    fs.writeFile(targetFileName, JSON.stringify(spells), function (err) {
-      if (err) return console.log(err);
-      console.log(errors);
-    });
-  }
 }
 
 var parseResultsPage=function(err, url, document){
@@ -155,4 +176,4 @@ var crawlSpells = function( casterClass, level){
   post_req.write(params);
   post_req.end();*/
 }
-crawlSpells("Ensorceleur/Magicien", 6);
+crawlSpells();//"Ensorceleur/Magicien", 6);
