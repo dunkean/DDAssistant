@@ -8,6 +8,7 @@ import models.DiceType;
 import models.Dice;
 import models.Damage;
 import models.Spell;
+import models.SpellDB;
 import models.TestClass;
 import models.TestClass2;
 import models.Player;
@@ -17,17 +18,24 @@ import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.themes.GradientTheme;
 import network.Syncable;
 import network.SyncSerializer;
+import ru.stablex.ui.UIBuilder;
+import flash.Lib;
+
 /**
  * Main class for the DDCombatAssistant
  * @author dunkean
  * @version 0.1
  */
-class Main
+class Main extends ru.stablex.ui.widgets.Widget
 {
 
 	public function new() 
 	{
-		//super();
+		super();
+		UIBuilder.init();
+		flash.Lib.current.addChild( UIBuilder.buildFn('ui/spelldb.xml')() );
+		flash.Lib.current.addChild( UIBuilder.buildFn('ui/spellitem.xml')() );
+	
 		Toolkit.theme = new GradientTheme();
 		Toolkit.setTransitionForClass(Stack, "none");
 		Toolkit.init();
@@ -35,6 +43,7 @@ class Main
 			var controller = new DDAssistant();
 			root.addChild(controller.view);
 		});
+		var spellDB = new SpellDB();
 		var s1:Spell = new Spell();
 		s1.damage = new Damage( BaseElement.Acid, new Dice(2, DiceType.D6) );
 		s1.damage.addDamage( BaseElement.Cold , "2d20");
