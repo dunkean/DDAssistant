@@ -33,8 +33,10 @@ class Counter extends Widget
 	public var posNumbers: Array<Widget> = new Array();
 	public var negNumbers: Array<Widget> = new Array();
 	
-	private var scrollY(get,set): Float;
-	private var absoluteY: Float = 0;
+	public var unitDigit(default, set_unitDigit): Float;
+	public var tenthDigit(default, set): Float;
+	public var hundredthDigit(default, set): Float;
+	
 
 	private var _processingDrag : Bool = false;
 	
@@ -116,63 +118,37 @@ class Counter extends Widget
     }
 	
 	
-	var lastVal:Int = 0;
-	var direction: Int = 1;
-	var tenthDigit: Int = 0;
-	var unitDigit: Int = 0;
-	
-    private function set_scrollY (y:Float) : Float {
-		this.absoluteY = y;
-		
-        this.numbers[0].top = absoluteY % cycleLength;
-		if (this.numbers[0].top > 0) {
-			this.numbers[0].top -= cycleLength; 
-			if (unitDigit == 0 && direction == -1) {
-				for (i in 0...3) {
-					negNumbers[i].visible = true;
-					posNumbers[i].visible = false;
-				}
-				numbers = negNumbers;
-			}
-		}
-		
-		if (this.numbers[0].top < stepLength) {
-			if (unitDigit == 0 && direction == 1) {
-				for (i in 0...3) {
-					negNumbers[i].visible = false;
-					posNumbers[i].visible = true;
-				}
-				numbers = posNumbers;
-			}
-		}
-		
-		
-		var currentVal = Math.round((Math.abs(this.numbers[0].top / cycleLength) * 10)) % 10;
-		
-		if (currentVal != lastVal) {
-			direction = currentVal - lastVal;
-			lastVal = currentVal;
-			if (direction == 9) direction = -1;
-			if (direction == -9) direction = 1;
-			unitDigit += direction;
-			trace(currentVal + " " + lastVal + " > " + direction +" : " + unitDigit);
-		}
-        return absoluteY;
-    }
+	//var lastVal:Int = 0;
+	//var direction: Int = 1;
+	//var currentVal = Math.round((Math.abs(this.numbers[0].top / cycleLength) * 10)) % 10;
+	//
+	//if (currentVal != lastVal) {
+		//direction = currentVal - lastVal;
+		//lastVal = currentVal;
+		//if (direction == 9) direction = -1;
+		//if (direction == -9) direction = 1;
+		//unitDigit += direction;
+		//trace(currentVal + " " + lastVal + " > " + direction +" : " + unitDigit);
+	//}
 	
 	var ySum : Float = 0;
 	private function scrollDigits (y:Float) : Void {
 		ySum += y;
+		var modulo = ySum % cycleLength;
 		if (ySum > 0) {
 			if (negNumbers[0].visible == false) {
 				for (i in 0...3) {
 					negNumbers[i].visible = true;
 					posNumbers[i].visible = false;
 				}
+				negNumbers[1].top -= cycleLength;
+				negNumbers[2].top -= cycleLength;
 				numbers = negNumbers;
 			}
-			this.numbers[0].top = ySum % cycleLength;
-			this.numbers[0].top -= cycleLength;
+			this.numbers[0].top = modulo - cycleLength;
+			if ( modulo < (10 * stepLength) && modulo > (9 * stepLength) ) {
+				this.numbers[1].top += y;
+			}
 		}else {
 			if (posNumbers[0].visible == false) {
 				for (i in 0...3) {
@@ -181,14 +157,27 @@ class Counter extends Widget
 				}
 				numbers = posNumbers;
 			}
-			this.numbers[0].top = ySum % cycleLength;
+			this.numbers[0].top = modulo;
+			if ( modulo < (-9 * stepLength) && modulo > (-10 * stepLength)) {
+				this.numbers[1].top += y;
+			}
+			
 		}
-		
     }
 
-	private function get_scrollY () : Float {
-        return this.numbers[0].top;
-    }
+	public function set_unitDigit(y:Float): Float {
+		trace("set " + y);
+		numbers[0].top = y;
+		return y;
+	}
+	private function set_tenthDigit(y:Float): Float {
+		numbers[1].top = y;
+		return y;
+	}
+	private function set_hundredthDigit(y:Float): Float {
+		numbers[2].top = y;
+		return y;
+	}
 
 	
 	private function _dragScroll (e:MouseEvent) : Void {
@@ -222,11 +211,17 @@ class Counter extends Widget
 				this.dispatchEvent(new WidgetEvent(WidgetEvent.SCROLL_STOP));
 			};
 			
-			//var distanceToYValue = Math.abs(scrollY % stepLength);
-			//if (distanceToYValue > (stepLength/2))
-				//distanceToYValue -= stepLength;
-				//
-			//this.tween(0.4, {scrollY:this.scrollY + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
+			for (i in 0...3) {
+				var distanceToYValue = Math.abs(numbers[i].top % stepLength);
+				if (distanceToYValue > (stepLength/2))
+					distanceToYValue -= stepLength;
+				
+				//unitDigit = numbers[i].top;
+				trace("dst " + distanceToYValue);
+				this.tween(0.4, {unitDigit: this.numbers[i].top + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
+			}
+			
+			
         }
         Lib.current.stage.removeEventListener(MouseEvent.MOUSE_UP, fnStop);
         Lib.current.stage.addEventListener(MouseEvent.MOUSE_UP, fnStop);
