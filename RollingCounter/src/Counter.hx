@@ -22,7 +22,7 @@ import ru.stablex.ui.widgets.Widget;
  */
 class Counter extends Widget
 {
-
+	public var digitsCount = 3;
 	private static var cycleLength: Float;
 	private static var stepLength: Float;
 	
@@ -34,9 +34,7 @@ class Counter extends Widget
 	public var negNumbers: Array<Widget> = new Array();
 	
 	private var scrollY(get,set): Float;
-	private var scrollX: Float;
-	private var refY: Float;
-	private var refX: Float;
+	private var absoluteY: Float = 0;
 
 	private var _processingDrag : Bool = false;
 	
@@ -56,12 +54,12 @@ class Counter extends Widget
 		trace(this.h);
 		trace(this.w);
 		
-		for (i in 0...3) {
+		for (i in 0...digitsCount) {
 			posNumbers.push(
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: 770,
-					left: srcWidth * i
+					left: srcWidth * (digitsCount-1-i)
 				})
 			);
 			this.addChild(posNumbers[i]);
@@ -70,7 +68,7 @@ class Counter extends Widget
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: 770,
-					left: srcWidth * i
+					left: srcWidth * (digitsCount-1-i)
 				})
 			);
 			this.addChild(negNumbers[i]);
@@ -88,8 +86,8 @@ class Counter extends Widget
 		}
 		numbers = posNumbers;
 		
-        this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this._beforeScroll);
-        this.addUniqueListener(MouseEvent.MOUSE_DOWN, this._beforeScroll);
+        this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this.startScroll);
+		this.addUniqueListener(MouseEvent.MOUSE_DOWN, this.startScroll);
     }
 	
 	
@@ -103,25 +101,19 @@ class Counter extends Widget
 		//data.draw(source.bitmapData, matrix);
 		//return new Bitmap(data);
 	//}
-	
-	
-	private function _beforeScroll(e:MouseEvent) : Void {
-        this.addUniqueListener(ScrollEvent.BEFORE_SCROLL, this._startScroll);
-        var e : ScrollEvent = new ScrollEvent(ScrollEvent.BEFORE_SCROLL, e);
-        this.dispatchEvent(e);
-    }
-	
-	private function _startScroll(e:ScrollEvent) : Void {
-        this.removeEventListener(ScrollEvent.BEFORE_SCROLL, this._startScroll);
-        if( e.canceled ) return;
 
-        if( e.srcEvent.type == MouseEvent.MOUSE_DOWN ){
-            this._dragScroll( e.srcAs(MouseEvent) );
-        }else if( e.srcEvent.type == MouseEvent.MOUSE_WHEEL ){
-            this._wheelScroll( e.srcAs(MouseEvent) );
+	
+	
+	
+	private function startScroll(e:MouseEvent) : Void {
+        if ( e.type == MouseEvent.MOUSE_DOWN ) {
+			trace("drag");
+            this._dragScroll( e );
+        }else if ( e.type == MouseEvent.MOUSE_WHEEL ) {
+			trace("wheel");
+            this._wheelScroll( e );
         }
     }
-	
 	
 	
 	var lastVal:Int = 0;
@@ -130,9 +122,9 @@ class Counter extends Widget
 	var unitDigit: Int = 0;
 	
     private function set_scrollY (y:Float) : Float {
-		this.refY = y;
+		this.absoluteY = y;
 		
-        this.numbers[0].top = refY % cycleLength;
+        this.numbers[0].top = absoluteY % cycleLength;
 		if (this.numbers[0].top > 0) {
 			this.numbers[0].top -= cycleLength; 
 			if (unitDigit == 0 && direction == -1) {
@@ -165,7 +157,33 @@ class Counter extends Widget
 			unitDigit += direction;
 			trace(currentVal + " " + lastVal + " > " + direction +" : " + unitDigit);
 		}
-        return refY;
+        return absoluteY;
+    }
+	
+	var ySum : Float = 0;
+	private function scrollDigits (y:Float) : Void {
+		ySum += y;
+		if (ySum > 0) {
+			if (negNumbers[0].visible == false) {
+				for (i in 0...3) {
+					negNumbers[i].visible = true;
+					posNumbers[i].visible = false;
+				}
+				numbers = negNumbers;
+			}
+			this.numbers[0].top = ySum % cycleLength;
+			this.numbers[0].top -= cycleLength;
+		}else {
+			if (posNumbers[0].visible == false) {
+				for (i in 0...3) {
+					negNumbers[i].visible = false;
+					posNumbers[i].visible = true;
+				}
+				numbers = posNumbers;
+			}
+			this.numbers[0].top = ySum % cycleLength;
+		}
+		
     }
 
 	private function get_scrollY () : Float {
@@ -174,62 +192,29 @@ class Counter extends Widget
 
 	
 	private function _dragScroll (e:MouseEvent) : Void {
-        if( this._processingDrag ) return;
-        this._processingDrag = true;
-		
-        var dx       : Float = this.mouseX - this.scrollX;
-        var dy       : Float = this.mouseY - this.scrollY;
-        var lastX    : Float = this.mouseX;
+        //var dy       : Float = this.mouseY - this.scrollY;
+		var dy 		 : Float = 0;
         var lastY    : Float = this.mouseY;
-        var lastDx   : Float = 0;
         var lastDy   : Float = 0;
-        var startX   : Float = this.mouseX;
         var startY   : Float = this.mouseY;
         var scrolled : Bool = false;
 
-        //stop previous scrolling
-        this.tweenStop(["scrollX", "scrollY"], false, true);
+        this.tweenStop(["scrollY"], false, true);
 
-        //html5 target does not respect .mouseChildren
-        #if html5
-            var blocker : Sprite = new Sprite();
-            blocker.graphics.beginFill(0x000000, 0);
-            blocker.graphics.drawRect(0, 0, this.w, this.h);
-            blocker.graphics.endFill();
-        #end
-
-        var fn = function(e:Event) : Void {
-            if( scrolled ){
-                this.scrollX = this.mouseX - dx;
-                this.scrollY = this.mouseY - dy;
-				
-            //disable processing mouse events by children
-            }else if(
-                (!scrolled && Math.abs(this.mouseX - startX) >= 5)
-                || (!scrolled && Math.abs(this.mouseY - startY) >= 5)
-            ){
-                #if html5 this.addChild(blocker); #end
-                scrolled = true;
-                this.numbers[0].mouseEnabled = false;
-                this.numbers[0].mouseChildren = false;
-                this.dispatchEvent(new WidgetEvent(WidgetEvent.SCROLL_START));
-            }
-
-            lastDx = this.mouseX - lastX;
-            lastDy = this.mouseY - lastY;
-
-            lastX = this.mouseX;
-            lastY = this.mouseY;
-        }
-
+		
         //follow pointer
+        var fn = function(e:Event) : Void {
+            //this.scrollY = this.mouseY - dy;
+            lastDy = this.mouseY - lastY;
+            lastY = this.mouseY;
+			scrollDigits(lastDy);
+        }
         this.addUniqueListener(Event.ENTER_FRAME, fn);
+		//
 
         //stop following
         var fnStop : MouseEvent->Void = null;
         fnStop = function(e:MouseEvent) : Void {
-            this._processingDrag = false;
-
             this.removeEventListener(Event.ENTER_FRAME, fn);
             Lib.current.stage.removeEventListener(MouseEvent.MOUSE_UP, fnStop);
 
@@ -237,27 +222,17 @@ class Counter extends Widget
 				this.dispatchEvent(new WidgetEvent(WidgetEvent.SCROLL_STOP));
 			};
 			
-			var distanceToYValue = Math.abs(scrollY % stepLength);
-			if (distanceToYValue > (stepLength/2))
-				distanceToYValue -= stepLength;
-				
-			this.tween(0.4, {scrollX:this.scrollX + lastDx * 20, scrollY:this.scrollY + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
-
-			#if html5 if( blocker.parent == this) this.removeChild(blocker); #end
-			this.numbers[0].mouseEnabled  = true;
-			this.numbers[0].mouseChildren = true;
+			//var distanceToYValue = Math.abs(scrollY % stepLength);
+			//if (distanceToYValue > (stepLength/2))
+				//distanceToYValue -= stepLength;
+				//
+			//this.tween(0.4, {scrollY:this.scrollY + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
         }
-
-        //stop scrolling
         Lib.current.stage.removeEventListener(MouseEvent.MOUSE_UP, fnStop);
         Lib.current.stage.addEventListener(MouseEvent.MOUSE_UP, fnStop);
+		//
     }
 
-
-	//public function set_numValue(val: Int) {
-		//numValue = val;
-		//return val;
-	//}
 	
     private function _wheelScroll (e:MouseEvent) : Void {
         //scroll horizontally
