@@ -22,74 +22,25 @@ import ru.stablex.ui.widgets.Widget;
  */
 class Counter extends Widget
 {
-	public var digitsCount = 3;
+	private var srcHeight = 770;
+	private var srcWidth = 42;
 	private static var cycleLength: Float;
 	private static var stepLength: Float;
 	
-	//public var value (get, set);
-	//private var _value (get, set);
-    
+	public var digitsCount = 2;    
 	public var numbers: Array<Widget> = new Array();
 	public var posNumbers: Array<Widget> = new Array();
 	public var negNumbers: Array<Widget> = new Array();
-	
-	public var unitDigit(default, set_unitDigit): Float;
-	public var tenthDigit(default, set): Float;
-	public var hundredthDigit(default, set): Float;
-	
-
+	private var ySum : Float = 0;
 	private var _processingDrag : Bool = false;
+	
+	private var _value: Int;
+	//public var value (get, set);
+	
 	
 	public function new () : Void {
         super();
         this.overflow = false;
-		
-		var bmpPosNumbers: BitmapData = Assets.getBitmapData("assets/img/numbers.png");
-		var bmpNegNumbers: BitmapData = Assets.getBitmapData("assets/img/reversenumbers.png");
-		stepLength = bmpPosNumbers.height / 11;
-		cycleLength = stepLength * 10;
-		var srcWidth = bmpPosNumbers.width;
-		
-		//this.h = stepLength;
-		//this.w = srcWidth * 3;
-		
-		trace(this.h);
-		trace(this.w);
-		
-		for (i in 0...digitsCount) {
-			posNumbers.push(
-				UIBuilder.create(Widget, {
-					widthPt : 100,
-					h: 770,
-					left: srcWidth * (digitsCount-1-i)
-				})
-			);
-			this.addChild(posNumbers[i]);
-			
-			negNumbers.push(
-				UIBuilder.create(Widget, {
-					widthPt : 100,
-					h: 770,
-					left: srcWidth * (digitsCount-1-i)
-				})
-			);
-			this.addChild(negNumbers[i]);
-		}
-		
-		for (i in 0...3) {
-			posNumbers[i].skin = new Img();
-			cast(posNumbers[i].skin, Img)._src = "assets/img/numbers.png";
-			negNumbers[i].skin = new Img();
-			cast(negNumbers[i].skin, Img)._src = "assets/img/reversenumbers.png";
-		}
-		
-		for (i in 0...3) {
-			negNumbers[i].visible = false;
-		}
-		numbers = posNumbers;
-		
-        this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this.startScroll);
-		this.addUniqueListener(MouseEvent.MOUSE_DOWN, this.startScroll);
     }
 	
 	
@@ -104,15 +55,68 @@ class Counter extends Widget
 		//return new Bitmap(data);
 	//}
 
-	
+	override public function onCreate () : Void {
+		//COMPUTE RESIZE HERE
+		var bmpPosNumbers: BitmapData = Assets.getBitmapData("assets/img/numbers.png");
+		var bmpNegNumbers: BitmapData = Assets.getBitmapData("assets/img/reversenumbers.png");
+		stepLength = bmpPosNumbers.height / 11;
+		cycleLength = stepLength * 10;
+		srcWidth = bmpPosNumbers.width;
+		srcHeight = bmpPosNumbers.height;
+		
+		for (i in 0...digitsCount) {
+			posNumbers.push(
+				UIBuilder.create(Widget, {
+					widthPt : 100,
+					h: srcHeight,
+					left: srcWidth * (digitsCount-1-i)
+				})
+			);
+			this.addChild(posNumbers[i]);
+			
+			negNumbers.push(
+				UIBuilder.create(Widget, {
+					widthPt : 100,
+					h: srcHeight,
+					left: srcWidth * (digitsCount-1-i)
+				})
+			);
+			this.addChild(negNumbers[i]);
+		}
+		
+		
+		
+		for (i in 0...digitsCount) {
+			negNumbers[i].visible = false;
+		}
+		numbers = posNumbers;
+		
+		for (i in 0...digitsCount) {
+			posNumbers[i].skin = new Img();
+			cast(posNumbers[i].skin, Img)._src = "assets/img/numbers.png";
+			negNumbers[i].skin = new Img();
+			cast(negNumbers[i].skin, Img)._src = "assets/img/reversenumbers.png";
+		}
+		
+		for (i in 0...digitsCount) {
+			posNumbers[i].refresh();
+			negNumbers[i].refresh();
+		}
+		//this.refresh();
+		
+		
+        this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this.startScroll);
+		this.addUniqueListener(MouseEvent.MOUSE_DOWN, this.startScroll);
+		
+    }
 	
 	
 	private function startScroll(e:MouseEvent) : Void {
         if ( e.type == MouseEvent.MOUSE_DOWN ) {
-			trace("drag");
+			//trace("drag");
             this._dragScroll( e );
         }else if ( e.type == MouseEvent.MOUSE_WHEEL ) {
-			trace("wheel");
+			//trace("wheel");
             this._wheelScroll( e );
         }
     }
@@ -131,27 +135,29 @@ class Counter extends Widget
 		//trace(currentVal + " " + lastVal + " > " + direction +" : " + unitDigit);
 	//}
 	
-	var ySum : Float = 0;
+	
 	private function scrollDigits (y:Float) : Void {
-		ySum += y;
+		var dy = y * 3;
+		ySum += dy;
 		var modulo = ySum % cycleLength;
 		if (ySum > 0) {
+			
 			if (negNumbers[0].visible == false) {
-				for (i in 0...3) {
+				for (i in 0...digitsCount) {
 					negNumbers[i].visible = true;
 					posNumbers[i].visible = false;
 				}
-				negNumbers[1].top -= cycleLength;
-				negNumbers[2].top -= cycleLength;
+				negNumbers[1].top = - cycleLength;
+				//negNumbers[2].top = - cycleLength;
 				numbers = negNumbers;
 			}
 			this.numbers[0].top = modulo - cycleLength;
 			if ( modulo < (10 * stepLength) && modulo > (9 * stepLength) ) {
-				this.numbers[1].top += y;
+				this.numbers[1].top += dy;
 			}
 		}else {
 			if (posNumbers[0].visible == false) {
-				for (i in 0...3) {
+				for (i in 0...digitsCount) {
 					negNumbers[i].visible = false;
 					posNumbers[i].visible = true;
 				}
@@ -159,29 +165,20 @@ class Counter extends Widget
 			}
 			this.numbers[0].top = modulo;
 			if ( modulo < (-9 * stepLength) && modulo > (-10 * stepLength)) {
-				this.numbers[1].top += y;
+				this.numbers[1].top += dy;
 			}
 			
 		}
     }
 
-	public function set_unitDigit(y:Float): Float {
-		trace("set " + y);
-		numbers[0].top = y;
-		return y;
-	}
-	private function set_tenthDigit(y:Float): Float {
-		numbers[1].top = y;
-		return y;
-	}
-	private function set_hundredthDigit(y:Float): Float {
-		numbers[2].top = y;
-		return y;
-	}
+	//public function set_unitDigit(y:Float): Float {
+		//trace("set " + y);
+		//numbers[0].top = y;
+		//return y;
+	//}
 
 	
 	private function _dragScroll (e:MouseEvent) : Void {
-        //var dy       : Float = this.mouseY - this.scrollY;
 		var dy 		 : Float = 0;
         var lastY    : Float = this.mouseY;
         var lastDy   : Float = 0;
@@ -189,11 +186,16 @@ class Counter extends Widget
         var scrolled : Bool = false;
 
         this.tweenStop(["scrollY"], false, true);
-
+		#if html5
+            var blocker : Sprite = new Sprite();
+            blocker.graphics.beginFill(0x000000, 0);
+            blocker.graphics.drawRect(0, 0, this.w, this.h);
+            blocker.graphics.endFill();
+        #end
 		
         //follow pointer
         var fn = function(e:Event) : Void {
-            //this.scrollY = this.mouseY - dy;
+			#if html5 this.addChild(blocker); #end
             lastDy = this.mouseY - lastY;
             lastY = this.mouseY;
 			scrollDigits(lastDy);
@@ -211,18 +213,20 @@ class Counter extends Widget
 				this.dispatchEvent(new WidgetEvent(WidgetEvent.SCROLL_STOP));
 			};
 			
-			for (i in 0...3) {
+			for (i in 0...digitsCount) {
 				var distanceToYValue = Math.abs(numbers[i].top % stepLength);
 				if (distanceToYValue > (stepLength/2))
 					distanceToYValue -= stepLength;
-				
-				//unitDigit = numbers[i].top;
-				trace("dst " + distanceToYValue);
-				this.tween(0.4, {unitDigit: this.numbers[i].top + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
+				//if(i>0)
+					numbers[i].top += distanceToYValue;
+				//else
+					//this.tween(0.4, { unitDigit: numbers[0].top + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
 			}
 			
+			_value = Math.round( -ySum / stepLength);
 			
         }
+		#if html5 if( blocker.parent == this) this.removeChild(blocker); #end
         Lib.current.stage.removeEventListener(MouseEvent.MOUSE_UP, fnStop);
         Lib.current.stage.addEventListener(MouseEvent.MOUSE_UP, fnStop);
 		//

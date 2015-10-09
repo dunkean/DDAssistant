@@ -33,6 +33,7 @@ class Main extends ru.stablex.ui.widgets.Widget{
 
         //Create our UI
         Lib.current.addChild( UIBuilder.buildFn('assets/ui/index2.xml')() );
+		//Lib.current.addChild( UIBuilder.buildFn('assets/ui/index.xml')() );
 		
 		//var widget : Scroll = cast UIBuilder.get('scrollZone');
 		//var item1 : Widget = cast UIBuilder.get('item1');
