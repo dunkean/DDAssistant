@@ -7,9 +7,11 @@ import haxe.ui.toolkit.core.XMLController;
 import haxe.ui.toolkit.events.MenuEvent;
 import haxe.ui.toolkit.events.UIEvent;
 import models.Player;
+import models.SorcererSpellBook;
 import network.Peer;
 import utils.UUID;
 import views.AbilitiesView;
+import views.SpellBookView;
 
 
 typedef Settings = {
@@ -134,6 +136,9 @@ class DDAssistant extends XMLController
 		switch(e.menuItem.id) {
 			case "abilities":
 				var viewController = new AbilitiesView(player);
+				mainLayout.addChild(viewController.view);
+			case "spells":
+				var viewController = new SpellBookView(player);
 				mainLayout.addChild(viewController.view);
 			default:
 		}

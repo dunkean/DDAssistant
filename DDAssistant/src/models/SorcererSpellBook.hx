@@ -1,4 +1,4 @@
-package src.models;
+package models;
 
 import models.SpellBook;
 
@@ -8,34 +8,37 @@ import models.SpellBook;
  */
 class SorcererSpellBook extends SpellBook
 {
-	var currentSpellsPerDay:Array<Int>;
-	
-	public function new(?uuid:String) 
+	public var currentSpellsPerDay:Array<Int>;
+	public function new(?casterLevel:Int=0, ?casterMainBonus:Int= 0, ?uuid:String) 
 	{
-		super(?uuid);
-		currentSpellsPerDay = new Array<Int>();
+		super(casterLevel, casterMainBonus, uuid);
+		
+//		currentSpellsPerDay = spellsNumberPerDay.copy();// new Array<Int>();
+//		currentSpellsPerDay.push( generalSpellsPerDay[casterLevel][i] + bonusSpellsPerDay[casterMainBonus][i] );	
 	}
-	public function setKnownSpellsForLevel(level:Int, value:Int) {
+	override public function setKnownSpellsForLevel(level:Int, value:Int) {
 		super.setKnownSpellsForLevel(level, value);
 		while ( currentSpellsPerDay.length < level ) {
 			currentSpellsPerDay.push(0);
 		}
 		currentSpellsPerDay[level] = value;
 	}
-	public function addSpellForLevel(level:Int, spell:Spell) {
-		
-		while ( knownSpells.length < level ) {
-			knownSpells.push(new Array<Spell>() );
+	
+	override public function addSpellForLevel(spell:Spell) {
+		var level:Int = Std.parseInt( spell.level );
+		while ( spellList.length < level ) {
+			spellList.push(new Array<Spell>() );
 		}
-		knownSpells[level].push( spell );
+		spellList[level].push( spell );
 	}
-	public function consumeSpell( level:Int ) {
+	override public function consumeSpell( spell:Spell ) {
+		var level:Int = Std.parseInt( spell.level );
 		if ( currentSpellsPerDay[level] > 0 ) {
 			currentSpellsPerDay[level]--;
 		}
 	}
-	public function reset() {
-		for ( var i = 0; i < spellsNumberPerDay.length; i++ ) {
+	override public function reset() {
+		for ( i in 0...spellsNumberPerDay.length ) {
 			currentSpellsPerDay[i] = spellsNumberPerDay[i];
 		}
 	}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Scroll hScroll="false" w="100" h="200">
+<Scroll vScroll="false" skin:Paint-border="1" w="400" h="400" left="50" top="100">
 
-<ViewStack name="'list'" w="100" h="300">
+<ViewStack name="'list'" w="100" h="600">
 </ViewStack>
 
 </Scroll>

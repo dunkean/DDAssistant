@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hbox width="100%" autoSize="true" id="abilities">
+	<grid columns="6" styleName="blackStyle" >
+		<text id="LVLlbl" text="Niveau" styleName="blackStyle" />
+		<text id="LVLVal" text="0" styleName="whiteStyle" />
+		<text id="NBlbl" text="Connus" styleName="blackStyle" />
+		<text id="NBVal" text="0" styleName="whiteStyle" />
+		<text id="PERDAYlbl" text="Par jour" styleName="blackStyle" />
+		<text id="PERDAYVal" text="0" styleName="whiteStyle" />
+	</grid>
+</hbox>

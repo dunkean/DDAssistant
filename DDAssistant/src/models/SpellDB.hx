@@ -1,10 +1,12 @@
 package models;
 import haxe.Json;
 import ru.stablex.ui.UIBuilder;
+import ru.stablex.ui.widgets.Widget;
 import sys.io.File;
 import sys.FileSystem;
 import haxe.Json;
 import ru.stablex.ui.UIBuilder;
+import flash.Lib;
 /**
  * ...
  * @author cda
@@ -18,17 +20,20 @@ typedef AnonSpell = {
 class SpellDB
 {
 	public var content:Array<Dynamic>;
+	public var view:Widget;
 //	public var byLevel: Array < Array<Spell> >= new Array<Array<Spell>>();
 //	public var byClass: Map< String, Array<Spell> >= new Map<String, Array<Spell>>();
 	public function new() 
 	{
-		var dbView= UIBuilder.create(SpellDBView);
+		view = UIBuilder.create(SpellDBView);
+		flash.Lib.current.addChild( UIBuilder.buildFn('ui/spellitem.xml')() );
+	
 		var dices= ~/(\d+d\d+) ((.*) (par\s|\/\s?)(niv|round)\w*|.*)/i;
 		var cap= ~/.*\(.*max\D*(\d+d\d+)/i;
 		var cap2= ~/.*\(\D*(\d+d\d+)\D*max.*\)/i;
 		DDAssistant.console("NEW SPELL DB");
 		try {
-			//deployer dev "C:\Qt\Qt5.4.2\5.4\msvc2010_opengl\bin" "" C:\Qt\Qt5.4.2\Tools\QtCreator\bin" "printack*-*Printack Designer*-*printack*-*Basic" ""
+			//deployer dev "C:\Qt\Qt5.4.2\5.4\msvc2010_opengl\bin" "C:\Qt\QT5.4.2_msvc2010_opengl_static\msvc2010_opengl\bin" "C:\Qt\Qt5.4.2\Tools\QtCreator\bin" "C:\Users\dartnell\Documents\DEV\PrintackV2Deployer__conf\DefaultBuildList.txt" "C:\Users\dartnell\Documents\DEV\PrintackV2Deployer__conf2"
 			var file:String = File.getContent("db/Spells_Ens_6.json");
 			var content:Array<AnonSpell> = Json.parse( file );
 /*

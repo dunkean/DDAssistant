@@ -8,7 +8,7 @@ import models.DiceType;
 import models.Dice;
 import models.Damage;
 import models.Spell;
-import models.SpellDB;
+//import models.SpellDB;
 import models.TestClass;
 import models.TestClass2;
 import models.Player;
@@ -20,35 +20,39 @@ import network.Syncable;
 import network.SyncSerializer;
 import ru.stablex.ui.UIBuilder;
 import flash.Lib;
+import models.SorcererSpellBook;
 
 /**
  * Main class for the DDCombatAssistant
  * @author dunkean
  * @version 0.1
  */
-class Main extends ru.stablex.ui.widgets.Widget
+class Main extends flash.display.Sprite
 {
 
-	public function new() 
+	//public function new() 
+	public static function main():Void
 	{
-		super();
+		//super();
 		UIBuilder.init();
 		flash.Lib.current.addChild( UIBuilder.buildFn('ui/spelldb.xml')() );
-		flash.Lib.current.addChild( UIBuilder.buildFn('ui/spellitem.xml')() );
-	
+		
 		Toolkit.theme = new GradientTheme();
 		Toolkit.setTransitionForClass(Stack, "none");
 		Toolkit.init();
 		Toolkit.openFullscreen(function(root:Root) {
 			var controller = new DDAssistant();
 			root.addChild(controller.view);
+	//		var spellDB = new SpellDB();
 		});
-		var spellDB = new SpellDB();
+	//	flash.Lib.current.addChild( UIBuilder.buildFn('sample.xml')() );
+	
 		var s1:Spell = new Spell();
 		s1.damage = new Damage( BaseElement.Acid, new Dice(2, DiceType.D6) );
 		s1.damage.addDamage( BaseElement.Cold , "2d20");
 		s1.damage.addDamage( BaseElement.Cold , "2.5d20");
 		DDAssistant.console('S1: ' + s1.damage.roll() );
+		
 	}
 }
 

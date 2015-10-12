@@ -18,7 +18,14 @@ class Player extends Syncable
 	public var Wisdom: String = "10";
 	public var Charisma: String = "10";
 	
-	public var spells:SpellBook;
+	public var spellBook:SpellBook;// = new SpellBook();
+	
+	public function new(?uuid:String) {
+		super(uuid);
+		DDAssistant.console("creating player");
+		spellBook = new  SorcererSpellBook(14, 4, uuid);
+	}
+	
 }
 
 

@@ -13,6 +13,7 @@
 		<menuitem text="Vie" id="life" styleName="blackStyle"/><!--dynamic-->
 		<menuitem text="Attaque" id="attack" styleName="blackStyle"/><!--dynamic-->
 		<menuitem text="Compétences" id="skills" styleName="blackStyle"/><!--dynamic-->
+		<menuitem text="Sorts" id="spells" styleName="blackStyle"/><!--dynamic-->
 	</menubutton>
 </menubar>
 	
