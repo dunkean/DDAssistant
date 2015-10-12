@@ -100,29 +100,30 @@ class SpellBook extends Syncable
 
 	}
 	public function setKnownSpellsForLevel(level:Int, value:Int) {
-		
-		while ( knownSpellsNumber.length < level ) {
+		DDAssistant.console("length " + knownSpellsNumber.length);
+		while ( knownSpellsNumber.length <= level ) {
 			knownSpellsNumber.push(0);
+			DDAssistant.console("length " + knownSpellsNumber.length);
 		}
 		knownSpellsNumber[level] = value;
 	}
 	public function setSpellsNumberPerDay(level:Int, value:Int) {
 		
-		while ( spellsNumberPerDay.length < level ) {
+		while ( spellsNumberPerDay.length <= level ) {
 			spellsNumberPerDay.push(0);
 		}
 		spellsNumberPerDay[level] = value;
 	}
 	public function setCurrentSpellsPerDay(level:Int, value:Int) {
 		
-		while ( spellsNumberPerDay.length < level ) {
+		while ( spellsNumberPerDay.length <= level ) {
 			spellsNumberPerDay.push(0);
 		}
 		spellsNumberPerDay[level] = value;
 	}
 	public function addSpellForLevel(spell:Spell) {
 		var level:Int = Std.parseInt( spell.level );
-		while ( knownSpellsNumber.length < level ) {
+		while ( knownSpellsNumber.length <= level ) {
 			spellList.push(new Array<Spell>() );
 		}
 		spellList[level].push( spell );
