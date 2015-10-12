@@ -1,5 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<HBox w="800" h="600" childPadding="20">
-    <Counter w = "126" h = "70"/>
-</HBox>
+<Counter w = "42" h = "35"/>
