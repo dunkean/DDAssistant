@@ -6,6 +6,7 @@ import flash.events.MouseEvent;
 import flash.Lib;
 import openfl.Assets;
 import openfl.display.BitmapData;
+import openfl.geom.Matrix;
 import ru.stablex.Assets;
 import ru.stablex.ui.events.ScrollEvent;
 import ru.stablex.ui.events.WidgetEvent;
@@ -43,48 +44,46 @@ class Counter extends Widget
         this.overflow = false;
     }
 	
-	
-	//public static function resize( source:Bitmap, width:Int, height:Int ) : Bitmap
-	//{
-		//var scaleX:Float = width / source.bitmapData.width;
-		//var scaleY:Float = height / source.bitmapData.height;
-		//var data:BitmapData = new BitmapData(width, height, true);
-		//var matrix:Matrix = new Matrix();
-		//matrix.scale(scaleX, scaleY);
-		//data.draw(source.bitmapData, matrix);
-		//return new Bitmap(data);
-	//}
+
 
 	override public function onCreate () : Void {
 		//COMPUTE RESIZE HERE
+		
 		var bmpPosNumbers: BitmapData = Assets.getBitmapData("assets/img/numbers.png");
 		var bmpNegNumbers: BitmapData = Assets.getBitmapData("assets/img/reversenumbers.png");
-		stepLength = bmpPosNumbers.height / 11;
-		cycleLength = stepLength * 10;
+		
 		srcWidth = bmpPosNumbers.width;
 		srcHeight = bmpPosNumbers.height;
+
+		var factorX = (this.w / digitsCount ) / srcWidth;
+		var factorY = (this.h * 11) / srcHeight;
 		
 		for (i in 0...digitsCount) {
 			posNumbers.push(
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: srcHeight,
-					left: srcWidth * (digitsCount-1-i)
+					left: factorX * srcWidth * (digitsCount-1-i)
 				})
 			);
 			this.addChild(posNumbers[i]);
+			posNumbers[i].scaleX = factorX;
+			posNumbers[i].scaleY = factorY;
 			
 			negNumbers.push(
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: srcHeight,
-					left: srcWidth * (digitsCount-1-i)
+					left: factorX * srcWidth * (digitsCount-1-i)
 				})
 			);
 			this.addChild(negNumbers[i]);
+			negNumbers[i].scaleX = factorX;
+			negNumbers[i].scaleY = factorY;
 		}
 		
-		
+		stepLength = (bmpPosNumbers.height / 11) * factorY;
+		cycleLength = (stepLength * 10) * factorY;
 		
 		for (i in 0...digitsCount) {
 			negNumbers[i].visible = false;
