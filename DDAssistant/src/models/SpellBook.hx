@@ -79,36 +79,31 @@ class SpellBook extends Syncable
 	public var knownSpellsNumber:Array<Int>;
 	public var spellsNumberPerDay:Array<Int>;
 	public var spellList:Array<Array<Spell>>;
+	public var currentSpellsPerDay:Array<Int>;
 	public function new(?casterLevel:Int=0, ?casterMainBonus:Int= 0, ?uuid:String) 
 	{
 		super(uuid);
 		knownSpellsNumber = new Array<Int>();
 		spellsNumberPerDay = new Array<Int>();
 		spellList = new Array<Array<Spell>>();
-		DDAssistant.console("setting known spells per level for caster "+casterLevel);
-		DDAssistant.console(" set to "+generalKnownSpellsPerLevel[casterLevel]);
 		for ( i in 0...generalKnownSpellsPerLevel[casterLevel].length ) {
 			setKnownSpellsForLevel(i, generalKnownSpellsPerLevel[casterLevel][i]);
 		}
-		DDAssistant.console("setting spells per day" + casterLevel);
-		DDAssistant.console(" set to "+generalSpellsPerDay[casterLevel]);
 		for ( i in 0...generalSpellsPerDay[casterLevel].length ) {
 			setSpellsNumberPerDay( i, generalSpellsPerDay[casterLevel][i] + bonusSpellsPerDay[casterMainBonus][i]);
 	//		spellsNumberPerDay.push( generalSpellsPerDay[casterLevel][i] + bonusSpellsPerDay[casterMainBonus][i] );
 	//		currentSpellsPerDay.push( generalSpellsPerDay[casterLevel][i] + bonusSpellsPerDay[casterMainBonus][i] );
 		}
-
+		currentSpellsPerDay = spellsNumberPerDay.copy();
+		DDAssistant.console("Spell book ready");
 	}
 	public function setKnownSpellsForLevel(level:Int, value:Int) {
-		DDAssistant.console("length " + knownSpellsNumber.length);
 		while ( knownSpellsNumber.length <= level ) {
 			knownSpellsNumber.push(0);
-			DDAssistant.console("length " + knownSpellsNumber.length);
 		}
 		knownSpellsNumber[level] = value;
 	}
-	public function setSpellsNumberPerDay(level:Int, value:Int) {
-		
+	public function setSpellsNumberPerDay(level:Int, value:Int) {	
 		while ( spellsNumberPerDay.length <= level ) {
 			spellsNumberPerDay.push(0);
 		}

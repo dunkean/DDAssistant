@@ -15,5 +15,5 @@
 		<text id="CHAlbl" text="CHA" styleName="blackStyle" />
 		<text id="CHAVal" text="10" styleName="whiteStyle" />
 	</grid>
-	-->
+</accordion>	-->
 </vbox>

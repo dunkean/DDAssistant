@@ -4,7 +4,7 @@ import models.Player;
 import models.SpellBook;
 import models.SorcererSpellBook;
 import haxe.ui.toolkit.core.XMLController;
-
+import haxe.ui.toolkit.controls.Text;
 /**
  * First test view (abilities)
  * @author dunkean
@@ -18,20 +18,15 @@ class SpellBookView extends XMLController
 	public function new(player:Player) 
 	{
 		DDAssistant.console("creating spell book view and player spell book");
+//		new hxcpp.DebugStdio(true);
 		var spellBook:SpellBook= new SorcererSpellBook(14, 4);
 		for ( i in 0...spellBook.knownSpellsNumber.length ) {
-	//		DDAssistant.console("creating summary");
-			var summary:XMLController = new XMLController("ui.spellLevelSummary.xml" );
-	//		DDAssistant.console("creating summary2");
-			summary._view.findChild("LVLValue").setText(i);
-	//		DDAssistant.console("creating summary3");
-			summary._view.findChild("NBValue").setText(spellBook.knownSpellsNumber[i]);
-	//		DDAssistant.console("creating summary4");
-			summary._view.findChild("PERDAYValue").setText(spellBook.spellsNumberPerDay[i]);
-	//		DDAssistant.console("creating summary5");
-			_view.findChild("list").addChild( summary );
-
-	//		DDAssistant.console("known spells per level "+i+': ' + spellBook.knownSpellsNumber[i] +"("+spellBook.spellsNumberPerDay[i]+" per day)");
+			var summary:XMLController = new XMLController("ui/spellLevelSummary.xml" );// ("ui/spellLevelList.xml" );
+			//summary.root.text = "Lvl " + i + ": x" + spellBook.spellsNumberPerDay[i];
+			summary.getComponent("LVLVal").text= ""+i;
+			//summary.getComponent("NBVal").text= ""+spellBook.knownSpellsNumber[i];
+			summary.getComponent("PERDAYVal").text= ""+spellBook.spellsNumberPerDay[i];
+			getComponent("list").addChild( summary.view );
 		}
 	}
 	

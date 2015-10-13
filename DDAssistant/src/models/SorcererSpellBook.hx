@@ -8,22 +8,19 @@ import models.SpellBook;
  */
 class SorcererSpellBook extends SpellBook
 {
-	public var currentSpellsPerDay:Array<Int>;
 	public function new(?casterLevel:Int=0, ?casterMainBonus:Int= 0, ?uuid:String) 
 	{
 		super(casterLevel, casterMainBonus, uuid);
 		
-//		currentSpellsPerDay = spellsNumberPerDay.copy();// new Array<Int>();
+		// new Array<Int>();
 //		currentSpellsPerDay.push( generalSpellsPerDay[casterLevel][i] + bonusSpellsPerDay[casterMainBonus][i] );	
 	}
+/*
 	override public function setKnownSpellsForLevel(level:Int, value:Int) {
 		super.setKnownSpellsForLevel(level, value);
-		while ( currentSpellsPerDay.length < level ) {
-			currentSpellsPerDay.push(0);
-		}
-		currentSpellsPerDay[level] = value;
+		currentSpellsPerDay = spellsNumberPerDay.copy();
 	}
-	
+	*/
 	override public function addSpellForLevel(spell:Spell) {
 		var level:Int = Std.parseInt( spell.level );
 		while ( spellList.length < level ) {
