@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%" autoSize="true" id="list">
-	
-	<grid columns="6" styleName="blackStyle" >
-		<text id="LVLlbl" text="Niveau" styleName="blackStyle" />
-		<text id="LVLVal" text="0" styleName="whiteStyle" />
-	<!--	<text id="NBlbl" text="Connus" styleName="blackStyle" />
-		<text id="NBVal" text="0" styleName="whiteStyle" />-->
-		<text id="PERDAYlbl" text="Par jour" styleName="blackStyle" />
-		<text id="PERDAYVal" text="0" styleName="whiteStyle" />
-	</grid>
+<vbox width="100%" autoSize="true" id="list" text="test">
+	<Text id="description">
+	</Text>
 </vbox>

@@ -34,8 +34,8 @@ class Main extends flash.display.Sprite
 	public static function main():Void
 	{
 		//super();
-		UIBuilder.init();
-		flash.Lib.current.addChild( UIBuilder.buildFn('ui/spelldb.xml')() );
+		//UIBuilder.init();
+		//flash.Lib.current.addChild( UIBuilder.buildFn('ui/spelldb.xml')() );
 		
 		Toolkit.theme = new GradientTheme();
 		Toolkit.setTransitionForClass(Stack, "none");

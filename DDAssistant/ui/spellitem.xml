@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Text >
+<vbox width="100%" autoSize="true" id="list" text="test">
 
-</Text>
+</vbox>

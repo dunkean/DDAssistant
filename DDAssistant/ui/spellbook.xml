@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%" autoSize="true" id="list">
+<accordion width="100%" autoSize="true" id="list">
 	<!--
 	<grid columns="12" styleName="blackStyle" >
 		<text id="FORlbl" text="FOR" styleName="blackStyle" />
@@ -14,6 +14,5 @@
 		<text id="SAGVal" text="10" styleName="whiteStyle" />
 		<text id="CHAlbl" text="CHA" styleName="blackStyle" />
 		<text id="CHAVal" text="10" styleName="whiteStyle" />
-	</grid>
-</accordion>	-->
-</vbox>
+	</grid>-->
+</accordion>
