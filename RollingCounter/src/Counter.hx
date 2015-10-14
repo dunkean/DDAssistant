@@ -37,8 +37,8 @@ class Counter extends Widget
 
 	//VALUE
 	private var ySum : Float = 0;
-	private var _value: Int;
-	//public var value (get, set);
+	@:isVar private var _value(get, set): Int;
+	public var value (get, set): Int;
 	
 	
 	public function new () : Void {
@@ -46,7 +46,30 @@ class Counter extends Widget
         this.overflow = false;
     }
 	
-
+	/************************/
+	/****   BIND LOGIC   ****/
+	/************************/
+	
+	private function get__value(): Int {
+		return this._value;
+	}
+	
+	private function set__value(val: Int): Int {
+		return this._value = val;
+	}
+	
+	public function get_value(): Int {
+		return this._value;
+	}
+	
+	public function set_value(val: Int): Int {
+		return this._value = val;
+	}
+	
+	
+	/************************/
+	/*****   UI LOGIC   *****/
+	/************************/
 
 	override public function onCreate () : Void {
 		var bmpPosNumbers: BitmapData = Assets.getBitmapData("assets/img/numbers.png");
@@ -104,16 +127,13 @@ class Counter extends Widget
 		
         this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this.startScroll);
 		this.addUniqueListener(MouseEvent.MOUSE_DOWN, this.startScroll);
-		
     }
 	
 	
 	private function startScroll(e:MouseEvent) : Void {
         if ( e.type == MouseEvent.MOUSE_DOWN ) {
-			//trace("drag");
             this._dragScroll( e );
         }else if ( e.type == MouseEvent.MOUSE_WHEEL ) {
-			//trace("wheel");
             this._wheelScroll( e );
         }
     }
@@ -151,10 +171,6 @@ class Counter extends Widget
 			for (i in 0...digitsCount - 1) {
 				this.numbers[i+1].top = digitsModulo[i] - cycleLength;
 			}
-			//Rolling during 9-10 transition
-			//if ( modulo < (10 * stepLength) && modulo > (9 * stepLength) ) {
-				//this.numbers[1].top += dy;
-			//}
 		}else {
 			if (posNumbers[0].visible == false) {
 				for (i in 0...digitsCount) {
@@ -167,11 +183,6 @@ class Counter extends Widget
 			for (i in 0...digitsCount - 1) {
 				this.numbers[i+1].top = digitsModulo[i];
 			}
-			//Rolling during 9-10 transition
-			//if ( modulo < (-9 * stepLength) && modulo > (-10 * stepLength)) {
-				//this.numbers[1].top += dy;
-			//}
-			
 		}
     }
 
@@ -225,7 +236,7 @@ class Counter extends Widget
 
 	
     private function _wheelScroll (e:MouseEvent) : Void {
-		if(e.delta > 0)
+		if(e.delta < 0)
 			scrollDigits(stepLength * wheelSpeed * -1);
 		else
 			scrollDigits(stepLength * wheelSpeed);
@@ -234,5 +245,7 @@ class Counter extends Widget
 			var distanceToYValue = round(numbers[i].top);
 			numbers[i].top += distanceToYValue;
 		}
+		
+		_value = Math.round( -ySum / stepLength);
     }
 }
