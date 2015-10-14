@@ -23,18 +23,20 @@ import ru.stablex.ui.widgets.Widget;
  */
 class Counter extends Widget
 {
-	private var srcHeight = 770;
-	private var srcWidth = 42;
+	//XML CONFIGURABLE
+	public var digitsCount = 2;    
+	public var scrollSpeed = 2;
+	public var wheelSpeed = 1;
+	
+	//COUNTER IMGS PARAMS
 	private static var cycleLength: Float;
 	private static var stepLength: Float;
-	
-	public var digitsCount = 2;    
 	public var numbers: Array<Widget> = new Array();
 	public var posNumbers: Array<Widget> = new Array();
-	public var negNumbers: Array<Widget> = new Array();
+	public var negNumbers: Array<Widget> = new Array();	
+
+	//VALUE
 	private var ySum : Float = 0;
-	private var _processingDrag : Bool = false;
-	
 	private var _value: Int;
 	//public var value (get, set);
 	
@@ -47,13 +49,11 @@ class Counter extends Widget
 
 
 	override public function onCreate () : Void {
-		//COMPUTE RESIZE HERE
-		
 		var bmpPosNumbers: BitmapData = Assets.getBitmapData("assets/img/numbers.png");
 		var bmpNegNumbers: BitmapData = Assets.getBitmapData("assets/img/reversenumbers.png");
 		
-		srcWidth = bmpPosNumbers.width;
-		srcHeight = bmpPosNumbers.height;
+		var srcWidth = bmpPosNumbers.width;
+		var srcHeight = bmpPosNumbers.height;
 
 		var factorX = (this.w / digitsCount ) / srcWidth;
 		var factorY = (this.h * 11) / srcHeight;
@@ -82,8 +82,8 @@ class Counter extends Widget
 			negNumbers[i].scaleY = factorY;
 		}
 		
-		stepLength = (bmpPosNumbers.height / 11) * factorY;
-		cycleLength = (stepLength * 10) * factorY;
+		stepLength = (posNumbers[0].h / 11) * factorY;
+		cycleLength = stepLength * 10;
 		
 		for (i in 0...digitsCount) {
 			negNumbers[i].visible = false;
@@ -101,8 +101,6 @@ class Counter extends Widget
 			posNumbers[i].refresh();
 			negNumbers[i].refresh();
 		}
-		//this.refresh();
-		
 		
         this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this.startScroll);
 		this.addUniqueListener(MouseEvent.MOUSE_DOWN, this.startScroll);
@@ -120,40 +118,43 @@ class Counter extends Widget
         }
     }
 	
-	
-	//var lastVal:Int = 0;
-	//var direction: Int = 1;
-	//var currentVal = Math.round((Math.abs(this.numbers[0].top / cycleLength) * 10)) % 10;
-	//
-	//if (currentVal != lastVal) {
-		//direction = currentVal - lastVal;
-		//lastVal = currentVal;
-		//if (direction == 9) direction = -1;
-		//if (direction == -9) direction = 1;
-		//unitDigit += direction;
-		//trace(currentVal + " " + lastVal + " > " + direction +" : " + unitDigit);
-	//}
+	private function round(top: Float): Float {
+		var distanceToYValue = Math.abs(top % stepLength);
+		if (distanceToYValue > (stepLength/2))
+			distanceToYValue -= stepLength;
+		return distanceToYValue;
+	}
 	
 	
 	private function scrollDigits (y:Float) : Void {
-		var dy = y * 3;
+		var dy = y;
 		ySum += dy;
 		var modulo = ySum % cycleLength;
+		var digitsModulo: Array<Float> = new Array();
+		for (i in 0...digitsCount - 1) {
+			var digitCycleLength: Float = cycleLength * Math.pow(10, i);
+			var digitSum: Float = ySum + (ySum > 0 ? 0.5 : -0.5) * stepLength;
+			if (ySum > 0) 
+				digitsModulo[i] = ( Math.floor( digitSum / digitCycleLength) * stepLength ) % cycleLength;
+			else 
+				digitsModulo[i] = ( Math.fceil( digitSum / digitCycleLength) * stepLength ) % cycleLength;
+		}
 		if (ySum > 0) {
-			
 			if (negNumbers[0].visible == false) {
 				for (i in 0...digitsCount) {
 					negNumbers[i].visible = true;
 					posNumbers[i].visible = false;
 				}
-				negNumbers[1].top = - cycleLength;
-				//negNumbers[2].top = - cycleLength;
 				numbers = negNumbers;
 			}
 			this.numbers[0].top = modulo - cycleLength;
-			if ( modulo < (10 * stepLength) && modulo > (9 * stepLength) ) {
-				this.numbers[1].top += dy;
+			for (i in 0...digitsCount - 1) {
+				this.numbers[i+1].top = digitsModulo[i] - cycleLength;
 			}
+			//Rolling during 9-10 transition
+			//if ( modulo < (10 * stepLength) && modulo > (9 * stepLength) ) {
+				//this.numbers[1].top += dy;
+			//}
 		}else {
 			if (posNumbers[0].visible == false) {
 				for (i in 0...digitsCount) {
@@ -163,18 +164,16 @@ class Counter extends Widget
 				numbers = posNumbers;
 			}
 			this.numbers[0].top = modulo;
-			if ( modulo < (-9 * stepLength) && modulo > (-10 * stepLength)) {
-				this.numbers[1].top += dy;
+			for (i in 0...digitsCount - 1) {
+				this.numbers[i+1].top = digitsModulo[i];
 			}
+			//Rolling during 9-10 transition
+			//if ( modulo < (-9 * stepLength) && modulo > (-10 * stepLength)) {
+				//this.numbers[1].top += dy;
+			//}
 			
 		}
     }
-
-	//public function set_unitDigit(y:Float): Float {
-		//trace("set " + y);
-		//numbers[0].top = y;
-		//return y;
-	//}
 
 	
 	private function _dragScroll (e:MouseEvent) : Void {
@@ -194,10 +193,9 @@ class Counter extends Widget
 		
         //follow pointer
         var fn = function(e:Event) : Void {
-			#if html5 this.addChild(blocker); #end
             lastDy = this.mouseY - lastY;
             lastY = this.mouseY;
-			scrollDigits(lastDy);
+			scrollDigits(lastDy*scrollSpeed);
         }
         this.addUniqueListener(Event.ENTER_FRAME, fn);
 		//
@@ -213,42 +211,28 @@ class Counter extends Widget
 			};
 			
 			for (i in 0...digitsCount) {
-				var distanceToYValue = Math.abs(numbers[i].top % stepLength);
-				if (distanceToYValue > (stepLength/2))
-					distanceToYValue -= stepLength;
-				//if(i>0)
-					numbers[i].top += distanceToYValue;
-				//else
-					//this.tween(0.4, { unitDigit: numbers[0].top + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
+				var distanceToYValue = round(numbers[i].top);
+				numbers[i].top += distanceToYValue;
 			}
 			
 			_value = Math.round( -ySum / stepLength);
+			trace(_value);
 			
         }
-		#if html5 if( blocker.parent == this) this.removeChild(blocker); #end
         Lib.current.stage.removeEventListener(MouseEvent.MOUSE_UP, fnStop);
         Lib.current.stage.addEventListener(MouseEvent.MOUSE_UP, fnStop);
-		//
     }
 
 	
     private function _wheelScroll (e:MouseEvent) : Void {
-        //scroll horizontally
-        //if(
-            //this.hScroll
-            //&& (
-                //(e.altKey && this.hScrollKey == 'alt')
-                //|| (e.shiftKey && this.hScrollKey == 'shift')
-                //|| (e.ctrlKey && this.hScrollKey == 'ctrl')
-            //)
-        //){
-            //this.tweenStop();
-            //this.scrollX += e.delta * wheelScrollSpeed;
-//
-        ////scroll vertically
-        //}else if( this.vScroll ){
-            //this.tweenStop();
-            //this.scrollY += e.delta * wheelScrollSpeed;
-        //}
+		if(e.delta > 0)
+			scrollDigits(stepLength * wheelSpeed * -1);
+		else
+			scrollDigits(stepLength * wheelSpeed);
+			
+		for (i in 0...digitsCount) {
+			var distanceToYValue = round(numbers[i].top);
+			numbers[i].top += distanceToYValue;
+		}
     }
 }
