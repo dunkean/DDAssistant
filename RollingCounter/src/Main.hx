@@ -22,10 +22,11 @@ class Main extends ru.stablex.ui.widgets.Widget{
 
         Lib.current.stage.align     = StageAlign.TOP_LEFT;
         Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
+		UIBuilder.setTheme('ru.stablex.ui.themes.android4');
 
         //register Main so we can use it in xml.
         UIBuilder.regClass("Main");
-		UIBuilder.regClass('MyScroll');
+		//UIBuilder.regClass('MyScroll');
 		UIBuilder.regClass('Counter');
 
         //initialize StablexUI

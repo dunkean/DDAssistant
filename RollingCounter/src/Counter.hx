@@ -12,6 +12,7 @@ import ru.stablex.ui.events.ScrollEvent;
 import ru.stablex.ui.events.WidgetEvent;
 import ru.stablex.ui.skins.Img;
 import ru.stablex.ui.UIBuilder;
+import ru.stablex.ui.widgets.Text;
 import ru.stablex.ui.widgets.Widget;
 
 
@@ -23,11 +24,16 @@ import ru.stablex.ui.widgets.Widget;
  */
 class Counter extends Widget
 {
+	//STATIC UI PARAMS
+	private static inline var counterWidthPt = 0.5;
+	
 	//XML CONFIGURABLE
 	public var digitsCount = 2;    
 	public var scrollSpeed = 2;
 	public var wheelSpeed = 1;
-	
+	public var title = "CAR";
+	public var posAsset = "assets/img/numbers.png";
+	public var negAsset = "assets/img/reversenumbers.png";
 	//COUNTER IMGS PARAMS
 	private static var cycleLength: Float;
 	private static var stepLength: Float;
@@ -49,6 +55,10 @@ class Counter extends Widget
 	/************************/
 	/****   BIND LOGIC   ****/
 	/************************/
+	
+	public function bind(syncableUuid: String, field: String): Void {
+	
+	}
 	
 	private function get__value(): Int {
 		return this._value;
@@ -72,13 +82,15 @@ class Counter extends Widget
 	/************************/
 
 	override public function onCreate () : Void {
-		var bmpPosNumbers: BitmapData = Assets.getBitmapData("assets/img/numbers.png");
-		var bmpNegNumbers: BitmapData = Assets.getBitmapData("assets/img/reversenumbers.png");
+		//BEGIN create counter
+		var bmpPosNumbers: BitmapData = Assets.getBitmapData(posAsset);
+		var bmpNegNumbers: BitmapData = Assets.getBitmapData(negAsset);
 		
 		var srcWidth = bmpPosNumbers.width;
 		var srcHeight = bmpPosNumbers.height;
-
-		var factorX = (this.w / digitsCount ) / srcWidth;
+		
+		var counterAvailableWidth = this.w * counterWidthPt;
+		var factorX = (counterAvailableWidth / digitsCount ) / srcWidth;
 		var factorY = (this.h * 11) / srcHeight;
 		
 		for (i in 0...digitsCount) {
@@ -86,7 +98,7 @@ class Counter extends Widget
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: srcHeight,
-					left: factorX * srcWidth * (digitsCount-1-i)
+					left: factorX * srcWidth * (digitsCount-1-i) + (this.w - counterAvailableWidth)
 				})
 			);
 			this.addChild(posNumbers[i]);
@@ -97,7 +109,7 @@ class Counter extends Widget
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: srcHeight,
-					left: factorX * srcWidth * (digitsCount-1-i)
+					left: factorX * srcWidth * (digitsCount-1-i) + (this.w - counterAvailableWidth)
 				})
 			);
 			this.addChild(negNumbers[i]);
@@ -115,9 +127,9 @@ class Counter extends Widget
 		
 		for (i in 0...digitsCount) {
 			posNumbers[i].skin = new Img();
-			cast(posNumbers[i].skin, Img)._src = "assets/img/numbers.png";
+			cast(posNumbers[i].skin, Img)._src = posAsset;
 			negNumbers[i].skin = new Img();
-			cast(negNumbers[i].skin, Img)._src = "assets/img/reversenumbers.png";
+			cast(negNumbers[i].skin, Img)._src = negAsset;
 		}
 		
 		for (i in 0...digitsCount) {
@@ -127,6 +139,13 @@ class Counter extends Widget
 		
         this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this.startScroll);
 		this.addUniqueListener(MouseEvent.MOUSE_DOWN, this.startScroll);
+		//END create counter
+		
+		//BEGIN create title
+		//var titleCompo: Text = new Text();
+		//titleCompo.text = title;
+		//this.addChild(titleCompo);
+		//END create title
     }
 	
 	
@@ -149,6 +168,7 @@ class Counter extends Widget
 	private function scrollDigits (y:Float) : Void {
 		var dy = y;
 		ySum += dy;
+		
 		var modulo = ySum % cycleLength;
 		var digitsModulo: Array<Float> = new Array();
 		for (i in 0...digitsCount - 1) {
@@ -159,6 +179,7 @@ class Counter extends Widget
 			else 
 				digitsModulo[i] = ( Math.fceil( digitSum / digitCycleLength) * stepLength ) % cycleLength;
 		}
+		
 		if (ySum > 0) {
 			if (negNumbers[0].visible == false) {
 				for (i in 0...digitsCount) {
@@ -194,14 +215,6 @@ class Counter extends Widget
         var startY   : Float = this.mouseY;
         var scrolled : Bool = false;
 
-        this.tweenStop(["scrollY"], false, true);
-		#if html5
-            var blocker : Sprite = new Sprite();
-            blocker.graphics.beginFill(0x000000, 0);
-            blocker.graphics.drawRect(0, 0, this.w, this.h);
-            blocker.graphics.endFill();
-        #end
-		
         //follow pointer
         var fn = function(e:Event) : Void {
             lastDy = this.mouseY - lastY;
