@@ -34,6 +34,7 @@ class Counter extends Widget
 	public var title = "CAR";
 	public var posAsset = "assets/img/numbers.png";
 	public var negAsset = "assets/img/reversenumbers.png";
+	
 	//COUNTER IMGS PARAMS
 	private static var cycleLength: Float;
 	private static var stepLength: Float;
@@ -142,9 +143,22 @@ class Counter extends Widget
 		//END create counter
 		
 		//BEGIN create title
-		//var titleCompo: Text = new Text();
-		//titleCompo.text = title;
-		//this.addChild(titleCompo);
+		var texxxt = UIBuilder.create(Text, {
+			text  : title,
+			label : {
+				selectable : false
+			},
+			format     : {
+				font   : Assets.getFont('assets/font/GLECB.TTF').fontName,
+				//italic : true,
+				color  : 0xFFFFFF,
+				size   : this.h,
+				y : 30
+			}
+		});
+		texxxt.h = srcHeight;
+		//texxxt.scaleY = factorY;
+		this.addChild(texxxt);
 		//END create title
     }
 	
