@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%" height="100%" id="name" ><!--autoSize="true" -->
+	<scrollview width="100%" height="95%"><!--  skin:Paint-border="1" left="10%" top="0" h="90%" w="90%">-->
+		<accordion width="100%" autoSize="true" id="list">
+		<!--
+		<grid columns="12" styleName="blackStyle" >
+			<text id="FORlbl" text="FOR" styleName="blackStyle" />
+			<text id="FORVal" text="10" styleName="whiteStyle" />
+			<text id="DEXlbl" text="DEX" styleName="blackStyle" />
+			<text id="DEXVal" text="10" styleName="whiteStyle" />
+			<text id="CONlbl" text="CON" styleName="blackStyle" />
+			<text id="CONVal" text="10" styleName="whiteStyle" />
+			<text id="INTlbl" text="INT" styleName="blackStyle" />
+			<text id="INTVal" text="10" styleName="whiteStyle" />
+			<text id="SAGlbl" text="SAG" styleName="blackStyle" />
+			<text id="SAGVal" text="10" styleName="whiteStyle" />
+			<text id="CHAlbl" text="CHA" styleName="blackStyle" />
+			<text id="CHAVal" text="10" styleName="whiteStyle" />
+		</grid>-->
+		</accordion>
+	</scrollview>
+	<button id="close" text="Done" width="90%" x="5%" height="5%" />
+</vbox>

@@ -1,13 +1,16 @@
 package;
 import haxe.Json;
 import haxe.ui.toolkit.containers.HBox;
+import haxe.ui.toolkit.controls.Progress;
+import haxe.ui.toolkit.core.Root;
+import haxe.ui.toolkit.core.RootManager;
+import haxe.ui.toolkit.core.Toolkit;
 import haxe.ui.toolkit.controls.Text;
 import haxe.ui.toolkit.core.Macros;
 import haxe.ui.toolkit.core.XMLController;
 import haxe.ui.toolkit.events.MenuEvent;
 import haxe.ui.toolkit.events.UIEvent;
 import models.Player;
-import models.SorcererSpellBook;
 import network.Peer;
 import utils.UUID;
 import views.AbilitiesView;
@@ -30,7 +33,8 @@ class DDAssistant extends XMLController
 	public static var uuid:String;
 	public static var name:String;
 	public static var ddAssistant: DDAssistant; //Lazy singleton
-	
+	public static var progressPopup:Root;
+	public static var progressBar:Progress;
 	/**
 	 * Instanciate peer, resourceManager. Load last settings. 
 	 */
@@ -48,6 +52,32 @@ class DDAssistant extends XMLController
 		Peer.start();
 	}
 	
+	public static function showProgress(min:Int, max:Int, label:String, ?cb:Void ->Void) {
+		/*
+		var progress:XMLController = new XMLController("ui/progress.xml" );
+		progress.getComponent("label").text = label;
+		progressBar = cast( progress.getComponent("bar"), Progress);
+		progressBar.pos= 0;
+		progressBar.min = min;
+		progressBar.max= max;
+		Toolkit.openPopup( { percentWidth: 90, height: 100 }, function(root:Root) {
+			progressPopup = root;
+			root.addChild(progress.view);
+			if ( cb != null ){
+				cb();
+			}
+		});
+		*/
+	}
+	public static function updateProgress(current:Int, ?label:String) {
+		/*if( label != null ) {
+			progressPopup.findChild("label").text = label;
+		}*/
+		//progressBar.pos= current;	
+	}
+	public static function closeProgress() {
+		//RootManager.instance.destroyRoot(progressPopup);
+	}
 	private function loadSettings() {
 		//if (!FileSystem.exists(SystemPath.applicationStorageDirectory)) {
 			//try{

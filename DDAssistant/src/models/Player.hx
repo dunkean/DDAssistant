@@ -1,4 +1,6 @@
 package models;
+import models.magic.SorcererSpellBook;
+import models.magic.SpellBook;
 import network.Syncable;
 
 /**

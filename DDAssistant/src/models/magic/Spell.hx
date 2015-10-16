@@ -1,6 +1,7 @@
-package models;
+package models.magic;
 
 import haxe.ui.toolkit.controls.Divider;
+import models.magic.SpellDB.AnonSpell;
 import network.Syncable;
 import haxe.ds.StringMap;
 /**
@@ -11,7 +12,7 @@ import haxe.ds.StringMap;
 class Spell extends Syncable
 {
 	public var name:String = "";
-	public var level:String = "";
+	public var level:Int = 0;
 	public var range:String = "";
 	public var target:String = "";
 	public var duration:Duration;
@@ -24,5 +25,12 @@ class Spell extends Syncable
 
 	
 	public var damage:Damage = new Damage();
-
+	public static function parse(sort:AnonSpell) {
+		var ret:Spell = new Spell();
+		ret.name = sort.nom;
+		ret.summary = sort.resume;
+		ret.description = sort.description;
+		ret.level = sort.classLevel;
+		return ret;
+	}
 }

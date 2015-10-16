@@ -1,5 +1,7 @@
-package models;
+package models.magic;
 
+import models.magic.Spell;
+import models.magic.SpellDB.AnonSpell;
 import network.Syncable;
 
 /**
@@ -116,15 +118,18 @@ class SpellBook extends Syncable
 		}
 		spellsNumberPerDay[level] = value;
 	}
-	public function addSpellForLevel(spell:Spell) {
-		var level:Int = Std.parseInt( spell.level );
-		while ( knownSpellsNumber.length <= level ) {
+	public function addSpellForLevel(spellDesc:AnonSpell) {
+		while ( spellList.length <= spellDesc.classLevel ) {
 			spellList.push(new Array<Spell>() );
 		}
-		spellList[level].push( spell );
+		spellList[spellDesc.classLevel].push( Spell.parse(spellDesc) );
+		DDAssistant.console("Spell list Level " + spellDesc.classLevel + " is now");
+		for ( spell in spellList[spellDesc.classLevel] ) {
+			DDAssistant.console(spell.name);
+		}
 	}
 	public function consumeSpell( spell:Spell ) {
-		var level:Int = Std.parseInt( spell.level );
+		var level:Int = spell.level;
 		if ( spellsNumberPerDay[level] > 0 ) {
 			spellsNumberPerDay[level]--;
 		}

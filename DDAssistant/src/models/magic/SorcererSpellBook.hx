@@ -1,6 +1,6 @@
-package models;
+package models.magic;
 
-import models.SpellBook;
+import models.magic.SpellBook;
 
 /**
  * ...
@@ -20,20 +20,14 @@ class SorcererSpellBook extends SpellBook
 		super.setKnownSpellsForLevel(level, value);
 		currentSpellsPerDay = spellsNumberPerDay.copy();
 	}
-	*/
-	override public function addSpellForLevel(spell:Spell) {
-		var level:Int = Std.parseInt( spell.level );
-		while ( spellList.length < level ) {
-			spellList.push(new Array<Spell>() );
-		}
-		spellList[level].push( spell );
-	}
+	
+	
 	override public function consumeSpell( spell:Spell ) {
 		var level:Int = Std.parseInt( spell.level );
 		if ( currentSpellsPerDay[level] > 0 ) {
 			currentSpellsPerDay[level]--;
 		}
-	}
+	}*/
 	override public function reset() {
 		for ( i in 0...spellsNumberPerDay.length ) {
 			currentSpellsPerDay[i] = spellsNumberPerDay[i];

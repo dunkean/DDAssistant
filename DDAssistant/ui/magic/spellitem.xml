@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%" autoSize="true" id="name" >
+	<hbox>
+		<button id="spellAction" text="Launch">
+		</button>
+	</hbox>
+	<Text styleName="normal" autoSize="true" id="desc" width="100%" multiline="true" selectable="false" wrapLines="true"></Text>
+</vbox>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<vbox width="100%" height="100">
+	<Text id="label">
+	</text>
+	<Progress id="bar" width="90%" height="14px" x="5%">
+	</Progress>
+</vbox>

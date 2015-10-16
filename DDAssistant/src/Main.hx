@@ -7,7 +7,7 @@ import models.BaseElement;
 import models.DiceType;
 import models.Dice;
 import models.Damage;
-import models.Spell;
+import models.magic.Spell;
 //import models.SpellDB;
 import models.TestClass;
 import models.TestClass2;
@@ -20,7 +20,7 @@ import network.Syncable;
 import network.SyncSerializer;
 import ru.stablex.ui.UIBuilder;
 import flash.Lib;
-import models.SorcererSpellBook;
+import models.magic.SorcererSpellBook;
 
 /**
  * Main class for the DDCombatAssistant
@@ -35,7 +35,7 @@ class Main extends flash.display.Sprite
 	{
 		//super();
 		//UIBuilder.init();
-		//flash.Lib.current.addChild( UIBuilder.buildFn('ui/spelldb.xml')() );
+		//flash.Lib.current.addChild( UIBuilder.buildFn('ui/magic/spelldb.xml')() );
 		
 		Toolkit.theme = new GradientTheme();
 		Toolkit.setTransitionForClass(Stack, "none");

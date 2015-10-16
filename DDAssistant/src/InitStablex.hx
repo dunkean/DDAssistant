@@ -8,7 +8,7 @@ class InitStablex{
         //create xml-based classes for custom widgets
 	//	UIBuilder.regClass("SpellItemView");
 //		UIBuilder.regClass("SpellItemView");
-		UIBuilder.buildClass("ui/spellitem.xml", "SpellItemView");
-        UIBuilder.buildClass("ui/spelldb.xml", "SpellDBView");
+		UIBuilder.buildClass("ui/magic/spellitem.xml", "SpellItemView");
+        UIBuilder.buildClass("ui/magic/spelldb.xml", "SpellDBView");
     }//function init()
 }//class Init

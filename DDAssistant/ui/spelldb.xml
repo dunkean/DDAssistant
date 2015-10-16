@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<Scroll vScroll="false" skin:Paint-border="1" left="50" top="100">
-
-<accordion id="list">
-</accordion>
-
-</Scroll>

@@ -1,5 +1,3 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <vbox width="100%" autoSize="true" id="list" text="test">
-	<Text id="description">
-	</Text>
 </vbox>
