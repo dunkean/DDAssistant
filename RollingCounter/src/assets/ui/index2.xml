@@ -1,2 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Counter w = "42" h = "35"/>
+<Counter digitsCount="2" y="250" w="84" h="30" title="'FOR'"/>
+<!--<VBox w="800" h="600" padding="20" childPadding="20" align="'left,top'">
+
+	<Text text="'Hit me!'" />	
+	
+	
+    <Checkbox text="'check me!'" />
+
+    
+
+    <Checkbox text="'check me!'" />
+
+    <HBox childPadding="20">
+        <Radio group="'radio1'" text="'pick me!'" selected="true"/>
+        <Radio group="'radio1'" text="'no, pick me!'"/>
+    </HBox>
+
+    <Options options="[['apple', 'wow'], ['pancakes', 'yay'], ['peanut butter', 'doh']]" />
+
+    <Progress w="300" on-enterFrame="$this.value += 0.5; if($this.value >= $this.max) $this.value = 0;" />
+
+    <Slider w="300"/>
+
+    <Switch />
+
+
+    <TabStack>
+        <TabPage title-text="'Tab1'">
+			-->
+            <!-- 'BlackGradient1' skin is defined by android4 theme -->
+            <!-- <VBox widthPt="100" h="100" skinName="'BlackGradient1'">
+                <Button text="'I am in the first tab'" />
+            </VBox>
+        </TabPage>
+        <TabPage title-text="'Tab2'">
+            <VBox widthPt="100" h="100" skinName="'BlackGradient1'">
+                <Button text="'I am in the second tab'" />
+            </VBox>
+        </TabPage>
+    </TabStack>
+
+</VBox>-->
+

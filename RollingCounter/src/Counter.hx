@@ -12,6 +12,7 @@ import ru.stablex.ui.events.ScrollEvent;
 import ru.stablex.ui.events.WidgetEvent;
 import ru.stablex.ui.skins.Img;
 import ru.stablex.ui.UIBuilder;
+import ru.stablex.ui.widgets.Text;
 import ru.stablex.ui.widgets.Widget;
 
 
@@ -23,20 +24,28 @@ import ru.stablex.ui.widgets.Widget;
  */
 class Counter extends Widget
 {
-	private var srcHeight = 770;
-	private var srcWidth = 42;
+	//STATIC UI PARAMS
+	private static inline var counterWidthPt = 0.5;
+	
+	//XML CONFIGURABLE
+	public var digitsCount = 2;    
+	public var scrollSpeed = 2;
+	public var wheelSpeed = 1;
+	public var title = "CAR";
+	public var posAsset = "assets/img/numbers.png";
+	public var negAsset = "assets/img/reversenumbers.png";
+	
+	//COUNTER IMGS PARAMS
 	private static var cycleLength: Float;
 	private static var stepLength: Float;
-	
-	public var digitsCount = 2;    
 	public var numbers: Array<Widget> = new Array();
 	public var posNumbers: Array<Widget> = new Array();
-	public var negNumbers: Array<Widget> = new Array();
+	public var negNumbers: Array<Widget> = new Array();	
+
+	//VALUE
 	private var ySum : Float = 0;
-	private var _processingDrag : Bool = false;
-	
-	private var _value: Int;
-	//public var value (get, set);
+	@:isVar private var _value(get, set): Int;
+	public var value (get, set): Int;
 	
 	
 	public function new () : Void {
@@ -44,18 +53,45 @@ class Counter extends Widget
         this.overflow = false;
     }
 	
-
+	/************************/
+	/****   BIND LOGIC   ****/
+	/************************/
+	
+	public function bind(syncableUuid: String, field: String): Void {
+	
+	}
+	
+	private function get__value(): Int {
+		return this._value;
+	}
+	
+	private function set__value(val: Int): Int {
+		return this._value = val;
+	}
+	
+	public function get_value(): Int {
+		return this._value;
+	}
+	
+	public function set_value(val: Int): Int {
+		return this._value = val;
+	}
+	
+	
+	/************************/
+	/*****   UI LOGIC   *****/
+	/************************/
 
 	override public function onCreate () : Void {
-		//COMPUTE RESIZE HERE
+		//BEGIN create counter
+		var bmpPosNumbers: BitmapData = Assets.getBitmapData(posAsset);
+		var bmpNegNumbers: BitmapData = Assets.getBitmapData(negAsset);
 		
-		var bmpPosNumbers: BitmapData = Assets.getBitmapData("assets/img/numbers.png");
-		var bmpNegNumbers: BitmapData = Assets.getBitmapData("assets/img/reversenumbers.png");
+		var srcWidth = bmpPosNumbers.width;
+		var srcHeight = bmpPosNumbers.height;
 		
-		srcWidth = bmpPosNumbers.width;
-		srcHeight = bmpPosNumbers.height;
-
-		var factorX = (this.w / digitsCount ) / srcWidth;
+		var counterAvailableWidth = this.w * counterWidthPt;
+		var factorX = (counterAvailableWidth / digitsCount ) / srcWidth;
 		var factorY = (this.h * 11) / srcHeight;
 		
 		for (i in 0...digitsCount) {
@@ -63,7 +99,7 @@ class Counter extends Widget
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: srcHeight,
-					left: factorX * srcWidth * (digitsCount-1-i)
+					left: factorX * srcWidth * (digitsCount-1-i) + (this.w - counterAvailableWidth)
 				})
 			);
 			this.addChild(posNumbers[i]);
@@ -74,7 +110,7 @@ class Counter extends Widget
 				UIBuilder.create(Widget, {
 					widthPt : 100,
 					h: srcHeight,
-					left: factorX * srcWidth * (digitsCount-1-i)
+					left: factorX * srcWidth * (digitsCount-1-i) + (this.w - counterAvailableWidth)
 				})
 			);
 			this.addChild(negNumbers[i]);
@@ -82,8 +118,8 @@ class Counter extends Widget
 			negNumbers[i].scaleY = factorY;
 		}
 		
-		stepLength = (bmpPosNumbers.height / 11) * factorY;
-		cycleLength = (stepLength * 10) * factorY;
+		stepLength = (posNumbers[0].h / 11) * factorY;
+		cycleLength = stepLength * 10;
 		
 		for (i in 0...digitsCount) {
 			negNumbers[i].visible = false;
@@ -92,67 +128,83 @@ class Counter extends Widget
 		
 		for (i in 0...digitsCount) {
 			posNumbers[i].skin = new Img();
-			cast(posNumbers[i].skin, Img)._src = "assets/img/numbers.png";
+			cast(posNumbers[i].skin, Img)._src = posAsset;
 			negNumbers[i].skin = new Img();
-			cast(negNumbers[i].skin, Img)._src = "assets/img/reversenumbers.png";
+			cast(negNumbers[i].skin, Img)._src = negAsset;
 		}
 		
 		for (i in 0...digitsCount) {
 			posNumbers[i].refresh();
 			negNumbers[i].refresh();
 		}
-		//this.refresh();
-		
 		
         this.addUniqueListener(MouseEvent.MOUSE_WHEEL, this.startScroll);
 		this.addUniqueListener(MouseEvent.MOUSE_DOWN, this.startScroll);
+		//END create counter
 		
+		//BEGIN create title
+		var texxxt = UIBuilder.create(Text, {
+			text  : title,
+			label : {
+				selectable : false
+			},
+			format     : {
+				font   : Assets.getFont('assets/font/GLECB.TTF').fontName,
+				//italic : true,
+				color  : 0xFFFFFF,
+				size   : this.h,
+				y : 30
+			}
+		});
+		texxxt.h = srcHeight;
+		//texxxt.scaleY = factorY;
+		this.addChild(texxxt);
+		//END create title
     }
 	
 	
 	private function startScroll(e:MouseEvent) : Void {
         if ( e.type == MouseEvent.MOUSE_DOWN ) {
-			//trace("drag");
             this._dragScroll( e );
         }else if ( e.type == MouseEvent.MOUSE_WHEEL ) {
-			//trace("wheel");
             this._wheelScroll( e );
         }
     }
 	
-	
-	//var lastVal:Int = 0;
-	//var direction: Int = 1;
-	//var currentVal = Math.round((Math.abs(this.numbers[0].top / cycleLength) * 10)) % 10;
-	//
-	//if (currentVal != lastVal) {
-		//direction = currentVal - lastVal;
-		//lastVal = currentVal;
-		//if (direction == 9) direction = -1;
-		//if (direction == -9) direction = 1;
-		//unitDigit += direction;
-		//trace(currentVal + " " + lastVal + " > " + direction +" : " + unitDigit);
-	//}
+	private function round(top: Float): Float {
+		var distanceToYValue = Math.abs(top % stepLength);
+		if (distanceToYValue > (stepLength/2))
+			distanceToYValue -= stepLength;
+		return distanceToYValue;
+	}
 	
 	
 	private function scrollDigits (y:Float) : Void {
-		var dy = y * 3;
+		var dy = y;
 		ySum += dy;
+		
 		var modulo = ySum % cycleLength;
+		var digitsModulo: Array<Float> = new Array();
+		for (i in 0...digitsCount - 1) {
+			var digitCycleLength: Float = cycleLength * Math.pow(10, i);
+			var digitSum: Float = ySum + (ySum > 0 ? 0.5 : -0.5) * stepLength;
+			if (ySum > 0) 
+				digitsModulo[i] = ( Math.floor( digitSum / digitCycleLength) * stepLength ) % cycleLength;
+			else 
+				digitsModulo[i] = ( Math.fceil( digitSum / digitCycleLength) * stepLength ) % cycleLength;
+		}
+		
 		if (ySum > 0) {
-			
 			if (negNumbers[0].visible == false) {
 				for (i in 0...digitsCount) {
 					negNumbers[i].visible = true;
 					posNumbers[i].visible = false;
 				}
-				negNumbers[1].top = - cycleLength;
-				//negNumbers[2].top = - cycleLength;
 				numbers = negNumbers;
 			}
 			this.numbers[0].top = modulo - cycleLength;
-			if ( modulo < (10 * stepLength) && modulo > (9 * stepLength) ) {
-				this.numbers[1].top += dy;
+			for (i in 0...digitsCount - 1) {
+				this.numbers[i+1].top = digitsModulo[i] - cycleLength;
 			}
 		}else {
 			if (posNumbers[0].visible == false) {
@@ -163,18 +215,11 @@ class Counter extends Widget
 				numbers = posNumbers;
 			}
 			this.numbers[0].top = modulo;
-			if ( modulo < (-9 * stepLength) && modulo > (-10 * stepLength)) {
-				this.numbers[1].top += dy;
+			for (i in 0...digitsCount - 1) {
+				this.numbers[i+1].top = digitsModulo[i];
 			}
-			
 		}
     }
-
-	//public function set_unitDigit(y:Float): Float {
-		//trace("set " + y);
-		//numbers[0].top = y;
-		//return y;
-	//}
 
 	
 	private function _dragScroll (e:MouseEvent) : Void {
@@ -184,20 +229,11 @@ class Counter extends Widget
         var startY   : Float = this.mouseY;
         var scrolled : Bool = false;
 
-        this.tweenStop(["scrollY"], false, true);
-		#if html5
-            var blocker : Sprite = new Sprite();
-            blocker.graphics.beginFill(0x000000, 0);
-            blocker.graphics.drawRect(0, 0, this.w, this.h);
-            blocker.graphics.endFill();
-        #end
-		
         //follow pointer
         var fn = function(e:Event) : Void {
-			#if html5 this.addChild(blocker); #end
             lastDy = this.mouseY - lastY;
             lastY = this.mouseY;
-			scrollDigits(lastDy);
+			scrollDigits(lastDy*scrollSpeed);
         }
         this.addUniqueListener(Event.ENTER_FRAME, fn);
 		//
@@ -213,42 +249,30 @@ class Counter extends Widget
 			};
 			
 			for (i in 0...digitsCount) {
-				var distanceToYValue = Math.abs(numbers[i].top % stepLength);
-				if (distanceToYValue > (stepLength/2))
-					distanceToYValue -= stepLength;
-				//if(i>0)
-					numbers[i].top += distanceToYValue;
-				//else
-					//this.tween(0.4, { unitDigit: numbers[0].top + distanceToYValue}, 'Quad.easeOut').onComplete(finish);
+				var distanceToYValue = round(numbers[i].top);
+				numbers[i].top += distanceToYValue;
 			}
 			
 			_value = Math.round( -ySum / stepLength);
+			trace(_value);
 			
         }
-		#if html5 if( blocker.parent == this) this.removeChild(blocker); #end
         Lib.current.stage.removeEventListener(MouseEvent.MOUSE_UP, fnStop);
         Lib.current.stage.addEventListener(MouseEvent.MOUSE_UP, fnStop);
-		//
     }
 
 	
     private function _wheelScroll (e:MouseEvent) : Void {
-        //scroll horizontally
-        //if(
-            //this.hScroll
-            //&& (
-                //(e.altKey && this.hScrollKey == 'alt')
-                //|| (e.shiftKey && this.hScrollKey == 'shift')
-                //|| (e.ctrlKey && this.hScrollKey == 'ctrl')
-            //)
-        //){
-            //this.tweenStop();
-            //this.scrollX += e.delta * wheelScrollSpeed;
-//
-        ////scroll vertically
-        //}else if( this.vScroll ){
-            //this.tweenStop();
-            //this.scrollY += e.delta * wheelScrollSpeed;
-        //}
+		if(e.delta < 0)
+			scrollDigits(stepLength * wheelSpeed * -1);
+		else
+			scrollDigits(stepLength * wheelSpeed);
+			
+		for (i in 0...digitsCount) {
+			var distanceToYValue = round(numbers[i].top);
+			numbers[i].top += distanceToYValue;
+		}
+		
+		_value = Math.round( -ySum / stepLength);
     }
 }
