@@ -13,19 +13,23 @@ class SyncManager
 	
 	static public function newSyncable(syncable: Syncable) {
 		syncables.set(syncable.uuid, syncable);
-		Peer.broadcast(SyncMessage.newCreateMessage(syncable));
+		broadcast(SyncMessage.newCreateMessage(syncable));
 		//Notify UI Menus
 	}
 	
 	static public function localUpdate(syncableId:String, field: String, from: Dynamic, to: Dynamic): Void {
 		DDAssistant.console("SYNC INFO > " + syncableId + "." + field + ": from " + from + " to " + to);
 		if(from != to){
-			Peer.broadcast(SyncMessage.newUpdateMessage(syncables.get(syncableId), field, from, to));
+			broadcast(SyncMessage.newUpdateMessage(syncables.get(syncableId), field, from, to));
 			//Notify UI Views
 		}
 	}
 	
-	static public function remoteMessage(syncMessage: SyncMessage, sender: PeerInfo): Void {
+	#if !html5
+		static public function remoteMessage(syncMessage: SyncMessage, sender: PeerInfo): Void {
+	#else
+		static public function remoteMessage(syncMessage: SyncMessage, sender: Dynamic): Void {
+	#end
 		if (sender.uuid == DDAssistant.uuid)
 			return;
 		switch(syncMessage.type) {
@@ -41,12 +45,12 @@ class SyncManager
 			}
 			case "read": {
 				if (syncables.get(syncMessage.uuid) == null) {
-					Peer.broadcast(SyncMessage.newReadMessage(syncMessage.uuid));
+					broadcast(SyncMessage.newReadMessage(syncMessage.uuid));
 					return;
 				}
 					
 				if(syncables.get(syncMessage.uuid).ownerId == DDAssistant.uuid)
-					Peer.broadcast(SyncMessage.newCreateMessage(syncables.get(syncMessage.uuid)));
+					broadcast(SyncMessage.newCreateMessage(syncables.get(syncMessage.uuid)));
 			}
 			case "update": {
 				//Notify views
@@ -62,10 +66,23 @@ class SyncManager
 		}
 	}
 	
-	static public function sendAllMySyncables(peer: PeerInfo) {
+	#if !html5
+		static public function sendAllMySyncables(peer: PeerInfo) {
+	#else
+		static public function sendAllMySyncables(peer: Dynamic) {
+	#end
 		for ( syncable in syncables ) {
-			if (syncable.ownerId == DDAssistant.uuid)
-				peer.send(SyncMessage.newCreateMessage(cast (syncable, Syncable)));
+			if (syncable.ownerId == DDAssistant.uuid) {
+				#if !html5
+					peer.send(SyncMessage.newCreateMessage(cast (syncable, Syncable)));
+				#end
+			}
 		}
+	}
+	
+	static public function broadcast(msg: String) {
+		#if !html5
+			Peer.broadcast(msg);
+		#end
 	}
 }

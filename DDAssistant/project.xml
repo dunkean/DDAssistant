@@ -20,8 +20,8 @@
 	<haxelib name="stablexui" />
 	<haxelib name="openfl" />
 	<haxelib name="actuate" />
-	<haxelib name="haxeui" />
 	<haxelib name="tjson" />
+	<!--<haxelib name="haxeui" />-->
 	
 	<!-- assets -->
 	<icon path="ui/img/icon.png" />

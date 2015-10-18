@@ -1,24 +1,25 @@
 package models.magic;
-import format.svg.Text;
+//import format.svg.Text;
 import haxe.Json;
-import haxe.ui.toolkit.containers.Accordion;
-import haxe.ui.toolkit.containers.ExpandablePanel;
-import haxe.ui.toolkit.controls.Button;
-import haxe.ui.toolkit.core.Toolkit;
-import haxe.ui.toolkit.core.Root;
-import haxe.ui.toolkit.core.RootManager;
-import haxe.ui.toolkit.controls.Progress;
-import haxe.ui.toolkit.core.XMLController;
+//import haxe.ui.toolkit.containers.Accordion;
+//import haxe.ui.toolkit.containers.ExpandablePanel;
+//import haxe.ui.toolkit.controls.Button;
+//import haxe.ui.toolkit.core.Toolkit;
+//import haxe.ui.toolkit.core.Root;
+//import haxe.ui.toolkit.core.RootManager;
+//import haxe.ui.toolkit.controls.Progress;
+//import haxe.ui.toolkit.core.XMLController;
+//import haxe.ui.toolkit.events.UIEvent;
+import models.magic.SpellSelectionListener;
+import openfl.Assets;
 import ru.stablex.ui.UIBuilder;
 import ru.stablex.ui.widgets.VBox;
 import ru.stablex.ui.widgets.Widget;
+import flash.Lib;
+#if !html5
 import sys.io.File;
 import sys.FileSystem;
-import haxe.Json;
-import ru.stablex.ui.UIBuilder;
-import flash.Lib;
-import haxe.ui.toolkit.events.UIEvent;
-import models.magic.SpellSelectionListener;
+#end
 /**
  * ...
  * @author cda
@@ -59,7 +60,8 @@ class SpellDB extends XMLController
 		DDAssistant.console("NEW SPELL DB");
 		try {
 			//deployer dev "C:\Qt\Qt5.4.2\5.4\msvc2010_opengl\bin" "C:\Qt\QT5.4.2_msvc2010_opengl_static\msvc2010_opengl\bin" "C:\Qt\Qt5.4.2\Tools\QtCreator\bin" "C:\Users\dartnell\Documents\DEV\PrintackV2Deployer__conf\DefaultBuildList.txt" "C:\Users\dartnell\Documents\DEV\PrintackV2Deployer__conf2"
-			var file:String = File.getContent("db/Spells_Ens_6.json");
+			//var file:String = File.getContent("db/Spells_Ens_6.json");
+			var file:String = Assets.getText("db/Spells_Ens_6.json");
 	//		var file:String = File.getContent("db/Spells.json");
 			content = Json.parse( file );
 	/*

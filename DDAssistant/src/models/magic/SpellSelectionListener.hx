@@ -1,9 +1,9 @@
 package models.magic;
-import haxe.ui.toolkit.events.UIEvent;
+//import haxe.ui.toolkit.events.UIEvent;
 /**
  * @author cda
  */
 interface SpellSelectionListener 
 {
-	public function spellSelected(e:UIEvent):Void;
+	//public function spellSelected(e:UIEvent):Void;
 }

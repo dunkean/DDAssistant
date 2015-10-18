@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Counter digitsCount="2" y="250" w="84" h="30" title="'FOR'"/>
+<Counter digitsCount="2" y="250" w="42" h="30" title="'FOR'"/>
 <!--<VBox w="800" h="600" padding="20" childPadding="20" align="'left,top'">
 
 	<Text text="'Hit me!'" />	

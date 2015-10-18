@@ -1,6 +1,6 @@
 package models.magic;
 
-import haxe.ui.toolkit.controls.Divider;
+//import haxe.ui.toolkit.controls.Divider;
 import models.magic.SpellDB.AnonSpell;
 import network.Syncable;
 import haxe.ds.StringMap;

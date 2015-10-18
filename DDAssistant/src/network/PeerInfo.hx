@@ -6,8 +6,8 @@ package network;
  * @version 0.1
  */
 
-import sys.net.Socket;
 import utils.UUID;
+import sys.net.Socket;
 
 class PeerInfo
 {
