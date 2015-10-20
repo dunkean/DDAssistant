@@ -19,7 +19,7 @@ class Syncable
 	
 	public function new(?uuid: String) {
 		this._explicitType = Type.getClassName(Type.getClass(this));
-		this.ownerId = DDAssistant.uuid;
+		this.ownerId = Main.uuid;
 		if (uuid == null)
 			this.uuid = UUID.uuid(12, 16);
 		else

@@ -18,7 +18,7 @@ class SyncManager
 	}
 	
 	static public function localUpdate(syncableId:String, field: String, from: Dynamic, to: Dynamic): Void {
-		DDAssistant.console("SYNC INFO > " + syncableId + "." + field + ": from " + from + " to " + to);
+		Main.log("SYNC INFO > " + syncableId + "." + field + ": from " + from + " to " + to);
 		if(from != to){
 			broadcast(SyncMessage.newUpdateMessage(syncables.get(syncableId), field, from, to));
 			//Notify UI Views
@@ -30,7 +30,7 @@ class SyncManager
 	#else
 		static public function remoteMessage(syncMessage: SyncMessage, sender: Dynamic): Void {
 	#end
-		if (sender.uuid == DDAssistant.uuid)
+		if (sender.uuid == Main.uuid)
 			return;
 		switch(syncMessage.type) {
 			case "create": {
@@ -38,8 +38,7 @@ class SyncManager
 					case "models.Player":
 						var syncable: Player = SyncSerializer.decode(syncMessage.content, syncMessage.className);
 						syncables.set(syncable.uuid, syncable);
-						DDAssistant.console(SyncSerializer.encode(syncable));
-						DDAssistant.addCompoTest(SyncSerializer.encode(syncable));
+						Main.log(SyncSerializer.encode(syncable));
 						//Notify views
 				}
 			}
@@ -49,7 +48,7 @@ class SyncManager
 					return;
 				}
 					
-				if(syncables.get(syncMessage.uuid).ownerId == DDAssistant.uuid)
+				if(syncables.get(syncMessage.uuid).ownerId == Main.uuid)
 					broadcast(SyncMessage.newCreateMessage(syncables.get(syncMessage.uuid)));
 			}
 			case "update": {
@@ -72,7 +71,7 @@ class SyncManager
 		static public function sendAllMySyncables(peer: Dynamic) {
 	#end
 		for ( syncable in syncables ) {
-			if (syncable.ownerId == DDAssistant.uuid) {
+			if (syncable.ownerId == Main.uuid) {
 				#if !html5
 					peer.send(SyncMessage.newCreateMessage(cast (syncable, Syncable)));
 				#end

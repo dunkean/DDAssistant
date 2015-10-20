@@ -1,6 +1,6 @@
 package models;
-import models.magic.SorcererSpellBook;
-import models.magic.SpellBook;
+//import models.magic.SorcererSpellBook;
+//import models.magic.SpellBook;
 import network.Syncable;
 
 /**
@@ -20,12 +20,12 @@ class Player extends Syncable
 	public var Wisdom: String = "10";
 	public var Charisma: String = "10";
 	
-	public var spellBook:SpellBook;// = new SpellBook();
+	//public var spellBook:SpellBook;// = new SpellBook();
 	
 	public function new(?uuid:String) {
 		super(uuid);
-		DDAssistant.console("creating player");
-		spellBook = new  SorcererSpellBook(14, 4, uuid);
+		Main.log("creating player");
+		//spellBook = new  SorcererSpellBook(14, 4, uuid);
 	}
 	
 }

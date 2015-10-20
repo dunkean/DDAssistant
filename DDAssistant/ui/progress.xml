@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<vbox width="100%" height="100">
-	<Text id="label">
-	</text>
-	<Progress id="bar" width="90%" height="14px" x="5%">
-	</Progress>
-</vbox>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Progress bars demo -->
+<Scroll name="'progressBars'" defaults="'Screen,Level1'">
+    <VBox widthPt="100" heightPt="100">
+        <Progress max="200" widthPt="95" on-enterFrame="
+            $this.value ++;
+            if( $this.value > $this.max ) $this.value = 0;
+        "/>
+    </VBox>
+</Scroll>

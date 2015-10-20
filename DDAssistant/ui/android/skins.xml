@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Skins>
+    <switchSliderDayNight:Gradient
+        colors      = "[0xAAAAAA, 0x333333]"
+        rotation    = "0"
+        border      = "1"
+        padding     = "2"
+        corners     = "[20]"
+        borderColor = "0x333333"
+    />
+
+    <tabBottomActive:Layer
+        current:Paint-color = "0x333333"
+        current:Paint-paddingTop = "6"
+        behind:Paint-color = "0x33b5e5"
+    />
+    <tabBottomPressed:Layer
+        current:Paint-color = "0x33819d"
+        current:Paint-paddingTop = "6"
+        behind:Paint-color = "0x33b5e5"
+    />
+
+</Skins>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Defaults>
+
+    <Scroll>
+        <Level1 skinName="'BlackGradient1'"/>
+        <Level2 skin:Paint-color="0xf2f2f2"/>
+    </Scroll>
+
+
+
+    <Slider>
+        <Haxe
+            w = "20"
+            h = "20"
+            slider-w = "20"
+            slider-h = "20"
+            skin:Paint-color   = "0x969696"
+            skin:Paint-corners = "[20]"
+            skin:Paint-padding="8"
+            slider-top = "-2"
+            slider-skin:Img-src = "'ui/android/img/haxe24.png'"
+        />
+    </Slider>
+
+
+    <HBox>
+        <!-- Top menu -->
+        <TopMenu
+            widthPt  = "100"
+            align    = "'left,middle'"
+            padding  = "5"
+            skinName = "'BlackBlueStripe'"
+        />
+        <!-- Bottom menu -->
+        <BottomMenu
+            widthPt       = "100"
+            align         = "'top,center'"
+            padding       = "5"
+            unifyChildren = "true"
+            skin:Paint-color="0x000000"
+        />
+    </HBox>
+
+
+    <VBox>
+        <Menu widthPt="100" childPadding="2" paddingTop="4" paddingBottom="4"/>
+        <LightGray skinName="'LightGray'" widthPt="100" heightPt="100" childPadding="10" padding="5"/>
+        <DarkGray skinName="'DarkGray'" widthPt="100" heightPt="100" childPadding="10" padding="5"/>
+    </VBox>
+
+
+    <Button>
+        <MainBack ico-src="'ui/android/img/mainBack.png'" />
+        <MainHome ico-src="'ui/android/img/mainHome.png'" />
+        <MainRecent ico-src="'ui/android/img/mainRecent.png'" />
+    </Button>
+
+
+    <Switch>
+        <Dark skin:Paint-alpha="0.6" />
+        <DayNight
+            labelOn-format-color="0xFFFFFF"
+            labelOff-format-color="0x999999"
+            w        = "97"
+            h        = "24"
+            skinName = "'switcher'"
+            slider-w = "47"
+            slider-skinName = "'switchSliderDayNight'"
+        />
+    </Switch>
+
+</Defaults>

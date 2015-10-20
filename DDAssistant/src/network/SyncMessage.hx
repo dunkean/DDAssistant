@@ -29,26 +29,26 @@ class SyncMessage
 	public function new() { }
 
 	public static function newHandshakeMessage() {
-		return DDAssistant.uuid + SEPARATOR + "assistant" + SEPARATOR + DDAssistant.name;
+		return Main.uuid + SEPARATOR + "assistant" + SEPARATOR + Main.assistant;
 	}
 	
 	public static function newCreateMessage(syncable: Syncable): String {
-		return DDAssistant.uuid + SEPARATOR + "create" + SEPARATOR + syncable._explicitType + SEPARATOR + syncable.serialize() + SEPARATOR + syncable.md5();
+		return Main.uuid + SEPARATOR + "create" + SEPARATOR + syncable._explicitType + SEPARATOR + syncable.serialize() + SEPARATOR + syncable.md5();
 	}
 	
 	public static function newReadMessage(uuid: String): String {
-		return DDAssistant.uuid + SEPARATOR + "read" + SEPARATOR + uuid;
+		return Main.uuid + SEPARATOR + "read" + SEPARATOR + uuid;
 	}
 	
 	public static function newUpdateMessage(syncable: Syncable, field: String, from: Dynamic, to: Dynamic): String {
 		var updContent: UpdateContent = {
 			uuid: syncable.uuid, field: field, from: from, to: to
 		}
-		return DDAssistant.uuid + SEPARATOR + "update" + SEPARATOR + Json.stringify(updContent) + SEPARATOR + syncable.md5();
+		return Main.uuid + SEPARATOR + "update" + SEPARATOR + Json.stringify(updContent) + SEPARATOR + syncable.md5();
 	}
 	
 	public static function newDeleteMessage(syncable: Syncable): String {
-		return DDAssistant.uuid + SEPARATOR + "delete" + SEPARATOR + syncable.uuid;
+		return Main.uuid + SEPARATOR + "delete" + SEPARATOR + syncable.uuid;
 	}
 	
 	public static function parseMessage(rawMessage: String): SyncMessage {

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- settings for gradient skin -->
+<Scroll name="'tileSkin'" defaults="'Screen,Level2'">
+    <VBox widthPt="100" childPadding="10" paddingTop="20">
+        <VBox widthPt="100">
+            <Text defaults="'Dark'" text="'Tile skin options'" widthPt="100" align="'center,middle'"/>
+            <Text defaults="'DarkTip'" text="'There are more settings described in docs'" widthPt="100" align="'center,middle'" />
+            <Widget defaults="'HRLight'" />
+        </VBox>
+
+        <!-- Size -->
+        <HBox widthPt="100" align="'middle,center'" unifyChildren="true">
+            <Text defaults="'Dark'" text="'Width'" />
+            <Slider min="10" max="$Lib.current.stage.stageWidth * 0.9" value="64" on-change="
+                #tex.w = $this.value;
+            "/>
+        </HBox>
+        <HBox widthPt="100" align="'middle,center'" unifyChildren="true">
+            <Text defaults="'Dark'" text="'Height'" />
+            <Slider min="10" max="200" value="64" on-change="
+                #tex.h = $this.value;
+            "/>
+        </HBox>
+        <Widget defaults="'HRLight'" />
+
+        <Widget h="5" />
+
+        <Widget id="'tex'" w="64" h="64" skin:Tile-src="'ui/android/img/nme.png'"/>
+    </VBox>
+</Scroll>
