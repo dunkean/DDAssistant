@@ -4,7 +4,7 @@
 <Scroll name="'tabs'" defaults="'Screen,Level1'">
     <TabStack name="'tabs'">
 
-        <TabPage title-text="'First tab'">
+        <TabPage title-text="'Console'">
             <VBox widthPt="100" heightPt="100">
                 <VBox align="'left,middle'" childPadding="10">
                     <Radio group="'tabsPos'" text="'Bottom tabs'" on-change="
@@ -49,13 +49,19 @@
             </VBox>
         </TabPage>
 
-        <TabPage title-text="'OpenFL'">
+		<TabPage title-text="'Arena'">
+            <VBox widthPt="100" heightPt="100">
+                <Bmp src="'ui/android/img/haxe.png'"/>
+            </VBox>
+        </TabPage>
+		
+        <TabPage title-text="'Player'">
             <VBox widthPt="100" heightPt="100">
                 <Bmp src="'ui/android/img/nme.png'"/>
             </VBox>
         </TabPage>
 
-        <TabPage title-text="'HAXE'">
+        <TabPage title-text="'SpellBook'">
             <VBox widthPt="100" heightPt="100">
                 <Bmp src="'ui/android/img/haxe.png'"/>
             </VBox>

@@ -26,7 +26,8 @@
     <ViewStack id="'screens'" widthPt="100" trans:Slide-direction="'left'" trans:Slide-duration="0.2">
 
         <!-- Initial screen -->
-        <meta:include src="ui/main.xml"/>
+		<meta:include src="ui/main.xml"/>
+        <!--<meta:include src="ui/tabs.xml"/>-->
 
         <!-- Buttons demo -->
         <meta:include src="ui/buttons.xml"/>

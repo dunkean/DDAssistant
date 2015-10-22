@@ -60,12 +60,15 @@ class Main extends ru.stablex.ui.widgets.Widget
 	{
 		uuid = UUID.uuid(12, 16);
 		assistant = 'Device-' + UUID.uuid(2, 16);
-		
 		loadSettings();
+
+		configureStablex();		
 		//addControlsListeners();
 		#if !html5 
 			Peer.start(); 
 		#end
+		
+		
 		
 		//var spellDB = new SpellDB();
 		//flash.Lib.current.addChild( UIBuilder.buildFn('sample.xml')() );
@@ -78,35 +81,36 @@ class Main extends ru.stablex.ui.widgets.Widget
 	}
 	
 	
-	private function configureStablex() {
+	private static function configureStablex() {
 		Lib.current.stage.align     = StageAlign.TOP_LEFT;
-        Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
-        //UIBuilder.setTheme('ru.stablex.ui.themes.android4');
+        //Lib.current.stage.scaleMode = StageScaleMode.NO_SCALE;
+        UIBuilder.setTheme('ru.stablex.ui.themes.android4');
 
         //register main class to access it's methods and properties in xml
         UIBuilder.regClass('Main');
 
         //initialize StablexUI
-        //UIBuilder.init('ui/android/defaults.xml');
+        UIBuilder.init('ui/android/defaults.xml');
 
         //register skins
-        //UIBuilder.regSkins('ui/android/skins.xml');
+        UIBuilder.regSkins('ui/android/skins.xml');
 
         //create callback for alert popup
         Main.alert = UIBuilder.buildFn('ui/alert.xml');
 
         //Create our UI
-        UIBuilder.buildFn('ui/index.xml')().show();
+        //UIBuilder.buildFn('ui/index.xml')().show();
+		UIBuilder.buildFn('ui/ddassistant.xml')().show();
 		
 		 // FPS counter {
-             var fps : flash.display.FPS = cast Lib.current.stage.addChild(new flash.display.FPS());
-             var format = new flash.text.TextFormat (flash.Assets.getFont ("ui/android/fonts/regular.ttf").fontName, 12, 0xFFFFFF);
-             fps.defaultTextFormat = format;
-             fps.selectable = false;
-             fps.embedFonts = true;
-             fps.x = 0;
-             fps.y = 0;
-             fps.mouseEnabled = false;
+             //var fps : flash.display.FPS = cast Lib.current.stage.addChild(new flash.display.FPS());
+             //var format = new flash.text.TextFormat (flash.Assets.getFont ("ui/android/fonts/regular.ttf").fontName, 12, 0xFFFFFF);
+             //fps.defaultTextFormat = format;
+             //fps.selectable = false;
+             //fps.embedFonts = true;
+             //fps.x = 0;
+             //fps.y = 0;
+             //fps.mouseEnabled = false;
          //}
 	}
 	
