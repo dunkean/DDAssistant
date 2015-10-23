@@ -51,9 +51,9 @@
 
 
     <Button>
-        <MainBack ico-src="'ui/android/img/mainBack.png'" />
-        <MainHome ico-src="'ui/android/img/mainHome.png'" />
-        <MainRecent ico-src="'ui/android/img/mainRecent.png'" />
+        <MainBack ico-src="'ui/img/console.png'" />
+        <MainHome ico-src="'ui/img/player.png'" />
+        <MainRecent ico-src="'ui/img/spells.png'" />
     </Button>
 
 
